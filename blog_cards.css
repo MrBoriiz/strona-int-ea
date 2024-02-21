@@ -1,0 +1,394 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+}
+button{
+    padding: 9px 25px;
+    background-color: rgba(113, 179, 83, 0.925);
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #363636;
+}
+
+body{
+    background-color: #252525;
+    font-family: Arial;
+    min-width: 100vw;
+    min-height: 100vh;
+    color: #dedede;
+    display: inline-block;
+    flex-direction: center;
+    overflow-x: hidden;
+}
+h1{
+    font-size: 28px;
+    text-align: center;
+}
+h4{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 32px;
+    text-shadow: 0px 0px 5px black, 0px 0px 5px black;
+}
+
+article {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 0px auto;
+  }
+
+
+/*GALERIA*/
+
+
+.gallery{
+    flex-direction: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 32px;
+    background-color: #252525;
+    border-radius: 1%;
+}
+.thumbnail{
+    cursor: pointer;
+    margin: 24px;
+    max-width: 250px;
+    max-height: 400px;
+    transform: scale(1.0);
+    transition: all 0.3s;
+    border-radius: 2%;
+}
+.thumbnail img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2%;
+    transition: all 0.3s;
+}
+.thumbnail:hover img{
+    border-radius: 0%;
+}
+.thumbnail:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 48px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 0%;
+}
+
+
+/*PANEL WOJEN MENELI*/
+
+
+.info-dec1{
+    line-height: 100%;
+    text-shadow: 0px 0px 5px black, 0px 0px 10px black;
+}
+.thumbnail-Artykul1{
+    background-size: 100%;
+    object-fit: cover;
+    border-radius: 2%;
+}
+.info-title1{
+    position: relative;
+    width: max-content;
+    text-shadow: 0px 0px 5px black, 0px 0px 10px black;
+}
+.info-title1::after{                                 /*animowane podkreślenie tytułu produkcji*/
+    content: "";
+    position: absolute;
+    height: 3px;;
+    left: 0px;
+    top: 30px;
+    height: 4px;
+    width: 100%;
+    background-color:rgba(160, 255, 116, 0.753);
+    transform: scaleX(0);
+    transition: transform 500ms ease;
+}
+.Artykul1:hover .info-title1:after{
+    transform: scaleX(1);
+}
+.Artykul1{
+    color: white;                                  /*kolor tekstu*/
+    line-height: 1.6;                                /*wysokość pomiędzy liniami tytułu a opisu*/
+    background-size: cover;
+    border-radius: 2%;
+    background-color: rgba(0, 0, 0, 0.45);
+    flex-direction: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 24px;                                    /*odstęp od pozostałych opcji (produkcji)*/
+    padding: 100px;                                  /*położenie krótkiego opisu*/
+    padding-top: 280px;                              /*położenie krótkiego opisu*/
+    max-width: 400px;                                /*szerokość obrazu*/
+    max-height: 400px;                               /*wysokość obrazu*/
+    border-radius: 2%;                               /*zaokrąglenie obrazu*/
+    background-image: url(images/ARTYK1_plakat.png);     /*ścieżka obrazu*/
+    box-shadow: 0 0 48px 1px rgba(0, 0, 0, 0);     /*cień pod plakatem*/
+    transform: scale(1);
+    transition: all 350ms;
+}
+.Artykul1:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 48px 1px rgba(0, 0, 0, 0.5);
+}
+.description1{
+    margin-left: -80px;
+    transform: scale(1);
+    transition: all 500ms ease;
+    opacity: 0%;
+}
+.Artykul1:hover .description1{                         /*pojawianie się krótkiego opisu*/
+    opacity: 100%;
+}
+.button1{
+    cursor: pointer;
+    display: inline;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-family: initial;
+    border-radius: 5%;
+    transition: background-color(0.3s);
+    box-shadow: black;
+}
+
+
+/*PANEL ARTYKUŁ 2*/
+
+
+.info-dec2{
+    line-height: 100%;
+    text-shadow: 0px 0px 5px black, 0px 0px 10px rgb(58, 58, 58);
+}
+.thumbnail-Artykul2{
+    background-size: 100%;
+    object-fit: cover;
+    border-radius: 2%;
+}
+.info-title2{
+    position: relative;
+    width: max-content;
+    text-shadow: 0px 0px 5px black, 0px 0px 10px rgb(58, 58, 58);
+}
+.info-title2::after{                                 /*animowane podkreślenie tytułu produkcji*/
+    content: "";
+    position: absolute;
+    height: 3px;;
+    left: 0px;
+    top: 30px;
+    height: 4px;
+    width: 100%;
+    background-color:rgba(160, 255, 116, 0.753);
+    transform: scaleX(0);
+    transition: transform 500ms ease;
+}
+.Artykul2:hover .info-title2:after{
+    transform: scaleX(1);
+}
+.Artykul2{
+    color: white;                                  /*kolor tekstu*/
+    line-height: 1.6;                                /*wysokość pomiędzy liniami tytułu a opisu*/
+    background-size: cover;
+    border-radius: 2%;
+    background-color: rgba(0, 0, 0, 0.45);
+    flex-direction: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 24px;                                    /*odstęp od pozostałych opcji (produkcji)*/
+    padding: 100px;                                  /*położenie krótkiego opisu*/
+    padding-top: 280px;                              /*położenie krótkiego opisu*/
+    max-width: 250px;                                /*szerokość obrazu*/
+    max-height: 400px;                               /*wysokość obrazu*/
+    border-radius: 2%;                               /*zaokrąglenie obrazu*/
+    background-image: url(images/ARTYK2_plakat.png);     /*ścieżka obrazu*/
+    box-shadow: 0 0 48px 1px rgba(0, 0, 0, 0);     /*cień pod plakatem*/
+    transform: scale(1);
+    transition: all 350ms;
+}
+.Artykul2:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 48px 1px rgba(0, 0, 0, 0.5);
+}
+.description2{
+    margin-left: -80px;
+    transform: scale(1);
+    transition: all 500ms ease;
+    opacity: 0%;
+}
+.Artykul2:hover .description2{                         /*pojawianie się krótkiego opisu*/
+    opacity: 100%;
+}
+.button2{
+    cursor: pointer;
+    display: inline;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-family: initial;
+    border-radius: 5%;
+    transition: background-color(0.3s);
+}
+
+
+/*PANEL ELEVEN VS WTTG 2*/
+
+
+.info-dec3{
+    line-height: 100%;
+    text-shadow: 0px 0px 5px black, 0px 0px 10px rgb(58, 58, 58);
+}
+.thumbnail-Artykul3{
+    background-size: 100%;
+    object-fit: cover;
+    border-radius: 2%;
+}
+.info-title3{
+    position: relative;
+    width: max-content;
+    text-shadow: 0px 0px 5px black, 0px 0px 10px rgb(58, 58, 58);
+}
+.info-title3::after{                                 /*animowane podkreślenie tytułu produkcji*/
+    content: "";
+    position: absolute;
+    height: 3px;;
+    left: 0px;
+    top: 30px;
+    height: 4px;
+    width: 100%;
+    background-color:rgba(160, 255, 116, 0.753);
+    transform: scaleX(0);
+    transition: transform 500ms ease;
+}
+.Artykul3:hover .info-title3:after{
+    transform: scaleX(1);
+}
+.Artykul3{
+    color: white;                                  /*kolor tekstu*/
+    line-height: 1.6;                                /*wysokość pomiędzy liniami tytułu a opisu*/
+    background-size: cover;
+    border-radius: 2%;
+    background-color: rgba(0, 0, 0, 0.45);
+    flex-direction: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 24px;                                    /*odstęp od pozostałych opcji (produkcji)*/
+    padding: 100px;                                  /*położenie krótkiego opisu*/
+    padding-top: 280px;                              /*położenie krótkiego opisu*/
+    max-width: 250px;                                /*szerokość obrazu*/
+    max-height: 400px;                               /*wysokość obrazu*/
+    border-radius: 2%;                               /*zaokrąglenie obrazu*/
+    background-image: url(images/ARTYK3_plakat.png);     /*ścieżka obrazu*/
+
+    box-shadow: 0 0 48px 1px rgba(0, 0, 0, 0);     /*cień pod plakatem*/
+    transform: scale(1);
+    transition: all 350ms;
+}
+.Artykul3:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 48px 1px rgba(0, 0, 0, 0.5);
+}
+.description3{
+    margin-left: -80px;
+    transform: scale(1);
+    transition: all 500ms ease;
+    opacity: 0%;
+}
+.Artykul3:hover .description3{                         /*pojawianie się krótkiego opisu*/
+    opacity: 100%;
+}
+.button3{
+    cursor: pointer;
+    display: inline;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-family: initial;
+    border-radius: 5%;
+    transition: background-color(0.3s);
+}
+
+/*PANEL ARTYKUŁ 4 */
+
+
+.info-dec4{
+    line-height: 100%;
+    text-shadow: 0px 0px 5px black, 0px 0px 10px rgb(58, 58, 58);
+}
+.thumbnail-Artykul4{
+    background-size: 100%;
+    object-fit: cover;
+    border-radius: 2%;
+}
+.info-title4{
+    position: relative;
+    width: max-content;
+    text-shadow: 0px 0px 5px black, 0px 0px 10px rgb(58, 58, 58);
+}
+.info-title4::after{                                 /*animowane podkreślenie tytułu produkcji*/
+    content: "";
+    position: absolute;
+    height: 3px;;
+    left: 0px;
+    top: 30px;
+    height: 4px;
+    width: 100%;
+    background-color:rgba(160, 255, 116, 0.753);
+    transform: scaleX(0);
+    transition: transform 500ms ease;
+}
+.Artykul4:hover .info-title4:after{
+    transform: scaleX(1);
+}
+.Artykul4{
+    color: white;                                  /*kolor tekstu*/
+    line-height: 1.6;                                /*wysokość pomiędzy liniami tytułu a opisu*/
+    background-size: cover;
+    border-radius: 2%;
+    background-color: rgba(0, 0, 0, 0.45);
+    flex-direction: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 24px;                                    /*odstęp od pozostałych opcji (produkcji)*/
+    padding: 100px;                                  /*położenie krótkiego opisu*/
+    padding-top: 280px;                              /*położenie krótkiego opisu*/
+    max-width: 250px;                                /*szerokość obrazu*/
+    max-height: 400px;                               /*wysokość obrazu*/
+    border-radius: 2%;                               /*zaokrąglenie obrazu*/
+    background-image: url(images/ARTYK1_plakat.png);     /*ścieżka obrazu*/
+
+    box-shadow: 0 0 48px 1px rgba(0, 0, 0, 0);     /*cień pod plakatem*/
+    transform: scale(1);
+    transition: all 350ms;
+}
+.Artykul4:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 48px 1px rgba(0, 0, 0, 0.5);
+}
+.description4{
+    margin-left: -80px;
+    transform: scale(1);
+    transition: all 500ms ease;
+    opacity: 0%;
+}
+.Artykul4:hover .description4{                         /*pojawianie się krótkiego opisu*/
+    opacity: 100%;
+}
+.button4{
+    cursor: pointer;
+    display: inline;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-family: initial;
+    border-radius: 5%;
+    transition: background-color(0.3s);
+}
