@@ -1,0 +1,1017 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: -1;
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #222222;
+  }
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('../images/background_test.png');
+    height: 40vh;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes animate{
+    0%,100%{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('../images/bar.png');
+    }
+}
+
+@-webkit-keyframes animate{
+    0%,100%{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('../images/bar.png');
+    }
+}
+
+
+@keyframes slideInFromTop {
+    0% {
+        position: relative;
+      top: -50%;
+    }
+    100% {
+        position: relative;
+      top: 0%;
+    }
+  }
+
+  @keyframes slideInFromTop2 {
+    0% {
+        position: relative;
+      top: -600%;
+    }
+    100% {
+        position: relative;
+      top: 0%;
+    }
+  }
+
+.background-images{
+    height: 40vh;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+
+    -webkit-animation: animate 30s ease-in-out infinite;
+    -moz-animation: animate 30s ease-in-out infinite;
+    -o-animation: animate 30s ease-in-out infinite;
+    animation-name: animate;
+    animation-duration: 30s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    background-attachment: fixed;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+}
+
+.gradient-0deg{
+    position: relative;
+    width: 100%;
+    height: 30%;
+    top: 70%;
+    left: 0;
+    content: "";
+    background: linear-gradient(0deg, var(--background-color), transparent 100%);
+}
+
+.home-title{
+    animation: 1s ease-out 0s 1 slideInFromTop2;
+}
+
+h6{
+    color: #fff;
+}
+
+.logo img{
+    float: left;
+    width: 150px;
+    margin: 20px;
+    height: auto;
+}
+
+.main{
+    animation: 1s ease-out 0s 1 slideInFromTop;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.title{
+    left: 50%;
+    padding-bottom: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.title h1{
+    color: #fff;
+    font-size: 70px;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6), 0px 0px 15px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    text-align: center;
+}
+.title h3{
+    color:rgba(241, 255, 39, 0.808);
+    font-size: 30px;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6), 0px 0px 15px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    text-align: center;
+}
+
+  /*---------------------------------------------------------------------------------*/
+
+  .profile-description{
+    position: relative;
+    width: 915px;
+    left: 0px;
+    bottom: 300px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.profile-description p{
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 400;
+    position: relative;
+    top: 330px;
+    display: flex;
+    padding-top: 1.5%;
+    padding-left: 4%;
+    padding-right: 3%;
+    text-align: center;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.61);
+    font-size: 1.6rem;
+}
+
+.profile{
+    height: 620px;
+    width: auto;
+    position: relative;
+}
+
+.profile img{
+    border-radius: 5%;
+    position: relative;
+    left: 350px;
+    bottom: 50px;
+    height: 300px;
+    width: auto;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.profile h5{
+    position: relative;
+    color:rgba(255, 255, 255, 0.808);
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+    top: 340px;
+    left: 0px;
+
+}
+
+.profile h4{
+    position: relative;
+    justify-content: center;
+    font-family: 'Poppins', 'sans-serif';
+    display: flex;
+    left: 0px;
+    top: 340px;
+    font-weight: 800;
+    text-align: center;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.904);
+    font-size: 3.5rem;
+}
+
+span{
+    font-family: 'Poppins', 'sans-serif';
+    justify-content: center;
+    display: flex;
+    font-weight: 400;
+    padding-top: 1.5%;
+    padding-left: 4%;
+    padding-right: 3%;
+    text-align: center;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.479);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+span:hover{
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 400;
+    padding-top: 1.5%;
+    padding-left: 4%;
+    padding-right: 3%;
+    text-align: center;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.836);
+    font-size: 2.5rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.title2{
+    text-decoration: none;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.title2 h2{
+    color: #fff;
+    font-size: 45px;
+    text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6), 0px 0px 25px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    text-align: center;
+}
+
+.title2 h1{
+    color: #fff;
+    font-size: 70px;
+    text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6), 0px 0px 25px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    text-align: center;
+}
+.title2 h3{
+    color:rgba(241, 255, 39, 0.808);
+    font-size: 25px;
+    text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6), 0px 0px 25px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    text-align: center;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 374px) {
+
+    header{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('images/bar.png');
+        height: 80vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .background-images{
+        height: 80vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    }
+    
+        .profile-description{
+            position: relative;
+            width: 360px;
+            left: 0px;
+            bottom: 300px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .profile-description p{
+            font-family: 'Poppins', 'sans-serif';
+            font-weight: 400;
+            position: relative;
+            top: 330px;
+            display: flex;
+            padding-top: 1.5%;
+            padding-left: 4%;
+            padding-right: 3%;
+            text-align: center;
+            border-radius: 3px;
+            color: hsla(0, 0%, 100%, 0.61);
+            font-size: 1.5rem;
+        }
+
+        .profile{
+            height: 620px;
+            width: auto;
+            position: relative;
+        }
+
+        .profile img{
+            border-radius: 5%;
+            position: relative;
+            left: 100px;
+            bottom: 50px;
+            height: 160px;
+            width: auto;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .profile h5{
+            position: relative;
+            color:rgba(255, 255, 255, 0.808);
+            font-size: 16px;
+            text-decoration: none;
+            text-align: center;
+            top: 180px;
+            left: 0px;
+
+        }
+
+        .profile h4{
+            position: relative;
+            justify-content: center;
+            font-family: 'Poppins', 'sans-serif';
+            display: flex;
+            left: 0px;
+            top: 170px;
+            font-weight: 800;
+            padding-left: 4%;
+            padding-right: 3%;
+            text-align: center;
+            border-radius: 3px;
+            color: hsla(0, 0%, 100%, 0.904);
+            font-size: 2rem;
+        }
+        .logo img{
+            float: left;
+            width: 100px;
+            margin: 20px;
+            height: auto;
+        }
+
+        span{
+            font-family: 'Poppins', 'sans-serif';
+            justify-content: center;
+            display: flex;
+            font-weight: 400;
+            padding-top: 1.5%;
+            padding-left: 4%;
+            padding-right: 3%;
+            text-align: center;
+            border-radius: 3px;
+            color: hsla(0, 0%, 100%, 0.479);
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        
+        span:hover{
+            font-family: 'Poppins', 'sans-serif';
+            font-weight: 400;
+            padding-top: 1.5%;
+            padding-left: 4%;
+            padding-right: 3%;
+            text-align: center;
+            border-radius: 3px;
+            color: hsla(0, 0%, 100%, 0.836);
+            font-size: 2.5rem;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        
+        h1{
+            color: #fff;
+            font-size: 35px;
+            text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6), 0px 0px 15px rgba(0, 0, 0, 0.6);
+            text-decoration: none;
+            text-align: center;
+        }
+    
+  }
+
+  @media only screen and (min-width: 375px) and (max-width: 383px) {
+
+    header{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('images/bar.png');
+        height: 80vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .background-images{
+        height: 80vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    
+        -webkit-animation: animate 30s ease-in-out infinite;
+        -moz-animation: animate 30s ease-in-out infinite;
+        -o-animation: animate 30s ease-in-out infinite;
+        animation-name: animate;
+        animation-duration: 30s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+    
+        .profile-description{
+            position: relative;
+            width: 375px;
+            left: 0px;
+            bottom: 300px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .profile-description p{
+            font-family: 'Poppins', 'sans-serif';
+            font-weight: 400;
+            position: relative;
+            top: 330px;
+            display: flex;
+            padding-top: 1.5%;
+            padding-left: 4%;
+            padding-right: 3%;
+            text-align: center;
+            border-radius: 3px;
+            color: hsla(0, 0%, 100%, 0.61);
+            font-size: 1.5rem;
+        }
+
+        .profile{
+            height: 620px;
+            width: auto;
+            position: relative;
+        }
+
+        .profile img{
+            border-radius: 5%;
+            position: relative;
+            left: 100px;
+            bottom: 50px;
+            height: 170px;
+            width: auto;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .profile h5{
+            position: relative;
+            color:rgba(255, 255, 255, 0.808);
+            font-size: 18px;
+            text-decoration: none;
+            text-align: center;
+            top: 190px;
+            left: 0px;
+
+        }
+
+        .profile h4{
+            position: relative;
+            justify-content: center;
+            font-family: 'Poppins', 'sans-serif';
+            display: flex;
+            left: 0px;
+            top: 185px;
+            font-weight: 800;
+            padding-left: 4%;
+            padding-right: 3%;
+            text-align: center;
+            border-radius: 3px;
+            color: hsla(0, 0%, 100%, 0.904);
+            font-size: 2.1rem;
+        }
+        .logo img{
+            float: left;
+            width: 100px;
+            margin: 20px;
+            height: auto;
+        }
+  }
+
+  @media only screen and (min-width: 384px) and (max-width: 400px) {
+
+    header{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('images/bar.png');
+        height: 80vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .background-images{
+        height: 80vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    
+        -webkit-animation: animate 30s ease-in-out infinite;
+        -moz-animation: animate 30s ease-in-out infinite;
+        -o-animation: animate 30s ease-in-out infinite;
+        animation-name: animate;
+        animation-duration: 30s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+    
+        .profile-description{
+            position: relative;
+            width: 384px;
+            left: 0px;
+            bottom: 300px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .profile-description p{
+            font-family: 'Poppins', 'sans-serif';
+            font-weight: 400;
+            position: relative;
+            top: 330px;
+            display: flex;
+            padding-top: 1.5%;
+            padding-left: 4%;
+            padding-right: 3%;
+            text-align: center;
+            border-radius: 3px;
+            color: hsla(0, 0%, 100%, 0.61);
+            font-size: 1.5rem;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .profile{
+            height: 650px;
+            width: auto;
+            position: relative;
+        }
+
+        .profile img{
+            border-radius: 5%;
+            position: relative;
+            left: 100px;
+            bottom: 50px;
+            height: 190px;
+            width: auto;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .profile h5{
+            position: relative;
+            color:rgba(255, 255, 255, 0.808);
+            font-size: 18px;
+            text-decoration: none;
+            text-align: center;
+            top: 215px;
+            left: 0px;
+
+        }
+
+        .profile h4{
+            position: relative;
+            justify-content: center;
+            font-family: 'Poppins', 'sans-serif';
+            display: flex;
+            left: 0px;
+            top: 210px;
+            font-weight: 800;
+            padding-left: 4%;
+            padding-right: 3%;
+            text-align: center;
+            border-radius: 3px;
+            color: hsla(0, 0%, 100%, 0.904);
+            font-size: 2.4rem;
+        }
+
+        .logo img{
+            float: left;
+            width: 100px;
+            margin: 20px;
+            height: auto;
+        }
+    
+  }
+  
+  @media only screen and (min-width: 401px) and (max-width: 415px) {
+
+    header{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('images/bar.png');
+        height: 80vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .background-images{
+        height: 80vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    
+        -webkit-animation: animate 30s ease-in-out infinite;
+        -moz-animation: animate 30s ease-in-out infinite;
+        -o-animation: animate 30s ease-in-out infinite;
+        animation-name: animate;
+        animation-duration: 30s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+
+  /*---------------------------------------------------------------------------------*/
+
+  .profile-description{
+    position: relative;
+    width: 400px;
+    left: 0px;
+    bottom: 300px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.profile-description p{
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 400;
+    position: relative;
+    top: 330px;
+    display: flex;
+    padding-top: 1.5%;
+    padding-left: 4%;
+    padding-right: 3%;
+    text-align: center;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.61);
+    font-size: 1.5rem;
+}
+
+.profile{
+    height: 700px;
+    width: auto;
+    position: relative;
+}
+
+.profile img{
+    border-radius: 5%;
+    position: relative;
+    left: 100px;
+    bottom: 50px;
+    height: 210px;
+    width: auto;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.profile h5{
+    position: relative;
+    color:rgba(255, 255, 255, 0.808);
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    top: 230px;
+    left: 0px;
+
+}
+
+.profile h4{
+    position: relative;
+    justify-content: center;
+    font-family: 'Poppins', 'sans-serif';
+    display: flex;
+    left: 0px;
+    top: 230px;
+    font-weight: 800;
+    padding-left: 4%;
+    padding-right: 3%;
+    text-align: center;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.904);
+    font-size: 2.5rem;
+}
+.logo img{
+    float: left;
+    width: 100px;
+    margin: 20px;
+    height: auto;
+}
+  }
+  
+  @media only screen and (min-width: 416px) and (max-width: 759px) {
+
+    header{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('images/bar.png');
+        height: 80vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .background-images{
+        height: 80vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    
+        -webkit-animation: animate 30s ease-in-out infinite;
+        -moz-animation: animate 30s ease-in-out infinite;
+        -o-animation: animate 30s ease-in-out infinite;
+        animation-name: animate;
+        animation-duration: 30s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+
+    .logo img{
+        float: left;
+        width: 100px;
+        margin: 20px;
+        height: auto;
+    }
+
+  /*---------------------------------------------------------------------------------*/
+
+  .profile-description{
+    position: relative;
+    width: 415px;
+    left: 0px;
+    bottom: 300px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.profile-description p{
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 400;
+    position: relative;
+    top: 330px;
+    display: flex;
+    padding-top: 1.5%;
+    padding-left: 4%;
+    padding-right: 3%;
+    text-align: center;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.61);
+    font-size: 1.55rem;
+}
+
+.profile{
+    height: 700px;
+    width: auto;
+    position: relative;
+}
+
+.profile img{
+    border-radius: 5%;
+    position: relative;
+    left: 100px;
+    bottom: 60px;
+    height: 230px;
+    width: auto;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.profile h5{
+    position: relative;
+    color:rgba(255, 255, 255, 0.808);
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    top: 240px;
+    left: 0px;
+
+}
+
+.profile h4{
+    position: relative;
+    justify-content: center;
+    font-family: 'Poppins', 'sans-serif';
+    display: flex;
+    left: 0px;
+    top: 240px;
+    font-weight: 800;
+    padding-left: 4%;
+    padding-right: 3%;
+    text-align: center;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.904);
+    font-size: 2.6rem;
+}
+
+  }
+  
+  @media only screen and (min-width: 760px) and (max-width: 914px) {
+
+    header{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('images/bar.png');
+        height: 80vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .background-images{
+        height: 80vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    
+        -webkit-animation: animate 30s ease-in-out infinite;
+        -moz-animation: animate 30s ease-in-out infinite;
+        -o-animation: animate 30s ease-in-out infinite;
+        animation-name: animate;
+        animation-duration: 30s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+
+    .title{
+        left: 50%;
+        padding-bottom: 10%;
+        transform: translate(-50%, -50%);
+    }
+
+    .logo img{
+        float: left;
+        width: 100px;
+        margin: 20px;
+        height: auto;
+    }
+
+      /*---------------------------------------------------------------------------------*/
+
+      .profile-description{
+        position: relative;
+        width: 760px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        bottom: 300px;
+    }
+    
+    .profile-description p{
+        font-family: 'Poppins', 'sans-serif';
+        font-weight: 400;
+        position: relative;
+        top: 330px;
+        display: flex;
+        padding-top: 1.5%;
+        padding-left: 4%;
+        padding-right: 3%;
+        text-align: center;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.61);
+        font-size: 1.6rem;
+    }
+    
+    .profile{
+        height: 700px;
+        width: auto;
+        position: relative;
+    }
+    
+    .profile img{
+        border-radius: 5%;
+        position: relative;
+        left: 290px;
+        bottom: 60px;
+        height: 240px;
+        width: auto;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    
+    .profile h5{
+        position: relative;
+        color:rgba(255, 255, 255, 0.808);
+        font-size: 22px;
+        text-decoration: none;
+        text-align: center;
+        top: 260px;
+        left: 0px;
+    
+    }
+    
+    .profile h4{
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        font-family: 'Poppins', 'sans-serif';
+        left: 0px;
+        top: 260px;
+        font-weight: 800;
+        padding-left: 4%;
+        padding-right: 3%;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.904);
+        font-size: 2.7rem;
+    }
+
+  }
+
+  @media only screen and (min-width: 915px) and (max-width: 1079px) {
+
+    header{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('images/bar.png');
+        height: 80vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .background-images{
+        height: 80vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    
+        -webkit-animation: animate 30s ease-in-out infinite;
+        -moz-animation: animate 30s ease-in-out infinite;
+        -o-animation: animate 30s ease-in-out infinite;
+        animation-name: animate;
+        animation-duration: 30s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+
+    .title{
+        left: 50%;
+        padding-bottom: 10%;
+        transform: translate(-50%, -50%);
+    }
+
+    .logo img{
+        float: left;
+        width: 100px;
+        margin: 20px;
+        height: auto;
+    }
+
+      /*---------------------------------------------------------------------------------*/
+
+      .profile-description{
+        position: relative;
+        width: 915px;
+        left: 0px;
+        bottom: 300px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    
+    .profile-description p{
+        font-family: 'Poppins', 'sans-serif';
+        font-weight: 400;
+        position: relative;
+        top: 330px;
+        display: flex;
+        padding-top: 1.5%;
+        padding-left: 4%;
+        padding-right: 3%;
+        text-align: center;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.61);
+        font-size: 1.6rem;
+    }
+    
+    .profile{
+        height: 570px;
+        width: auto;
+        position: relative;
+    }
+    
+    .profile img{
+        border-radius: 5%;
+        position: relative;
+        left: 342px;
+        bottom: 60px;
+        height: 240px;
+        width: auto;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    
+    .profile h5{
+        position: relative;
+        color:rgba(255, 255, 255, 0.808);
+        font-size: 22px;
+        text-decoration: none;
+        text-align: center;
+        top: 260px;
+        left: 0px;
+    
+    }
+    
+    .profile h4{
+        position: relative;
+        justify-content: center;
+        font-family: 'Poppins', 'sans-serif';
+        display: flex;
+        left: 0px;
+        top: 260px;
+        font-weight: 800;
+        padding-left: 4%;
+        padding-right: 3%;
+        text-align: center;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.904);
+        font-size: 2.7rem;
+    }
+
+  }

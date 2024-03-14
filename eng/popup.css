@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
+
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content{
+    border-radius: 5px;
+    position: fixed;
+    overflow-y:visible;
+    overflow-x: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: auto;
+    height: 880px;
+    z-index: 2;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.popup .content::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.popup .content::-webkit-scrollbar-thumb {
+background-color: rgb(85, 85, 85);
+outline: 1px solid rgb(83, 91, 99);
+border-radius: 2px;
+}
+
+.popup .close-btn{
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #1b1b1b;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.popup.active .overlay{
+    display: block;
+}
+
+.popup.active .content{
+    transition: all 500ms ease;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.avatar2{
+    position: absolute;
+    left: 3%;
+    top: 12px;
+    translate: translateX(-50%);
+    width: 180px;
+    height: 280px;
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: all 500ms ease;
+}
+
+.avatar2 img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-popup-text{
+    padding-bottom: 50px;
+}
+.profile-popup-text h2{
+    font-size: 1.5em;
+    font-weight: 600;
+    color: rgb(255, 255, 255); 
+    line-height: 1.2em;
+    padding-left: 40%;
+}
+
+.profile-popup-text h3{
+    font-size: 1.25em;
+    font-weight: 600;
+    color: rgb(255, 255, 255); 
+    line-height: 1.2em;
+}
+    
+.profile-popup-text h2 span{
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+.profile-popup-text h3 span{
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+.profile-popup-text .data2{
+    display: inline;
+    justify-content: space-between;
+    margin: 50px;
+    max-width: 100px;
+    max-height: 650px;
+    padding-left: 42%;
+    line-height: 40px;
+}
+
+.profile-popup-text .data2 span{
+    font-size: 1em;
+    font-weight: 500;
+    opacity: 0.6;
+    color: #fff;
+}
+
+.profile-popup-text h6{
+    font-size: 0.9em;
+    font-weight: 500;
+    opacity: 0.8;
+    padding-left: 20px;
+    color: #fff;
+}
+
+.playbutton{
+    cursor: pointer;
+    display: inline;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    padding-left: 10px;
+    font-family: initial;
+    border-radius: 50%;
+}
+
+.play-btn{
+    padding-top: 0px;
+    position: relative;
+    justify-items: center;
+}
+
+.play-btn .playbutton img{
+    height: 100px;
+    width: auto;
+}
+
+.play-btn h6{
+    color:#fff;
+}
+
+
+
+
+.btn {
+    position: relative;
+    width: 800px;
+    height: 100px;
+    margin-bottom: 0px;
+    padding: 0 10px;
+    text-align: left;
+    font-size: 16px;
+    color: rgb(121, 121, 121);
+    background: #181818;
+  }
+  
+  #btn_container {
+    width: 120px;
+    height: 70px;
+    border-radius: 5px;
+    float: left;
+    text-align: center;
+  }
+  
+  .btn img {
+    margin-top: 0px;
+    border-radius: 10px;
+  }
+  
+  .btn h3{
+    font-size: 1.00em;
+    font-weight: 600;
+    color: rgb(255, 255, 255); 
+    line-height: 1.2em;
+    padding-left: 130px;
+  }
+  
+  .btn h5{
+    font-size: 0.75em;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.664); 
+    line-height: 1.2em;
+    padding-left: 130px;
+  }
+
+    .btn h6{
+        position: relative;
+        font-size: 1.00em;
+        font-weight: 600;
+        color: rgb(255, 255, 255); 
+        line-height: 1.2em;
+        padding-left: 710px;
+        margin-top: -55px;
+    }
+
+
+.plus{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%;
+}
+
+    .btn-plus {
+      position: relative;
+      width: 200px;
+      height: 250px;
+      margin-bottom: 20px;
+      padding: 0 10px;
+      text-align: left;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.719);
+      background: rgb(39, 39, 39);
+    }
+
+    .btn-plus img {
+      margin-top: -55px;
+      border-radius: 10px;
+    }
+
+    .play-btn-plus{
+      padding-right: 10px;
+      position: relative;
+      justify-items: center;
+      flex-wrap: wrap;
+
+  }
+
+  .popup h4{
+    font-size: 3.00em;
+    font-weight: 700;
+    color: rgb(255, 255, 255); 
+    line-height: 1.2em;
+    align-items: center;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
+.episode {
+  background-color: rgba(250, 250, 255, 0.178);
+  color: white;
+  padding: 2px 6px;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 6px;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 400px) {
+
+  .plus{
+    display: inline-block;
+    justify-content: center;
+  }
+  
+
+  .popup .content{
+    position: fixed;
+    max-height: calc(100vh - 10px);
+    overflow-y: auto;
+    top: 50%;
+  }
+
+    .btn {
+        position: relative;
+        width: 360px;
+        height: 130px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 0 10px;
+        text-align: left;
+        font-size: 16px;
+        color: rgb(121, 121, 121);
+        background: #181818;
+      }
+
+      .btn h6{
+        position: relative;
+        font-size: 0.85em;
+        font-weight: 600;
+        color: rgb(121, 121, 121); 
+        line-height: 1.2em;
+        padding-left: 130px;
+        margin-top: -75px;
+    }
+
+    #btn_container {
+        width: 120px;
+        height: 70px;
+        border-radius: 5px;
+        float: left;
+        text-align: center;
+        margin-top: -60px;
+  }
+  
+    .btn img {
+        margin-top: 0px;
+        border-radius: 10px;
+      }
+      
+      .btn h3{
+        font-size: 1.00em;
+        font-weight: 600;
+        color: rgb(255, 255, 255); 
+        line-height: 1.2em;
+        padding-left: 130px;
+        margin-top: -40px;
+      }
+      
+      .btn h5{
+        font-size: 0.75em;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.664); 
+        line-height: 1.2em;
+        padding-left: 0px;
+        margin-top: 35px;
+      }
+
+  }
+  
+  @media only screen and (min-width: 401px) and (max-width: 415px) {
+    .plus{
+      display: inline-block;
+      justify-content: center;
+    }
+    .btn {
+        position: relative;
+        width: 400px;
+        height: 130px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 0 10px;
+        text-align: left;
+        font-size: 16px;
+        color: rgb(121, 121, 121);
+        background: #181818;
+      }
+
+      .btn h6{
+        position: relative;
+        font-size: 0.85em;
+        font-weight: 600;
+        color: rgb(121, 121, 121); 
+        line-height: 1.2em;
+        padding-left: 150px;
+        margin-top: -75px;
+    }
+
+    #btn_container {
+        width: 140px;
+        height: 80px;
+        border-radius: 5px;
+        float: left;
+        text-align: center;
+        margin-top: -60px;
+  }
+  
+    .btn img {
+        margin-top: 5px;
+        border-radius: 10px;
+        width: 140px;
+        height: 80px;
+      }
+      
+      .btn h3{
+        font-size: 1.00em;
+        font-weight: 600;
+        color: rgb(255, 255, 255); 
+        line-height: 1.2em;
+        padding-left: 150px;
+        margin-top: -40px;
+      }
+      
+      .btn h5{
+        font-size: 0.75em;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.664); 
+        line-height: 1.2em;
+        padding-left: 0px;
+        margin-top: 50px;
+      }
+
+  }
+
+  .popup hr {
+    width: 90%;
+    margin-left: 5%;
+    justify-content: center;
+    opacity: 30%;
+    }
+  
+  
+  @media only screen and (min-width: 416px) and (max-width: 500px) {
+    .plus{
+      display: inline;
+      justify-content: center;
+    }
+    .btn {
+        position: relative;
+        width: 400px;
+        height: 130px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 0 10px;
+        text-align: left;
+        font-size: 16px;
+        color: rgb(121, 121, 121);
+        background: #181818;
+      }
+
+      .btn h6{
+        position: relative;
+        font-size: 0.85em;
+        font-weight: 600;
+        color: rgb(121, 121, 121); 
+        line-height: 1.2em;
+        padding-left: 150px;
+        margin-top: -75px;
+    }
+
+    #btn_container {
+        width: 140px;
+        height: 80px;
+        border-radius: 5px;
+        float: left;
+        text-align: center;
+        margin-top: -60px;
+  }
+  
+    .btn img {
+        margin-top: 5px;
+        border-radius: 10px;
+        width: 140px;
+        height: 80px;
+      }
+      
+      .btn h3{
+        font-size: 1.00em;
+        font-weight: 600;
+        color: rgb(255, 255, 255); 
+        line-height: 1.2em;
+        padding-left: 150px;
+        margin-top: -40px;
+      }
+      
+      .btn h5{
+        font-size: 0.75em;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.664); 
+        line-height: 1.2em;
+        padding-left: 0px;
+        margin-top: 50px;
+      }
+
+  }
+
+  @media only screen and (min-width: 760px) and (max-width: 800px) {
+    .btn {
+        position: relative;
+        width: 730px;
+        height: 130px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 0 10px;
+        text-align: left;
+        font-size: 16px;
+        color: rgb(121, 121, 121);
+        background: #181818;
+      }
+
+      .btn h6{
+        position: relative;
+        font-size: 0.85em;
+        font-weight: 600;
+        color: rgb(121, 121, 121); 
+        line-height: 1.2em;
+        padding-left: 150px;
+        margin-top: -75px;
+    }
+
+    #btn_container {
+        width: 140px;
+        height: 80px;
+        border-radius: 5px;
+        float: left;
+        text-align: center;
+        margin-top: -70px;
+  }
+  
+    .btn img {
+        margin-top: 15px;
+        border-radius: 10px;
+        width: 140px;
+        height: 80px;
+      }
+      
+      .btn h3{
+        font-size: 1.00em;
+        font-weight: 600;
+        color: rgb(255, 255, 255); 
+        line-height: 1.2em;
+        padding-left: 150px;
+        margin-top: -50px;
+      }
+      
+      .btn h5{
+        font-size: 0.75em;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.664); 
+        line-height: 1.2em;
+        padding-left: 0px;
+        margin-top: 65px;
+      }
+  }
+
+  @media only screen and (min-width: 800px) and (max-width: 1000px) {
+    .popup .content{
+      position: fixed;
+      max-height: calc(100vh - 10px);
+      overflow-y: auto;
+      top: 50%;
+    }
+    .btn {
+        position: relative;
+        width: 730px;
+        height: 130px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 0 10px;
+        text-align: left;
+        font-size: 16px;
+        color: rgb(121, 121, 121);
+        background: #181818;
+      }
+
+      .btn h6{
+        position: relative;
+        font-size: 0.85em;
+        font-weight: 600;
+        color: rgb(121, 121, 121); 
+        line-height: 1.2em;
+        padding-left: 150px;
+        margin-top: -75px;
+    }
+
+    #btn_container {
+        width: 140px;
+        height: 80px;
+        border-radius: 5px;
+        float: left;
+        text-align: center;
+        margin-top: -70px;
+  }
+  
+    .btn img {
+        margin-top: 15px;
+        border-radius: 10px;
+        width: 140px;
+        height: 80px;
+      }
+      
+      .btn h3{
+        font-size: 1.00em;
+        font-weight: 600;
+        color: rgb(255, 255, 255); 
+        line-height: 1.2em;
+        padding-left: 150px;
+        margin-top: -50px;
+      }
+      
+      .btn h5{
+        font-size: 0.75em;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.664); 
+        line-height: 1.2em;
+        padding-left: 0px;
+        margin-top: 65px;
+      }
+  }

@@ -1,0 +1,34 @@
+button{
+    padding: 9px 25px;
+    background-color: rgba(241, 255, 39, 0.808);
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.button6{
+    margin-right: 10px;
+    text-decoration: none;
+    max-width: 42px;
+    min-width: 32px;
+    min-height: 32px;
+    max-height: 42px;
+    background-color: rgba(34, 34, 34, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-width: 2px;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    color: var(--white);
+    border-radius: 50%;
+    border-color: var(--white);
+    background-color: rgba(42, 42, 42, 1);
+    
+}
+
+.button6 svg{
+    padding-right: 1px;
+    padding-bottom: 2px;
+    outline: none;
+    text-decoration: none;
+}
