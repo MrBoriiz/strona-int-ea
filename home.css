@@ -121,7 +121,7 @@ header{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('images/wojny\ meneli\ poster\ v.2.png');
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('images/background_image_1.png');
 }
 
 
@@ -130,29 +130,21 @@ h6{
 }
 
 .logo img{
-    float: left;
     width: 150px;
     margin: 20px;
     height: auto;
 }
 
 .main{
-    animation: 1s ease-out 0s 1 slideInFromTop;
-    -webkit-animation: 1s ease-out 0s 1 slideInFromTop;
-    -moz-animation: 1s ease-out 0s 1 slideInFromTop;
-    -o-animation: 1s ease-out 0s 1 slideInFromTop;
     margin: auto;
     max-width: 1200px;
+    position: absolute;
 }
 
 .home-title{
     position: relative;
     right: 50%;
     max-width: 700px;
-    animation: 1s ease-out 0s 1 slideInFromTop2;
-    -webkit-animation: 1s ease-out 0s 1 slideInFromTop2;
-    -moz-animation: 1s ease-out 0s 1 slideInFromTop2;
-    -o-animation: 1s ease-out 0s 1 slideInFromTop2;
 }
 
 .title h1{
@@ -236,7 +228,26 @@ p{
     text-align: center;
 }
 
+.slide2{
+    text-decoration: none;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
 
+.season{
+    position: relative;
+    left: 4%;
+    text-align: center;
+    font-weight: 600;
+    color:#fff;
+    font-size: 24px;
+    width: 150px;
+    height: 50px;
+    background-color: #181818;
+    border-radius: 10%;
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.137);
+}
 
 
 
@@ -295,13 +306,39 @@ p{
         text-decoration: none;
         text-align: center;
     }
+
+    .slider{
+        position: relative;
+        min-width: 360px;
+        max-width: 374px;
+    }
+
+    .slide{
+        position: relative;
+        min-width: 360px;
+        max-width: 374px;
+    }
+
+    .slide-title{
+        position: relative;
+        left: 1%;
+        min-width: 360px;
+        max-width: 374px;
+    }
+
+    .slide-title img{
+        min-width: 360px;
+        max-width: 374px;
+        height: auto;
+    }
+    
   }
 
   @media only screen and (min-width: 375px) and (max-width: 400px) {
 
     .home-title{
         right: 0%;
-        width: 350px;
+        min-width: 350px;
     }
 
     .logo img{
@@ -328,6 +365,31 @@ p{
         text-decoration: none;
         text-align: center;
     }
+
+    .slider{
+        position: relative;
+        min-width: 375px;
+        max-width: 400px;
+    }
+
+    .slide{
+        position: relative;
+        min-width: 375px;
+        max-width: 400px;
+    }
+
+    .slide-title{
+        position: relative;
+        left: 1%;
+        min-width: 375px;
+        max-width: 400px;
+    }
+
+    .slide-title img{
+        min-width: 375px;
+        max-width: 400px;
+        height: auto;
+    }
   }
 
   @media only screen and (min-width: 401px) and (max-width: 415px) {
@@ -341,6 +403,31 @@ p{
         margin: 20px;
         height: auto;
     }
+
+    .slider{
+        position: relative;
+        min-width: 401px;
+        max-width: 415px;
+    }
+
+    .slide{
+        position: relative;
+        min-width: 401px;
+        max-width: 415px;
+    }
+
+    .slide-title{
+        position: relative;
+        left: 1%;
+        min-width: 401px;
+        max-width: 415px;
+    }
+
+    .slide-title img{
+        min-width: 401px;
+        max-width: 415px;
+        height: auto;
+    }
   }
 
   @media only screen and (min-width: 416px) and (max-width: 500px) {
@@ -352,6 +439,28 @@ p{
         float: left;
         width: 100px;
         margin: 20px;
+        height: auto;
+    }
+
+    .slider{
+        position: relative;
+        min-width: 416px;
+        max-width: 500px;
+    }
+
+    .slide{
+        position: relative;
+        width: 416px;
+    }
+
+    .slide-title{
+        position: relative;
+        left: 1%;
+        width: 416px;
+    }
+
+    .slide-title img{
+        width: 416px;
         height: auto;
     }
   }
@@ -395,6 +504,28 @@ p{
         float: left;
         width: 100px;
         margin: 20px;
+        height: auto;
+    }
+
+    .slider{
+        position: relative;
+        min-width: 501px;
+        max-width: 759px;
+    }
+
+    .slide{
+        position: relative;
+        width: 501px;
+    }
+
+    .slide-title{
+        position: relative;
+        left: 1%;
+        width: 501px;
+    }
+
+    .slide-title img{
+        width: 501px;
         height: auto;
     }
   }
@@ -441,9 +572,106 @@ p{
         margin: 20px;
         height: auto;
     }
+
+    .slider{
+        position: relative;
+        min-width: 760px;
+        max-width: 1000px;
+    }
+
+    .slide{
+        position: relative;
+        width: 760px;
+    }
+
+    .slide-title{
+        position: relative;
+        left: 1%;
+        width: 760px;
+    }
+
+    .slide-title img{
+        width: 501px;
+        height: auto;
+    }
   }
 
+  @media only screen and (min-width: 1001px) and (max-width: 1500px) {
 
+  .slider{
+    position: relative;
+    min-width: 1001px;
+    max-width: 1500px;
+    }
+
+    .slide{
+        position: relative;
+        width: 1000px;
+    }
+
+    .slide-title{
+        position: relative;
+        left: 1%;
+        width: 1000px;
+    }
+
+    .slide-title img{
+        width: 600px;
+        height: auto;
+    }
+
+}
+
+@media only screen and (min-width: 1501px) and (max-width: 1700px) {
+
+    .slider{
+      position: relative;
+      min-width: 1501px;
+      max-width: 1700px;
+      }
+  
+      .slide{
+          position: relative;
+          width: 1501px;
+      }
+  
+      .slide-title{
+          position: relative;
+          left: 1%;
+          width: 1501px;
+      }
+  
+      .slide-title img{
+          width: 600px;
+          height: auto;
+      }
+  
+  }
+
+  @media only screen and (min-width: 1701px) and (max-width: 2600px) {
+
+    .slider{
+      position: relative;
+      min-width: 1701px;
+      max-width: 2560px;
+      }
+  
+      .slide{
+          position: relative;
+          width: 1701px;
+      }
+  
+      .slide-title{
+          position: fixed;
+          width: 1701px;
+      }
+  
+      .slide-title img{
+          width: 600px;
+          height: auto;
+      }
+  
+  }
 
   .backgound-clip{
     object-fit: cover;

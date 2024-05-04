@@ -534,12 +534,13 @@ border-radius: 2px;
       }
   }
 
-  @media only screen and (min-width: 800px) and (max-width: 1000px) {
+  @media only screen and (min-width: 800px) and (max-width: 1200px) {
     .popup .content{
       position: fixed;
       max-height: calc(100vh - 10px);
       overflow-y: auto;
       top: 50%;
+      height: 1200px;
     }
     .btn {
         position: relative;
@@ -591,6 +592,73 @@ border-radius: 2px;
       
       .btn h5{
         font-size: 0.75em;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.664); 
+        line-height: 1.2em;
+        padding-left: 0px;
+        margin-top: 65px;
+      }
+  }
+
+  @media only screen and (min-width: 1200px){
+    .popup .content{
+      position: fixed;
+      max-height: calc(100vh - 10px);
+      overflow-y: auto;
+      top: 50%;
+      height: 1200px;
+    }
+
+    .btn {
+        position: relative;
+        width: 1100px;
+        height: 130px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 0 10px;
+        text-align: left;
+        font-size: 16px;
+        color: rgb(121, 121, 121);
+        background: #181818;
+      }
+
+      .btn h6{
+        position: relative;
+        font-size: 1.2em;
+        font-weight: 600;
+        color: rgb(121, 121, 121); 
+        line-height: 1.2em;
+        padding-left: 150px;
+        margin-top: -70px;
+    }
+
+    #btn_container {
+        width: 140px;
+        height: 80px;
+        border-radius: 5px;
+        float: left;
+        text-align: center;
+        margin-top: -70px;
+  }
+  
+    .btn img {
+        margin-top: 15px;
+        border-radius: 10px;
+        width: 140px;
+        height: 80px;
+      }
+      
+      .btn h3{
+        font-size: 1.30em;
+        font-weight: 600;
+        color: rgb(255, 255, 255); 
+        line-height: 1.2em;
+        padding-left: 150px;
+        margin-top: -50px;
+      }
+      
+      .btn h5{
+        font-size: 0.85em;
         font-weight: 600;
         color: rgba(255, 255, 255, 0.664); 
         line-height: 1.2em;
