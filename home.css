@@ -96,7 +96,6 @@ header{
     width: auto;
     background-size: cover;
     background-position: center;
-
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
@@ -327,8 +326,7 @@ p{
     }
 
     .slide-title img{
-        min-width: 360px;
-        max-width: 374px;
+        width: 360px;
         height: auto;
     }
     
@@ -374,8 +372,7 @@ p{
 
     .slide{
         position: relative;
-        min-width: 375px;
-        max-width: 400px;
+        width: 375px;
     }
 
     .slide-title{
@@ -424,8 +421,7 @@ p{
     }
 
     .slide-title img{
-        min-width: 401px;
-        max-width: 415px;
+        width: 401px;
         height: auto;
     }
   }
