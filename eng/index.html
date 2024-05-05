@@ -5,71 +5,212 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entangled Artists | Home page</title>
-    <link rel="icon" href="../logos/icon.png" />
-    <link rel="stylesheet" href="menu.css" />
-    <link rel="stylesheet" href="home.css" />
-    <link rel="stylesheet" href="scroll.css" />
-    <link rel="stylesheet" href="popup.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="moviecard.css" />
-    <link rel="stylesheet" href="moviemodal.css" />
-    <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="blog-post-card.css" />
-    <script src="popup.js"></script>
+    <link rel="icon" href="./logos/icon.png" />
+    <link rel="stylesheet" href="../menu.css" />
+    <link rel="stylesheet" href="../home.css" />
+    <link rel="stylesheet" href="../scroll.css" />
+    <link rel="stylesheet" href="../popup.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../moviecard.css" />
+    <link rel="stylesheet" href="../moviemodal.css" />
+    <link rel="stylesheet" href="../footer.css" />
+    <link rel="stylesheet" href="../blog-post-card.css" />
+    <link rel="stylesheet" href="../slider.css" />
+    <script src="../popup.js"></script>
+    <script src="../slider.js"></script>
+    <script src="../select.js"></script>
+    
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </head>
+
 <body>
     <header>
-        <div class="landing-image-gradient-0deg"></div>
-        <div class="landing-image-gradient-90deg">
-            <div class="main">
-                <div class="logo">
-                    <img src="../images/logo.png">
-                </div>
-            </div>
-        </div>
+        <div class="CSSgal">
 
-        <div class="title">
-            <div class="home-title">
-                <h1>EXPLORE THE</h1>
-                <h3>WORLD OF CRAZY CARTOONS!</h3>
-                <p>Are you looking for captivating stories? Or are you looking for something absurd, serious and funny?
-                    If so, you've come to the right place! You will find everything you need here!
-                </p>
-                <div class="buttons">
-                    <a href="#about"><button class="button7">ABOUT US</button></a>
-                    <a href="#productions"><button class="button7">OUR PRODUCTIONS</button></a>
-                    <a href="#blog"><button class="button7">NEWS / BLOG</button></a>
-                </div>
-            </div>
-        </div>
+            <!-- Don't wrap targets in parent -->
+            <s id="s1"></s> 
+            <s id="s2"></s>
+            <s id="s3"></s>
+            <s id="s4"></s>
+          
+            <div class="slider">
 
-        <div class="landing-image"></div>
+              <div class="slide-1">
+                <!--SLIDE 1-->
+
+                <div class="landing-image-gradient-90deg"></div>
+                <div class="landing-image-gradient-0deg"></div>
+
+                <div class="main">
+                    <div class="logo">
+                        <img src="../images/logo.png">
+                    </div>
+                </div>
+
+                <div class="title">
+                    <div class="home-title">
+                        <h1>EXPLORE THE</h1>
+                        <h3>WORLD OF CRAZY CARTOONS!</h3>
+                        <p>Are you looking for captivating stories? Or are you looking for something absurd, serious and funny? 
+                            If so, you've come to the right place! You will find everything you need here!
+                        </p>
+                        <div class="buttons">
+                            <a href="#onas"><button class="button7">ABOUT US</button></a>
+                            <a href="#produkcje"><button class="button7">OUR PRODUCTIONS</button></a>
+                            <a href="#blog"><button class="button7">NEWS / BLOG</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="landing-image"></div>
+
+              </div>
+
+
+
+
+
+              <div class="slide">
+                <!--SLIDE 2-->
+                <div class="slide-image-gradient-0deg"></div>
+                <div class="slide-image-gradient-90deg"></div>
+
+                <div class="main">
+                    <div class="logo">
+                        <img src="../images/logo.png">
+                    </div>
+                </div>
+
+                <div class="title">
+                    <div class="slide-title">
+                        <img src="../logos/eng/bad-exorcist-logo.png" width="auto" height="300">
+                        <h4 class="episode">COOPERATION / CO-PRODUCTION</h4>
+                        <p>Bogdan Boner, a self-taught exorcist living near Piaseczno with his friends helpers Marcinek and the demon Domino, fight against the unclean forces that haunt surroundings.
+                        </p>
+                        <a href="https://www.netflix.com/"><button class="button9">
+                            PLAY
+                        </button></a>
+                        <button class="button11" onclick="togglePopup13()">MORE INFO</button>
+                    </div>
+                </div>
+
+                <!--<div class="slide-2-vid">
+                    <video src="./movies/boner_s4.mp4" autoplay muted poster="./images/egzorcysta-tlo.png"></video>
+                </div>-->
+                <div class="slide-2-bc"></div>
+              </div>
+
+
+
+
+
+
+              <div class="slide">
+                <!--SLIDE 3-->
+                <div class="slide-image-gradient-0deg"></div>
+                <div class="slide-image-gradient-90deg"></div>
+
+                <div class="main">
+                    <div class="logo">
+                        <img src="../images/logo.png">
+                    </div>
+                </div>
+
+                <div class="title">
+                    <div class="slide-title">
+                        <img src="../logos/wojny meneli.png" width="auto" height="300">
+                        <h4 class="episode">ORIGINAL PRODUCTION</h4>
+                        <p>Four drinking friends live peacefully in the kingdom of bums until... 
+                            one of them is fed up with being humiliated and treated like the worst 
+                            piece of trash constant robbery. He decides to take over the throne in the 
+                            kingdom and live on it the level it deserves.
+                        </p>
+                        <a href="https://www.youtube.com/@EntangledArtists"><button class="button9">
+                            COMING SOON
+                        </button></a>
+                        <button class="button11" onclick="togglePopup8()">MORE INFO</button>
+                    </div>
+                </div>
+
+                <!--<div class="slide-2-vid">
+                    <video src="./movies/boner_s4.mp4" autoplay muted poster="./images/egzorcysta-tlo.png"></video>
+                </div>-->
+                <div class="slide-3-bc"></div>
+              </div>
+
+
+
+
+
+
+              <div class="slide">
+                <!--SLIDE 4-->
+                <div class="slide-image-gradient-0deg"></div>
+                <div class="slide-image-gradient-90deg"></div>
+
+                <div class="main">
+                    <div class="logo">
+                        <img src="../images/logo.png">
+                    </div>
+                </div>
+
+                <div class="title">
+                    <div class="slide-title">
+                        <h4 class="episode">BLOG - NEWS</h4>
+                        <p>"Miasto Gliwice" the first series and both the first production of the Entangled Artists group (formerly Red Diamond Studio) were announced in July 2022 in the form of a trailer for the second season. [...]
+                        </p>
+                        <a href="./blog/miasto-gliwice-futher-production-cancelled.html"><button class="button11">MORE INFO</button></a>
+                    </div>
+                </div>
+
+                <!--<div class="slide-2-vid">
+                    <video src="./movies/boner_s4.mp4" autoplay muted poster="./images/egzorcysta-tlo.png"></video>
+                </div>-->
+                <div class="slide-4-bc"></div>
+              </div>
+
+
+            </div>
+            
+            <div class="prevNext">
+              <div><a href="#s4"><</a><a href="#s2">></a></div>
+              <div><a href="#s1"><</a><a href="#s3">></a></div>
+              <div><a href="#s2"><</a><a href="#s4">></a></div>
+              <div><a href="#s3"><</a><a href="#s1">></a></div>
+            </div>
+          
+            <div class="bullets">
+              <a href="#s1"></a>
+              <a href="#s2"></a>
+              <a href="#s3"></a>
+              <a href="#s4"></a>
+            </div>
+          
+          </div>
     </header>
 
 <!-- --------------------------------------------------------------------- -->
-<a id="about"></a>
+<a id="onas"></a>
 <div class="title2">
+
     <h2>ABOUT US</h2>
     <h3></h3>
     <hr>
-    <p>The "Entangled Artists" team is a group that has been producing 2D animations since 2019.
-        We create original films, series as well as short films, but we do not limit ourselves only to original projects,
-        because we are constantly open to external orders.
+    <p>The "Entangled Artists" team is a group that has been producing 2D animations since 2019. We create original films, series as well as short films, 
+        but we do not limit ourselves only to original projects, because we are constantly open to external orders.
     </p>
     
-    <p>The group consists of people with various experiences, but the most important thing is that each of us shares the passion for writing complex and
-        extensive stories, film editing and production, animation, etc. The initial goal of the team was to create content "from people to people",
-        so that everyone participating in the project can demonstrate their skills and have fun working on our projects. We are currently aiming for the highest one
-        the quality of production we can achieve, in order to set the bar higher and higher and constantly learn new things.
+    <p>The group consists of people with various experiences, but the most important thing is that each of us shares the passion for writing complex and extensive 
+        stories, film editing and production, animation, etc. The initial goal of the team was to create content "from people to people", so that everyone participating 
+        in the project can demonstrate their skills and have fun working on our projects. We are currently aiming for the highest one the quality of production we can achieve, 
+        in order to set the bar higher and higher and constantly learn new things.
     </p>
 
-    <p>We operate mainly on YouTube, but we are also active on social media such as LinkedIn, Vimeo and Instagram,
-        where we also publish content related to our work.
+    <p>We operate mainly on YouTube, but we are also active on social media such as LinkedIn, Vimeo and Instagram, where we also publish content related to our work.
     </p>
 </div>
 
@@ -80,7 +221,7 @@
     <div class="gradient-180deg"></div>
 </div>
 
-<a id="productions"></a>
+<a id="produkcje"></a>
 <div class="title2">
     <h2>ORIGINAL PRODUCTIONS</h2>
     <h3>ANIMATED FILMS AND SERIES</h3>
@@ -168,7 +309,7 @@
                            <a href="https://www.youtube.com/@EntangledArtists"><div class="header-buttons">
                             <button type="button" class="button9">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="auto" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16"> <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/> </svg>
-                                COMING SOON
+                                COMING SOON 
                             </button></a>
 
                             </div>
@@ -185,10 +326,10 @@
                             <span class="description-badge">4k</span>
                         </div>
                 
-                        <p>Four drinking friends live peacefully in the kingdom of bums until...
-                            one of them is fed up with being humiliated and treated like the worst piece of trash
-                            constant robbery. He decides to take over the throne in the kingdom and live on it
-                            the level it deserves.</p>
+                        <p>Four drinking friends live peacefully in the kingdom of bums until... 
+                            one of them is fed up with being humiliated and treated like the worst 
+                            piece of trash constant robbery. He decides to take over the throne in the 
+                            kingdom and live on it the level it deserves.</p>
     
                         </div>
                 
@@ -206,7 +347,7 @@
                         <div class="genres">
                             <h3>Genre:</h3>
                             <span class="sub-title">Animated,</span>
-                            <span class="sub-title">Comdedy,</span>
+                            <span class="sub-title">Comedy,</span>
                             <span class="sub-title">Fictional,</span>
                             <span class="sub-title">Mocking</span>
                         </div>
@@ -266,10 +407,9 @@
                             <span class="description-badge">FHD</span>
                         </div>
                 
-                        <p>The world seen through the eyes of four high school students experience
-                            various adventures and struggling with everyday life in a unique way.
-                            The series is a kind of mockery of current trends, politicians and everything about us
-                            surrounds.</p>
+                        <p> The world seen through the eyes of four high school students experience various 
+                            adventures and struggling with everyday life in a unique way. The series is a kind 
+                            of mockery of current trends, politicians and everything about us surrounds.</p>
     
                         </div>
                 
@@ -299,91 +439,116 @@
                         </div>
                     </div>
 
+                    <p>Episodes</p>
 
-                    <p></p>
-                    <h4>SEASON 1</h4>
-                    <p></p>
+                    <select class="season" id="mg" name="form_select" onchange="showDiv(this)">
+                        <option value="0">Season 1</option>
+                        <option value="1">Extras</option>
+                    </select>
+                    <div id="mgs1" style="display:block;">
+    
+                        <p></p>
+                        <h4></h4>
+                        <p></p>
 
-                    <hr>
+                        <hr>
+    
+                        <a href="https://youtu.be/gPHyLuiuDCA?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><div class="play-btn">
+                            <button class="btn">
+                                <div id="btn_container"><img src="../images/MINIATURKA_MG_1.png" width="120" height="70" /></div>
+                                <h3><span class="episode">1</span>Tuberocalypse</h3>
+                                <span class="duration">11 min</span>
+                                <h5>Influencers are flocking to the city in droves. Cherry, Fatty, Damian and doro decide to get rid of them to restore peace.</h5>
+                              </button>
+                        </div></a>
+    
+                        <hr>
+    
+                        <a href="https://youtu.be/w7JHnqaOOqs?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><div class="play-btn">
+                            <button class="btn">
+                                <div id="btn_container"><img src="../images/MINIATURKA_MG_2.png" width="120" height="70" /></div>
+                                <h3><span class="episode">2</span>Screw the politicians</h3>
+                                <span class="duration">24 min</span>
+                                <h5>After the government introduces a tax on minced cutlets, the main characters take matters into their own hands and go to Warsaw.</h5>
+                              </button>
+                        </div></a>
+    
+                        <hr>
+    
+                        <a href="https://youtu.be/FYTYPq6DMzE?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><div class="play-btn">
+                            <button class="btn">
+                                <div id="btn_container"><img src="../images/MINIATURKA_MG_3.png" width="120" height="70" /></div>
+                                <h3><span class="episode">3</span>Fatty's Love</h3>
+                                <span class="duration">18 min</span>
+                                <h5>A girl from school, Sarah, falls in love with Fatty. Cherry goes to a furry convention and then ends up at an animal shelter..</h5>
+                              </button>
+                        </div></a>
+    
+                        <hr>
+    
+                        <a href="https://youtu.be/6JOYCHbyGPM?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><div class="play-btn">
+                            <button class="btn">
+                                <div id="btn_container"><img src="../images/MINIATURKA_MG_4.png" width="120" height="70" /></div>
+                                <h3><span class="episode">4</span>Winter advertising block</h3>
+                                <span class="duration">10 min</span>
+                                <h5>There's a charity ad block coming up that the guys want to see. For this purpose, they bring in an animator, Popo, so that they don't have to watch it by themselfs.</h5>
+                              </button>
+                        </div></a>
+    
+                        <hr>
+    
+                        <a href="https://youtu.be/UPFk23rXTPU?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><div class="play-btn">
+                            <button class="btn">
+                                <div id="btn_container"><img src="../images/MINIATURKA_MG_5.png" width="120" height="70" /></div>
+                                <h3><span class="episode">5</span>Women's strike</h3>
+                                <span class="duration">35 min</span>
+                                <h5>Women are striking en masse against the absolute ban on abortion. Politicians, knowing that the situation is tense, they decide to hide in a bunker under the political party headquarters.</h5>
+                              </button>
+                        </div></a>
+    
+                        <hr>
 
-                    <a href="https://youtu.be/gPHyLuiuDCA?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><div class="play-btn">
-                        <button class="btn">
-                            <div id="btn_container"><img src="../images/MINIATURKA_MG_1.png" width="120" height="70" /></div>
-                            <h3><span class="episode">1</span>Tuberocalypse</h3>
-                            <h5>Influencers are flocking to the city in droves. Cherry, Fatty, Damian and doro decide to get rid of them to restore peace.</h5>
-                            <h6>11 min</h6>
-                          </button>
-                    </div></a>
+                    </div>
 
-                    <hr>
+                    <div id="mgdod" style="display:none;">
+                        <p></p>
+                        <h4></h4>
+                        <p></p>
 
-                    <a href="https://youtu.be/w7JHnqaOOqs?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><div class="play-btn">
-                        <button class="btn">
-                            <div id="btn_container"><img src="../images/MINIATURKA_MG_2.png" width="120" height="70" /></div>
-                            <h3><span class="episode">2</span>Screw the politicians</h3>
-                            <h5>After the government introduces a tax on minced cutlets, the main characters take matters into their own hands and go to Warsaw.</h5>
-                            <h6>24 min</h6>
-                          </button>
-                    </div></a>
-
-                    <hr>
-
-                    <a href="https://youtu.be/FYTYPq6DMzE?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><div class="play-btn">
-                        <button class="btn">
-                            <div id="btn_container"><img src="../images/MINIATURKA_MG_3.png" width="120" height="70" /></div>
-                            <h3><span class="episode">3</span>Fatty's Love</h3>
-                            <h5>A girl from school, Sara, falls in love with Fatty. Cherry goes to a furry convention and then ends up at an animal shelter.</h5>
-                            <h6>18 min</h6>
-                          </button>
-                    </div></a>
-
-                    <hr>
-
-                    <a href="https://youtu.be/6JOYCHbyGPM?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><div class="play-btn">
-                        <button class="btn">
-                            <div id="btn_container"><img src="../images/MINIATURKA_MG_4.png" width="120" height="70" /></div>
-                            <h3><span class="episode">4</span>Winter advertising block</h3>
-                            <h5>There's a charity ad block coming up that the guys want to see. For this purpose, they bring in an animator, Popo, so that they don't have to watch it by themselfs.</h5>
-                            <h6>10 min</h6>
-                          </button>
-                    </div></a>
-
-                    <hr>
-
-                    <a href="https://youtu.be/UPFk23rXTPU?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><div class="play-btn">
-                        <button class="btn">
-                            <div id="btn_container"><img src="../images/MINIATURKA_MG_5.png" width="120" height="70" /></div>
-                            <h3><span class="episode">5</span>Women's strike</h3>
-                            <h5>Women are striking en masse against the absolute ban on abortion. Politicians, knowing that the situation is tense, they decide to hide in a bunker under the political party headquarters.</h5>
-                            <h6>35 min</h6>
-                          </button>
-                    </div></a>
-
-                    <hr>
-
-                    <p></p>
-                    <h4>EXTRAS</h4>
-                    <p></p>
-
-                    <div class="plus">
-                        <a href="https://youtu.be/EkQnN0knJ00">
-                            <button class="button8">
-                                <img src="../images/MINIATURKA_MG_SEZON2.png"/>
-                                <h3>MIASTO GLIWICE SEASON 2 - TRAILER</h3>
+                        <hr>
+            
+                        <a href="https://youtu.be/EkQnN0knJ00"><div class="play-btn">
+                            <button class="btn">
+                                <div id="btn_container"><img src="../images/MINIATURKA_MG_SEZON2.png" width="120" height="70" /></div>
+                                <h3><span class="episode">Trailer</span>Season 2</h3>
+                                <span class="duration">1 min</span>
+                                <h5>Originally a trailer for season 2 of the series "Miasta Gliwice", in the end, a serious joke, they were late for the April Fools</h5>
                             </button>
-                        </a>
-                        <a href="https://youtu.be/e6DpWyL7yds">
-                            <button class="button8">
-                                <img src="../images/MINIATURKA_MG_PIOSENKA.png"/>
-                                <h3>MIASTO GLIWICE - SONG ABOUT MOTHER</h3>
+                        </div></a>
+
+                        <hr>
+
+                        <a href="https://youtu.be/e6DpWyL7yds"><div class="play-btn">
+                            <button class="btn">
+                                <div id="btn_container"><img src="../images/MINIATURKA_MG_PIOSENKA.png" width="120" height="70" /></div>
+                                <h3><span class="episode">Trailer</span>Song about mother</h3>
+                                <span class="duration">1 min</span>
+                                <h5>A song announcing the 1st season of the series "Miasto Gliwice". The first trailer of the series</h5>
                             </button>
-                        </a>
-                        <a href="https://youtu.be/Bmrvu5NktJc">
-                            <button class="button8">
-                                <img src="../images/MINIATURKA_MG_SEJM.png"/>
-                                <h3>MIASTO GLIWICE - DEBATES IN THE SEJM</h3>
+                        </div></a>
+
+                        <hr>
+
+                        <a href="https://youtu.be/Bmrvu5NktJc"><div class="play-btn">
+                            <button class="btn">
+                                <div id="btn_container"><img src="../images/MINIATURKA_MG_SEJM.png" width="120" height="70" /></div>
+                                <h3><span class="episode">Trailer</span>Debates in the sejm</h3>
+                                <span class="duration">2 min</span>
+                                <h5>Clip from the second episode, announcing the 1st season of the series "Miasto Gliwice". The second trailer of the series</h5>
                             </button>
-                        </a>
+                        </div></a>
+
+                        <hr>
                     </div>
 
                 </div>
@@ -433,10 +598,9 @@
                             <span class="description-badge">FHD</span>
                         </div>
                 
-                        <p>Due to the aggressive attack of the Russian Federation on Ukraine in February 2022,
-                            Russian troops presented to the whole world their preparation for combat and
-                            the ability to think while making a lot of downright comical mistakes that were an inspiration
-                            to create this short.</p>
+                        <p>Due to the aggressive attack of the Russian Federation on Ukraine in February 2022, Russian troops presented to the whole 
+                            world their preparation for combat and the ability to think while making a lot of downright comical mistakes that were an 
+                            inspiration to create this short.</p>
     
                         </div>
                 
@@ -461,9 +625,9 @@
                         <a href="https://youtu.be/PUPM8uHa9uM"><button class="btn">
                             <div id="btn_container"><img src="../images/MINIATURKA_uvr.png" width="120" height="70" /></div>
                             <h3>Ukraine vs Russia</h3>
+                            <span class="duration">2 min</span>
                             <h5>Comical and almost unbelievable mishaps of the Russian army on the front in the form of a short animation aimed at opposing
                             </h5>
-                            <h6>2 min</h6>
                           </button></a>
                     </div>
 
@@ -516,9 +680,9 @@
                             <span class="description-badge">FHD</span>
                         </div>
                 
-                        <p>A short animated film about two ordinary gardeners who...
-                            they decided to do something crazy and kill time by having fun
-                            race, destroying everything in the process.</p>
+                        <p>A short animated film about two ordinary gardeners who... 
+                            they decided to do something crazy and kill time by having fun race, 
+                            destroying everything in the process.</p>
     
                         </div>
                 
@@ -547,11 +711,11 @@
                     <div class="play-btn">
                         <a href="https://youtu.be/uQh60r4NlqQ"><button class="btn">
                             <div id="btn_container"><img src="../images/MINIATURKA_ogrodowy.png" width="120" height="70" /></div>
-                            <h3>Garden Race</h3>
+                            <h3>Garden race</h3>
+                            <span class="duration">2 min</span>
                             <h5>Two ordinary gardeners who
                                 they decided to do something crazy and kill time by having fun
                                 a race that was the result of a bet between them</h5>
-                            <h6>2 min</h6>
                           </button></a>
                     </div>
 
@@ -571,7 +735,7 @@
             
                 <div class="modal">
                     <div class="modal-header">
-                        <video autoplay loop poster="../images/MINIATURKA_Eleven.png">
+                        <video autoplay loop poster="../images/MINIATURKA_eleven.png">
                         <source src="" />
                         </video>
                 
@@ -603,9 +767,8 @@
                             <span class="description-badge">FHD</span>
                         </div>
                 
-                        <p>An animated version of the funniest moments from the streams
-                            Mateusz "Eleven" Gajewski playing in "Welcome To The Game 2".
-                            Animation created to celebrate the 10th anniversary of Mateusz's channel.</p>
+                        <p>An animated version of the funniest moments from the streams Mateusz "Eleven" Gajewski playing in 
+                            "Welcome To The Game 2". Animation created to celebrate the 10th anniversary of Mateusz's channel.</p>
     
                         </div>
                 
@@ -632,11 +795,11 @@
 
                     <div class="play-btn">
                         <a href="https://youtu.be/KkkLGWl1PTs"><button class="btn">
-                            <div id="btn_container"><img src="../images/MINIATURKA_Eleven.png" width="120" height="70" /></div>
+                            <div id="btn_container"><img src="../images/MINIATURKA_eleven.png" width="120" height="70" /></div>
                             <h3>Eleven vs. WTTG2</h3>
+                            <span class="duration">3 min</span>
                             <h5>An animated version of the funniest moments from the streams
                                 Mateusz Gajewski from the game Welcome to the game 2</h5>
-                            <h6>3 min</h6>
                           </button></a>
                     </div>
 
@@ -735,8 +898,6 @@
                     </div>
             
                     <p>A man doesn't keep his Easter tradition, so the evil bunny pays him a visit. Boner asks the good bunny for help.</p>
-                        <p> </p>
-                    <h3>LIST OF EPISODES CREATED IN COLLABORATION:</h3>
 
                     </div>
             
@@ -771,14 +932,19 @@
                     </div>
                 </div>
 
+                <p></p>
+                <h4>LIST OF EPISODES CREATED IN COLLABORATION:</h4>
+                <p></p>
+
                 <hr>
+                
 
                 <div class="play-btn">
                     <a href="https://www.netflix.com/watch/81677044?trackId=14170045&tctx=1%2C2%2Cb6323e9f-0fa2-471d-87b8-c9732b3cff82-414517392%2CNES_F1607CD971BB04E81F823317723960-7DA6E02492B0D5-216408B531_p_1712699209591%2CNES_F1607CD971BB04E81F823317723960_p_1712699209591%2C%2C%2C%2C%2CVideo%3A81677044%2CdetailsPagePlayButton"><button class="btn">
                         <div id="btn_container"><img src="../images/wielkanoc-3.png" width="120" height="70" /></div>
                         <h3>Bad Exorcist: Easter</h3>
-                        <h5>A man doesn't keep Easter traditions, so an evil bunny visits him. Boner asks the good bunny for help. The situation brings unexpected consequences </h5>
-                        <h6>12 min</h6>
+                        <span class="duration">12 min</span>
+                        <h5>A man doesn't keep his Easter tradition, so the evil bunny pays him a visit. Boner asks the good bunny for help. </h5>
                       </button></a>
                 </div>
 
@@ -810,7 +976,7 @@
             
                     <div class="header-content">
                     <div class="header-title">
-                        <img src="../logos/eng/bad-exorcist-logo.png" alt="Bogdan Boner: Egzorcysta" />
+                        <img src="../logos/eng/bad-exorcist-logo.png" alt="Bad Exorcist" />
             
                         <a href="https://www.netflix.com/"><div class="header-buttons">
                         <button type="button" class="button9">
@@ -834,11 +1000,7 @@
                         <span class="description-badge">HD</span>
                     </div>
             
-                    <p>Bogdan Boner, a self-taught exorcist living near Piaseczno with his friends
-                        helpers Marcinek and the demon Domino, fight against the unclean forces that haunt
-                        surroundings.</p>
-                        <p> </p>
-                    <h3>LIST OF EPISODES CREATED IN COLLABORATION:</h3>
+                    <p>Bogdan Boner, a self-taught exorcist living near Piaseczno with his friends helpers Marcinek and the demon Domino, fight against the unclean forces that haunt surroundings.</p>
 
                     </div>
             
@@ -873,8 +1035,14 @@
                     </div>
                 </div>
 
+                <p>Episodes</p>
+
+                <select class="season" id="egz" name="form_select" onchange="showDiv(this)">
+                    <option value="0">Season 4</option>
+                </select>
+
                 <p></p>
-                <h4>SEASON 4</h4>
+                <h4>LIST OF EPISODES CREATED IN COLLABORATION:</h4>
                 <p></p>
 
                 <hr>
@@ -883,8 +1051,8 @@
                     <a href="https://www.netflix.com/watch/81677096?trackId=200257859"><button class="btn">
                         <div id="btn_container"><img src="../images/uczicwy boner.png" width="120" height="70" /></div>
                         <h3><span class="episode">6</span> Honest Boner</h3>
-                        <h5>Domino and Marcinek discover that as punishment for Boner's bungling, nasty old Whisper makes him honest and even registers business activities. </h5>
-                        <h6>11 min</h6>
+                        <span class="duration">11 min</span>
+                        <h5>Domino and Marcinek discover that as punishment for Boner's bungling, nasty old Whisper makes him honest and even registers business activities.  </h5>
                       </button></a>
                 </div>
 
@@ -894,8 +1062,8 @@
                     <a href="https://www.netflix.com/watch/81677098?trackId=14170289&tctx=2%2C0%2C01720a8f-4096-496c-bc3a-457c48bcf0cd-472542269%2CNES_F1607CD971BB04E81F823317723960-994911DC4F528C-60A9F31389_p_1698831348168%2CNES_F1607CD971BB04E81F823317723960_p_1698829174288%2C%2C%2C%2C81297404%2CVideo%3A81677098%2CdetailsPageEpisodePlayButton"><button class="btn">
                         <div id="btn_container"><img src="../images/krystian 125p.png" width="120" height="70" /></div>
                         <h3><span class="episode">8</span> Krystian 125p</h3>
-                        <h5>Fed up with constantly asking for his boss's decaying car, Marcinek decides to invest in his own car. Over time, the car turns out to be possessed</h5>
-                        <h6>12 min</h6>
+                        <span class="duration">10 min</span>
+                        <h5>Fed up with constantly asking for his boss's decaying car, Marcinek decides to invest in his own car. Over time, the car turns out to be possessed.</h5>
                       </button></a>
                 </div>
 
@@ -904,9 +1072,9 @@
                 <div class="play-btn">
                     <a href="https://www.netflix.com/watch/81677099?trackId=14170289"><button class="btn">
                         <div id="btn_container"><img src="../images/krystian 125p2.png" width="120" height="70" /></div>
-                        <h3><span class="episode">9</span> Krystian 125p episode 2</h3>
+                        <h3><span class="episode">9</span> Krystian 125p część 2</h3>
+                        <span class="duration">11 min</span>
                         <h5>Something bad is happening to Marcinek's car. The main characters do not know that this will turn out to be both their salvation and their curse.</h5>
-                        <h6>11 min</h6>
                       </button></a>
                 </div>
 
@@ -916,8 +1084,8 @@
                     <a href="https://www.netflix.com/watch/81677103?trackId=200257859"><button class="btn">
                         <div id="btn_container"><img src="../images/prima sort mma2.png" width="120" height="70" /></div>
                         <h3><span class="episode">13</span> First class MMA 2</h3>
+                        <span class="duration">17 min</span>
                         <h5>The next MMA gala in hell is even more of a hit than the first one. Boner and Marcin are fighting for their lives, but it will not be easy for them.</h5>
-                        <h6>17 min</h6>
                       </button></a>
                 </div>
 
@@ -968,15 +1136,13 @@
                     <div class="modal-description">
                         <span>2013-</span>
                         <span class="badge">16+ </span>
-                        <span>9 Seasons</span>
+                        <span></span>
                         <span class="description-badge">FHD</span>
                     </div>
             
-                    <p> Spejson, Wojtas and Walo are three friends from Grochów, Warsaw. Together they spend their time in blissful idleness.
+                    <p> Spejson, Wojtas and Walo are three friends from Grochów, Warsaw. Together they spend their time in blissful idleness. 
                         Coming up with more and more different ideas on how to get out on your own and sometimes while avoiding your mortal enemies. 
                     </p>
-                        <p> </p>
-                        <h3>LIST OF EPISODES CREATED IN COLLABORATION:</h3>
 
 
                     </div>
@@ -1011,14 +1177,18 @@
                     </div>
                 </div>
 
+                <p></p>
+                <h4>LIST OF EPISODES CREATED IN COLLABORATION:</h4>
+                <p></p>
+
                 <hr>
 
                 <a href="https://www.youtube.com/watch?v=DGmRxagxImM"><div class="play-btn">
                     <button class="btn">
                         <div id="btn_container"><img src="../images/amerykanski zolnierz.png" width="120" height="70" /></div>
                         <h3><span class="episode">275</span> American Soldier</h3>
+                        <span class="duration">10 min</span>
                         <h5>Halina Paleta is chatting with an American soldier with whom she is infatuated. The next day it turns out that Halina and Wiesław's bank account is empty.</h5>
-                        <h6>10 min</h6>
                       </button>
                 </div></a>
 
@@ -1049,7 +1219,7 @@
             <a href="blog/miasto-gliwice-futher-production-cancelled.html"><button class="blog-btn">
                 <div id="blog-btn-container"><img src="../artykuly_miniturki/artykul-miniaturka-2.png" width="300" height="170" /></div>
                 <div class="article-title">
-                    <h3>Miasto Gliwice - further production cancelled</h3>
+                    <h3>"Miasto Gliwice" further production cancelled</h3>
                 </div>
                 <h5>"Miasto Gliwice" the first series and both the first production of the Entangled Artists group (formerly Red Diamond Studio) were announced in July 2022 in the form of a trailer for the second season. [...]</h5>
                 <div class="blog-posted-by">
@@ -1064,9 +1234,9 @@
             <a href="blog/bad-exorcist-4-season-on-netflix.html"><button class="blog-btn">
                 <div id="blog-btn-container"><img src="../artykuly_miniturki/artykul-miniaturka-1.png" width="300" height="170" /></div>
                 <div class="article-title">
-                    <h3>Bad Exorcist 4th season on Netflix</h3>
+                    <h3>"Bad Exorcist" 4th season on Netflix!</h3>
                 </div>
-                <h5>The return of the average, drunken, vulgar and deadly exorcist Bogdan Boner and his crew, in new episodes and with completely new adventures will provide a lot of entertainment to every fan of this series. The fourth season presents us with an expedition to distant lands [...]</h5>
+                <h5>The return of the average, drunken, vulgar and deadly exorcist Bogdan Boner and his crew, in new episodes and with completely new adventures will provide a lot of entertainment to every fan of this series. [...]</h5>
                 <div class="blog-posted-by">
                     <h6></h6>
                     <h7></h7>
@@ -1156,7 +1326,7 @@
                 <img src="../images/pl-flag.png" alt="">
             </button>
         </a>      
-        <a href="../eng/index.html">
+        <a href="index.html">
             <button class="button6">
                 <img src="../images/gb-flag.png" alt="">
             </button>
