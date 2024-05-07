@@ -1,4 +1,6 @@
-function showDiv(select){
+// wybór sezonu miasto gliwice
+
+function showDivMG(select){
     if(select.value==0){
      document.getElementById('mgs1').style.display = "block";
     } else{

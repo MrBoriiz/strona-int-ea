@@ -179,7 +179,7 @@ border-radius: 2px;
   
   #btn_container {
     position: relative;
-    top: 25px;
+    top: 45px;
     width: 120px;
     height: 70px;
     border-radius: 5px;
@@ -193,8 +193,8 @@ border-radius: 2px;
   }
   
   .btn h3{
-    position: relative;
-    top: 25px;
+    position: absolute;
+    top: 55px;
     font-size: 1.00em;
     font-weight: 600;
     color: rgb(255, 255, 255); 
@@ -204,7 +204,7 @@ border-radius: 2px;
   
   .btn h5{
     position: relative;
-    top: 25px;
+    top: 20px;
     font-size: 0.75em;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.664); 
@@ -297,7 +297,83 @@ border-radius: 2px;
   font-size: 20px;
 }
 
+.obsada p{
+  font-family: 'Poppins', 'sans-serif';
+  font-weight: 400;
+  display: block;
+  padding-top: 1.5%;
+  padding-left: 25%;
+  padding-right: 25%;
+  text-align: center;
+  border-radius: 3px;
+  color: hsla(0, 0%, 100%, 0.9);
+  font-size: 2rem;
+}
+
+.szczegoly{
+  position: relative;
+  left: 5%;
+  text-decoration: none;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.line{
+  color: white;
+  display: flex;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.line span{
+  display: flex;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  color: rgb(146, 146, 146);
+  position: relative;
+  padding-left: 6px;
+  font-size: 24px;
+}
+
+.line span:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.line .actors{
+  display: flex;
+  max-width: 1000px;
+  flex-wrap: wrap;
+}
+
+
 @media only screen and (min-width: 360px) and (max-width: 400px) {
+
+  .szczegoly{
+    position: relative;
+    left: 5%;
+    text-decoration: none;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    max-width: 300px;
+  }
+
+  .line span{
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(146, 146, 146);
+    position: relative;
+    padding-left: 6px;
+    font-size: 18px;
+  }
+
+  .line .actors{
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .modal h4{
     font-size: 20px;
@@ -380,6 +456,30 @@ border-radius: 2px;
   }
   
   @media only screen and (min-width: 401px) and (max-width: 415px) {
+
+    .szczegoly{
+      position: relative;
+      left: 5%;
+      text-decoration: none;
+      margin-top: 60px;
+      margin-bottom: 40px;
+      font-size: 16px;
+      max-width: 350px;
+    }
+  
+    .line span{
+      display: flex;
+      flex-wrap: wrap;
+      color: rgb(146, 146, 146);
+      position: relative;
+      padding-left: 6px;
+      font-size: 18px;
+    }
+  
+    .line .actors{
+      display: flex;
+      flex-wrap: wrap;
+    }
 
   .duration {
     position: absolute;
@@ -464,6 +564,30 @@ border-radius: 2px;
   
   @media only screen and (min-width: 416px) and (max-width: 500px) {
 
+    .szczegoly{
+      position: relative;
+      left: 5%;
+      text-decoration: none;
+      margin-top: 60px;
+      margin-bottom: 40px;
+      font-size: 16px;
+      max-width: 400px;
+    }
+  
+    .line span{
+      display: flex;
+      flex-wrap: wrap;
+      color: rgb(146, 146, 146);
+      position: relative;
+      padding-left: 6px;
+      font-size: 18px;
+    }
+  
+    .line .actors{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     .duration {
       position: absolute;
       left: 155px;
@@ -539,31 +663,59 @@ border-radius: 2px;
 
   @media only screen and (min-width: 501px) and (max-width: 759px) {
 
+    .szczegoly{
+      position: relative;
+      left: 5%;
+      text-decoration: none;
+      margin-top: 60px;
+      margin-bottom: 40px;
+      font-size: 16px;
+      max-width: 450px;
+    }
+  
+    .line span{
+      display: flex;
+      flex-wrap: wrap;
+      color: rgb(146, 146, 146);
+      position: relative;
+      padding-left: 6px;
+      font-size: 18px;
+    }
+  
+    .line .actors{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     .modal h4{
       font-size: 24px;
     }
 
     #btn_container {
+      position: absolute;
       width: 140px;
       height: 80px;
       border-radius: 5px;
       float: left;
       text-align: center;
-      margin-top: -40px;
+      margin-top: -45px;
+      left: 0px;
     }
 
     .btn h5{
+      position: absolute;
       font-size: 0.75em;
       font-weight: 600;
       color: rgba(255, 255, 255, 0.664); 
       line-height: 1.2em;
       padding-left: 0px;
-      margin-top: -30px;
+      margin-top: 50px;
+      width: auto;
     }
 
     .btn h3{
-      position: relative;
-      top: -10px;
+      position: absolute;
+      top: 10px;
     }
 
     .duration{
@@ -576,6 +728,30 @@ border-radius: 2px;
   }
 
   @media only screen and (min-width: 760px) and (max-width: 800px) {
+
+    .szczegoly{
+      position: relative;
+      left: 5%;
+      text-decoration: none;
+      margin-top: 60px;
+      margin-bottom: 40px;
+      font-size: 16px;
+      max-width: 700px;
+    }
+  
+    .line span{
+      display: flex;
+      flex-wrap: wrap;
+      color: rgb(146, 146, 146);
+      position: relative;
+      padding-left: 6px;
+      font-size: 18px;
+    }
+  
+    .line .actors{
+      display: flex;
+      flex-wrap: wrap;
+    }
 
     .modal h4{
       font-size: 24px;
@@ -640,6 +816,30 @@ border-radius: 2px;
   }
 
   @media only screen and (min-width: 800px) and (max-width: 1200px) {
+    
+    .szczegoly{
+      position: relative;
+      left: 5%;
+      text-decoration: none;
+      margin-top: 60px;
+      margin-bottom: 40px;
+      font-size: 16px;
+      max-width: 700px;
+    }
+  
+    .line span{
+      display: flex;
+      flex-wrap: wrap;
+      color: rgb(146, 146, 146);
+      position: relative;
+      padding-left: 6px;
+      font-size: 18px;
+    }
+  
+    .line .actors{
+      display: flex;
+      flex-wrap: wrap;
+    }
 
     .modal h4{
       font-size: 30px;

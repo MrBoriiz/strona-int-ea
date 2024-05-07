@@ -16,9 +16,10 @@
     <link rel="stylesheet" href="../footer.css" />
     <link rel="stylesheet" href="../blog-post-card.css" />
     <link rel="stylesheet" href="../slider.css" />
+    <script src="../keeppagelocation.js"></script>
     <script src="../popup.js"></script>
     <script src="../slider.js"></script>
-    <script src="../select.js"></script>
+    <script src="../select-mg.js"></script>
     
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
@@ -177,17 +178,17 @@
             </div>
             
             <div class="prevNext">
-              <div><a href="#s4"><</a><a href="#s2">></a></div>
-              <div><a href="#s1"><</a><a href="#s3">></a></div>
-              <div><a href="#s2"><</a><a href="#s4">></a></div>
-              <div><a href="#s3"><</a><a href="#s1">></a></div>
+              <div><a href="#s4" onclick="keepLocation(window.pageYOffset);"><</a><a href="#s2" onclick="keepLocation(window.pageYOffset);">></a></div>
+              <div><a href="#s1" onclick="keepLocation(window.pageYOffset);"><</a><a href="#s3" onclick="keepLocation(window.pageYOffset);">></a></div>
+              <div><a href="#s2" onclick="keepLocation(window.pageYOffset);"><</a><a href="#s4" onclick="keepLocation(window.pageYOffset);">></a></div>
+              <div><a href="#s3" onclick="keepLocation(window.pageYOffset);"><</a><a href="#s1" onclick="keepLocation(window.pageYOffset);">></a></div>
             </div>
           
             <div class="bullets">
-              <a href="#s1"></a>
-              <a href="#s2"></a>
-              <a href="#s3"></a>
-              <a href="#s4"></a>
+              <a href="#s1" onclick="keepLocation(window.pageYOffset);"></a>
+              <a href="#s2" onclick="keepLocation(window.pageYOffset);"></a>
+              <a href="#s3" onclick="keepLocation(window.pageYOffset);"></a>
+              <a href="#s4" onclick="keepLocation(window.pageYOffset);"></a>
             </div>
           
           </div>
@@ -336,12 +337,12 @@
                         <div class="modal-content-second">
                         <div class="cast">
                             <h3>Cast:</h3>
-                            <span class="sub-title"><a href="cast/hobo wars.html">Sylwester Chęciński,</a></span>
-                            <span class="sub-title"><a href="cast/hobo wars.html">Natalia Mazur,</a></span>
-                            <span class="sub-title"><a href="cast/hobo wars.html">Jakub Wiśniewski,</a></span>
-                            <span class="sub-title"><a href="cast/hobo wars.html">Hubert Aniołek,</a></span>
-                            <span class="sub-title"><a href="cast/hobo wars.html">Marcin Malarewicz,</a></span>
-                            <span class="sub-title"><a href="cast/hobo wars.html">more.</a></span>
+                            <span class="sub-title"><a href="#szczegoly-wm">Sylwester Chęciński,</a></span>
+                            <span class="sub-title"><a href="#szczegoly-wm">Natalia Mazur,</a></span>
+                            <span class="sub-title"><a href="#szczegoly-wm">Jakub Wiśniewski,</a></span>
+                            <span class="sub-title"><a href="#szczegoly-wm">Hubert Aniołek,</a></span>
+                            <span class="sub-title"><a href="#szczegoly-wm">Marcin Malarewicz,</a></span>
+                            <span class="sub-title"><a href="#szczegoly-wm">more.</a></span>
                         </div>
                 
                         <div class="genres">
@@ -356,6 +357,62 @@
                             <h3>Direction:</h3>
                             <span class="sub-title">Jakub Wiśniewski</span>
                         </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <a id="szczegoly-wm"></a>
+                    <p>Proporties</p>
+
+                    <div class="szczegoly">
+                        <div class="line">
+                            <h3>Genre:</h3>
+                            <span>Animated,</span>
+                            <span>Comedy,</span>
+                            <span>Fictional,</span>
+                            <span>Mocking</span>
+                        </div>
+                        <div class="line">
+                            <h3>Direction:</h3>
+                            <span>Jakub Wiśniewski</span>
+                        </div>
+                        <div class="line">
+                            <h3>Screenwriters:</h3>
+                            <span>Jakub Wiśniewski,</span>
+                            <span>Hubrt Aniołek</span>
+                        </div>
+                        <div class="line">
+                            <h3>Music:</h3>
+                            <span>Eric Castiglia</span>
+                        </div>
+                        <div class="line">
+                            <h3>Cast:</h3>
+                            <div class="actors">
+                                <span>Sylwester Chęciński,</span>
+                                <span>Natalia Mazur,</span>
+                                <span>Marcin Malarewicz,</span>
+                                <span>Markusknight,</span>
+                                <span>ArgusGorefest,</span>
+                                <span>Jakub Wiśniewski,</span>
+                                <span>Wico Wacha,</span>
+                                <span>Sylvaren,</span>
+                                <span>Tascmasc,</span>
+                                <span>Der0_desu,</span>
+                                <span>Kazetsu,</span>
+                                <span>Manieq,</span>
+                                <span>AdiX,</span>
+                                <span>Pinkadermus,</span>
+                                <span>Kristo,</span>
+                                <span>Sawik,</span>
+                                <span>Jackson Teller,</span>
+                                <span>TNG,</span>
+                                <span>Mr.Moon,</span>
+                                <span>Paulinka,</span>
+                                <span>Adamko,</span>
+                                <span>Bedi,</span>
+                                <span>Calunka,</span>
+                                <span>NoBoTak</span>
+                            </div>
                         </div>
                     </div>
 
@@ -416,12 +473,12 @@
                         <div class="modal-content-second">
                         <div class="cast">
                             <h3>Cast:</h3>
-                            <span class="sub-title"><a href="cast/miasto gliwice.html">Jakub Wiśniewski,</a></span>
-                            <span class="sub-title"><a href="cast/miasto gliwice.html">Hubert Aniołek, </a></span>
-                            <span class="sub-title"><a href="cast/miasto gliwice.html">Anna Beda,</a></span>
-                            <span class="sub-title"><a href="cast/miasto gliwice.html">Maciej Tryniszewski,</a></span>
-                            <span class="sub-title"><a href="cast/miasto gliwice.html">Jakub Machowski,</a></span>
-                            <span class="sub-title"><a href="cast/miasto gliwice.html">more.</a></span>
+                            <span class="sub-title"><a href="#szczegoly-mg">Jakub Wiśniewski,</a></span>
+                            <span class="sub-title"><a href="#szczegoly-mg">Hubert Aniołek, </a></span>
+                            <span class="sub-title"><a href="#szczegoly-mg">Anna Beda,</a></span>
+                            <span class="sub-title"><a href="#szczegoly-mg">Maciej Tryniszewski,</a></span>
+                            <span class="sub-title"><a href="#szczegoly-mg">Jakub Machowski,</a></span>
+                            <span class="sub-title"><a href="#szczegoly-mg">more.</a></span>
                         </div>
 
                         <div class="genres">
@@ -441,7 +498,7 @@
 
                     <p>Episodes</p>
 
-                    <select class="season" id="mg" name="form_select" onchange="showDiv(this)">
+                    <select class="season" id="mg" name="form_select" onchange="showDivMG(this)">
                         <option value="0">Season 1</option>
                         <option value="1">Extras</option>
                     </select>
@@ -549,6 +606,43 @@
                         </div></a>
 
                         <hr>
+                    </div>
+
+                    <p>Proporties</p>
+                    <a id="szczegoly-mg"></a>
+
+                    <div class="szczegoly">
+                        <div class="line">
+                            <h3>Genre:</h3>
+                            <span>Animated,</span>
+                            <span>Comedy,</span>
+                            <span>Dark humor,</span>
+                            <span>Mocking</span>
+                        </div>
+                        <div class="line">
+                            <h3>Direction:</h3>
+                            <span>Jakub Wiśniewski</span>
+                        </div>
+                        <div class="line">
+                            <h3>Screenwriters:</h3>
+                            <span>Jakub Wiśniewski</span>
+                        </div>
+                        <div class="line">
+                            <h3>Cast:</h3>
+                            <div class="actors">
+                                <span>Maciej Tryniszewski,</span>
+                                <span>Hubert Aniołek,</span>
+                                <span>Anna Beda,</span>
+                                <span>Kuba Machowski,</span>
+                                <span>Jakub Wiśniewski,</span>
+                                <span>Lee,</span>
+                                <span>Guwakka Taro,</span>
+                                <span>Kennedy,</span>
+                                <span>Wieczor77,</span>
+                                <span>Jeremi,</span>
+                                <span>popo</span>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
