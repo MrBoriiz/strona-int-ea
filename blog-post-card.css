@@ -140,6 +140,7 @@
       position: absolute;
       left: 100px; 
       margin-left: 40px;
+      width: 100px;
     }
     
     .blog-btn h5{
@@ -228,6 +229,7 @@
       position: absolute;
       left: 100px; 
       margin-left: 40px;
+      width: 100px;
     }
     
     .blog-btn h5{
@@ -314,7 +316,7 @@
     .article-title{
       position: absolute;
       left: 100px;
-      width: 300px;
+      width: auto;
       margin-left: 40px;
     }
     
