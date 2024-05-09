@@ -99,7 +99,6 @@ header{
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
-    background-attachment: fixed;
     background-image: url('./images/WM_gruby_menel.png');
 }
 
@@ -178,16 +177,19 @@ p{
 }
 
 .title2 p{
+    position: relative;
     font-family: 'Poppins', 'sans-serif';
     font-weight: 400;
     display: block;
     padding-top: 1.5%;
-    padding-left: 25%;
-    padding-right: 25%;
     text-align: center;
     border-radius: 3px;
     color: hsla(0, 0%, 100%, 0.9);
     font-size: 2rem;
+    min-width: 350px;
+    max-width: 1500px;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
 .background-images-2 .title2{
@@ -243,7 +245,7 @@ p{
     width: 150px;
     height: 50px;
     background-color: #181818;
-    border-radius: 10%;
+    border-radius: 10px;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0.137);
 }

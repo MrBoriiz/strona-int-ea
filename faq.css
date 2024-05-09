@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
+
+details{
+    background-color: #303030bd;
+    color: #fff;
+    font-weight: 600;
+    font-size: 2.5rem;
+    transition: all 0.2s ease;
+    max-width: 850px;
+    position: relative;
+    display: block;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 1%;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  
+  summary {
+    padding: .5em 1.3rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;  
+    transition: all 0.2s ease;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+    transition: all 0.2s ease;
+  }
+  
+  summary:after{
+    content: "\002B";
+    transition: all 0.2s ease;
+  }
+  
+  details[open] summary {
+      border-bottom: 1px solid #aaaaaa70;
+      margin-bottom: .5em;
+      transition: all 0.2s ease;
+  }
+  
+  details[open] summary:after{
+    content: "\00D7";
+    transition: all 0.2s ease;
+  }
+  
+  details[open] div{
+    padding: .5em 1em;
+    transition: all 0.2s ease;
+  }
+
+  .faq-text{
+    font-weight: 200;
+    text-align: left;
+    color: rgb(170, 170, 170);
+    font-size: 2rem;
+  }

@@ -12,7 +12,7 @@
   }
 
   header{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('../images/bar.png');
+    /*OBRAZ NAD NAGŁÓWKIEM DO KAŻDEGO ARTYKUŁY ZNAJDUJĄ SIĘ W PLIKACH .css Z NAZWĄ TAKĄ SAMĄ JAK PLIK .html ARTYKUŁU*/
     height: 40vh;
     width: auto;
     background-size: cover;
@@ -96,25 +96,6 @@ h6{
     font-size: 2.1rem;
 }
 
-.email{
-    position: relative;
-    height: auto;
-    max-width: 915px;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    flex-wrap: wrap;
-}
-
-.email p{
-    font-family: 'Poppins', 'sans-serif';
-    font-weight: 700;
-    display: block;
-    text-align: center;
-    border-radius: 3px;
-    color: hsla(0, 0%, 100%, 0.61);
-    font-size: 2.5rem;
-}
-
 .blog-img{
     position: relative;
     height: auto;
@@ -122,6 +103,7 @@ h6{
     border-radius: 5%;
     margin-top: 50px;
     margin-bottom: 50px;
+    min-width: 350px;
     max-width: 850px;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -132,6 +114,7 @@ h6{
     border-radius: 30px;
     position: relative;
     height: auto;
+    min-width: 350px;
     max-width: 850px;
 }
 
@@ -191,87 +174,78 @@ h6{
     text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6), 0px 0px 25px rgba(0, 0, 0, 0.6);
 }
 
+.highlight{
+    background-color: rgba(229, 255, 0, 0.158);
+    padding-bottom: 1.5%;
+}
+
+.quote{
+    background-color: rgba(88, 88, 88, 0.308);
+    padding-bottom: 1.5%;
+    font-style: italic;
+}
+
+.text-description .quote-author{
+    font-weight: 600;
+    display: flex;
+    padding-top: 1.5%;
+    padding-left: 4%;
+    padding-right: 3%;
+    padding-bottom: 1.5%;
+    text-align: left;
+    color: hsl(0, 0%, 100%);
+    font-style: italic;
+    font-size: 2rem;
+    background-color: rgba(88, 88, 88, 0.308);
+}
+
+.link{
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 400;
+    padding-left: 1%;
+    text-align: left;
+    border-radius: 3px;
+    font-size: 2.1rem;
+    color: hsla(0, 0%, 100%, 0.925);
+}
+
+.link:hover{
+    color: hsl(204, 100%, 50%);
+    text-decoration: underline;
+}
+
 @media only screen and (min-width: 360px) and (max-width: 374px) {
 
-    .email p{
-        font-family: 'Poppins', 'sans-serif';
-        font-weight: 700;
-        display: block;
-        text-align: center;
-        border-radius: 3px;
-        color: hsla(0, 0%, 100%, 0.61);
-        font-size: 1.8rem;
-    }
 
+    
   }
 
   @media only screen and (min-width: 375px) and (max-width: 383px) {
 
-    .email p{
-        font-family: 'Poppins', 'sans-serif';
-        font-weight: 700;
-        display: block;
-        text-align: center;
-        border-radius: 3px;
-        color: hsla(0, 0%, 100%, 0.61);
-        font-size: 1.8rem;
-    }
+
 
   }
 
   @media only screen and (min-width: 384px) and (max-width: 400px) {
 
-    .email p{
-        font-family: 'Poppins', 'sans-serif';
-        font-weight: 700;
-        display: block;
-        text-align: center;
-        border-radius: 3px;
-        color: hsla(0, 0%, 100%, 0.61);
-        font-size: 1.8rem;
-    }
+
     
   }
   
   @media only screen and (min-width: 401px) and (max-width: 415px) {
 
-    .email p{
-        font-family: 'Poppins', 'sans-serif';
-        font-weight: 700;
-        display: block;
-        text-align: center;
-        border-radius: 3px;
-        color: hsla(0, 0%, 100%, 0.61);
-        font-size: 1.85rem;
-    }
 
   }
   
   @media only screen and (min-width: 416px) and (max-width: 759px) {
 
-    .email p{
-        font-family: 'Poppins', 'sans-serif';
-        font-weight: 700;
-        display: block;
-        text-align: center;
-        border-radius: 3px;
-        color: hsla(0, 0%, 100%, 0.61);
-        font-size: 1.9rem;
-    }
+
 
   }
   
   @media only screen and (min-width: 760px) and (max-width: 914px) {
 
-    .email p{
-        font-family: 'Poppins', 'sans-serif';
-        font-weight: 700;
-        display: block;
-        text-align: center;
-        border-radius: 3px;
-        color: hsla(0, 0%, 100%, 0.61);
-        font-size: 1.95rem;
-    }
+
 
   }
 
