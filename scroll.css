@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar {
     width: 1em;
 }

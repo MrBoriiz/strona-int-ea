@@ -48,8 +48,3 @@ closeButton.addEventListener(
 );
 
 volumeButton.addEventListener("click", volumeHandler);
-
-// Não ganho nada disponibilizando isso de graça, se possível ajude!
-playButton.addEventListener("click", () =>
-  window.open("https://www.buymeacoffee.com/pingo")
-);
