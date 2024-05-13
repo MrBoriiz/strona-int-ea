@@ -1,4 +1,7 @@
 html{
+  -o-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
   scroll-behavior: smooth;
 }
 
