@@ -5,216 +5,220 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entangled Artists | Home page</title>
-    <link rel="icon" href="./logos/icon.png" />
-    <link rel="stylesheet" href="../menu.css" />
-    <link rel="stylesheet" href="../home.css" />
-    <link rel="stylesheet" href="../scroll.css" />
-    <link rel="stylesheet" href="../popup.css" />
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../moviecard.css" />
-    <link rel="stylesheet" href="../moviemodal.css" />
-    <link rel="stylesheet" href="../footer.css" />
-    <link rel="stylesheet" href="../blog-post-card.css" />
-    <link rel="stylesheet" href="../slider.css" />
-    <script src="../keeppagelocation.js"></script>
-    <script src="../popup.js"></script>
-    <script src="../slider.js"></script>
-    <script src="../select-mg.js"></script>
+
+    <meta name="title" content="Entangled Artists | Home page" />
+    <meta name="description" content="Poznaj świat zwariowanych kreskówek! Zespół Entangled Artists jest grupą realizującą animacje w formie 2D od 2019 roku. Tworzymy oryginalne filmy, seriale jak również krótkometrażówki jednakowo nie ograniczamy się jedynie do autorskich projektów, ponieważ jesteśmy stale otwarci na zlecenia zewnętrzne." />
     
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://entangledartists.pl/" />
+        <meta property="og:title" content="Entangled Artists | Home page" />
+        <meta property="og:description" content="Poznaj świat zwariowanych kreskówek! Zespół Entangled Artists jest grupą realizującą animacje w formie 2D od 2019 roku. Tworzymy oryginalne filmy, seriale jak również krótkometrażówki jednakowo nie ograniczamy się jedynie do autorskich projektów, ponieważ jesteśmy stale otwarci na zlecenia zewnętrzne." />
+        <meta property="og:image" content="./images/website_thumbnail.png" />
+        
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://entangledartists.pl/" />
+        <meta property="twitter:title" content="Entangled Artists | Home page" />
+        <meta property="twitter:description" content="Poznaj świat zwariowanych kreskówek! Zespół Entangled Artists jest grupą realizującą animacje w formie 2D od 2019 roku. Tworzymy oryginalne filmy, seriale jak również krótkometrażówki jednakowo nie ograniczamy się jedynie do autorskich projektów, ponieważ jesteśmy stale otwarci na zlecenia zewnętrzne." />
+        <meta property="twitter:image" content="./images/website_thumbnail.png" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-</head>
-
-<body>
-    <header>
-        <div class="CSSgal">
-
-            <!-- Don't wrap targets in parent -->
-            <s id="s1"></s> 
-            <s id="s2"></s>
-            <s id="s3"></s>
-            <s id="s4"></s>
-          
-            <div class="slider">
-
-              <div class="slide-1">
-                <!--SLIDE 1-->
-
-                <div class="landing-image-gradient-90deg"></div>
-                <div class="landing-image-gradient-0deg"></div>
-
-                <div class="main">
-                    <div class="logo">
-                        <img src="../images/logo.png">
+        <link rel="icon" href="../logos/icon.png" />
+        <link rel="stylesheet" href="../menu.css" />
+        <link rel="stylesheet" href="../home.css" />
+        <link rel="stylesheet" href="../scroll.css" />
+        <link rel="stylesheet" href="../popup.css" />
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="../moviecard.css" />
+        <link rel="stylesheet" href="../moviemodal.css" />
+        <link rel="stylesheet" href="../footer.css" />
+        <link rel="stylesheet" href="../blog-post-card.css" />
+        <link rel="stylesheet" href="../slider.css" />
+        <link rel="stylesheet" href="../tooltip.css" />
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="../divduplicate.js"></script>
+        <script src="../keeppagelocation.js"></script>
+        <script src="../popup.js"></script>
+        <script src="../slider.js"></script>
+        <script src="../select-mg.js"></script>
+        <script src="../select-egzor.js"></script>
+        <script src="../urldetect.js"></script>
+        <script src="../urlclear.js"></script>
+        <script src="../dropdownselectreset.js"></script>
+        
+    
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+    </head>
+    
+    <body onLoad="DropdownValueReset()">
+    
+        <a id="top"></a>
+    
+        <header>
+            <div class="CSSgal">
+    
+                <div class="slider-buttons">
+                    <div class="prevNext">
+                        <button class="slider-button-prev" id="prevButton"><span><</span></button>
+                        <button class="slider-button-next" id="nextButton"><span>></span></button>
+                    </div>
+    
+                    <div class="bullets">
+                        <span class="bullet"></span>
+                        <span class="bullet"></span>
+                        <span class="bullet"></span>
                     </div>
                 </div>
-
-                <div class="title">
-                    <div class="home-title">
-                        <h1>EXPLORE THE</h1>
-                        <h3>WORLD OF CRAZY CARTOONS!</h3>
-                        <p>Are you looking for captivating stories? Or are you looking for something absurd, serious and funny? 
-                            If so, you've come to the right place! You will find everything you need here!
-                        </p>
-                        <div class="buttons">
-                            <a href="#onas"><button class="button7">ABOUT US</button></a>
-                            <a href="#produkcje"><button class="button7">OUR PRODUCTIONS</button></a>
-                            <a href="#blog"><button class="button7">NEWS / BLOG</button></a>
+              
+                <div class="slider">
+    
+                  <div class="slide">
+                    <!--SLIDE 1-->
+                    <div class="slide-image-gradient-0deg"></div>
+                    <div class="slide-image-gradient-90deg"></div>
+    
+                        <div class="title">
+                            <div class="slide-title">
+                                <img src="../logos/wojny meneli.png" width="auto" height="300">
+                                <div></div>
+                                <div class="project-badges">
+                                    <span class="info-badge-2">TBA</span>
+                                    <span class="info-badge-1">FHD</span>
+                                    <span class="info-badge-1">16+</span>
+                                    <span class="info-badge-3">|</span>
+                                    <span class="info-badge-prod-org">Original production</span>
+                                </div>
+                                <p>The story of three drinking friends living in a kingdom of bums hidden from the world, ruled by a despotic dictator with an exaggerated ego.</p>
+                                <div class="slide-buttons1">
+                                    <a href="https://www.youtube.com/@EntangledArtists"><button class="button92">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16"> <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"></path> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"></path> </svg>
+                                    COMING SOON
+                                    </button></a>
+                                    <a href="#prod/wm"><button class="button11">MORE INFO</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="slide-1-bc"></div>
+                  </div>
+    
+    
+    
+    
+                  <div class="slide">
+                    <!--SLIDE 2-->
+                    <div class="slide-image-gradient-0deg"></div>
+                    <div class="slide-image-gradient-90deg"></div>
+    
+                    <div class="title">
+                        <div class="slide-title">
+                            <img src="../logos/eng/bad-exorcist-logo.png" width="auto" height="300">
+                            <div></div>
+                            <div class="project-badges">
+                                <span class="info-badge-2">2025</span>
+                                <span class="info-badge-1">FHD</span>
+                                <span class="info-badge-1">16+</span>
+                                <span class="info-badge-3">|</span>
+                                <span class="info-badge-prod-ko">Collab.</span>
+                            </div>
+                            <p>Bogdan Boner, a self-taught exorcist living near Piaseczno with his friends helpers Marcinek and the demon Domino, fight against the unclean forces that haunt surroundings.
+                            </p>
+                            <div class="slide-buttons1">
+                                <a href="https://www.netflix.com/search?q=egzoryc&jbv=81297404"><button class="button91">
+                                    <svg width="24px" height="24px" viewBox="0 0 24 24" role="img" fill="#fff">
+                                        <path d="M5.39.004l4.75 13.46v-.007l.376 1.06c2.088 5.908 3.21 9.075 3.216 9.082.004 0 .32.02.702.04 1.156.05 2.59.18 3.676.31.25.03.466.04.48.03l-4.71-13.36-.436-1.23-2.423-6.85c-.46-1.3-.85-2.408-.87-2.45L10.12 0H5.395zM13.898.012l-.01 5.306-.008 5.306-.437-1.232V9.39l-.565 11.81c.555 1.567.852 2.403.855 2.407.004.004.32.024.702.042 1.157.05 2.59.18 3.68.31.25.03.467.04.48.03s.02-5.42.017-12.01L18.604.01h-4.706zM5.39.002v11.99c0 6.594.007 11.995.015 12.003s.416-.03.907-.086c.49-.06 1.17-.13 1.51-.16.518-.05 2.068-.15 2.248-.15.052 0 .056-.27.063-5.08l.008-5.08.38 1.06.13.376.57-11.8-.19-.546-.88-2.44-.03-.087H5.39z"></path>
+                                    </svg>
+                                    WATCH
+                                </button></a>
+                                <a href="#koprod/egz"><button class="button11">MORE INFO</button></a>
+                            </div>
                         </div>
                     </div>
+                    <div class="slide-2-bc"></div>
+                  </div>
+    
+    
+    
+    
+                  <div class="slide">
+                    <!--SLIDE 3-->
+                    <div class="slide-image-gradient-0deg"></div>
+                    <div class="slide-image-gradient-90deg"></div>
+    
+                    <div class="title">
+                        <div class="slide-title">
+                            <img src="../logos/elektroglinalogo.png" width="auto" height="300">
+                            <div></div>
+                            <div class="project-badges">
+                                <span class="info-badge-2">2025</span>
+                                <span class="info-badge-1">FHD</span>
+                                <span class="info-badge-1">16+</span>
+                                <span class="info-badge-3">|</span>
+                                <span class="info-badge-prod-ko">Collab.</span>
+                            </div>
+                            <p>The year is 2050. Evil artificial intelligence has taken over most of the world's electronics. 
+                                Warsaw is struggling with cybercrime, rebellious robots, and cyborg gangs.
+                            </p>
+                            <div class="slide-buttons1">
+                            <a href="https://www.canalplus.com/pl/serial/elektroglina-2050/h/16493531_70026/sezony/"><button class="button91">
+                                <svg width="24px" height="24px" role="img" fill="#fff" xmlns="http://www.w3.org/2000/svg" id="Warstwa_1" data-name="Warstwa 1" viewBox="0 0 900 600"><path d="M419.55,733.38a351.63,351.63,0,0,1-93.37,12.84q-193.73,0-177.19-200.83Q156.51,454,206.7,404.2t126.78-49.8q36.07,0,66,12.5,26.94,11.28,44.34,31c2.65-16.07,5.24-32.15,7.89-48.22,4.08-24.74,9.17-49.45,11.82-74.39-4.06-1.95-8.26-3.8-12.64-5.54q-47-18.65-109.8-18.65-139.39,0-222,78.08T24.85,549.49q-24.69,300,277.69,300a501.19,501.19,0,0,0,110-12.09C415.93,802.81,418.45,768.12,419.55,733.38Z" transform="translate(-22.99 -251.12)"/><path d="M440.85,624.8V494.51H962V624.8ZM631.59,830.14v-541H771.26v541Z" transform="translate(-22.99 -251.12)"/></svg>
+                                WATCH
+                                </button></a>
+                                <a href="#koprod/egln"><button class="button11">MORE INFO</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-3-bc"></div>
+                  </div>
+    
+    
                 </div>
-
-                <div class="landing-image"></div>
-
+    
               </div>
-
-
-
-
-
-              <div class="slide">
-                <!--SLIDE 2-->
-                <div class="slide-image-gradient-0deg"></div>
-                <div class="slide-image-gradient-90deg"></div>
-
-                <div class="main">
-                    <div class="logo">
-                        <img src="../images/logo.png">
-                    </div>
-                </div>
-
-                <div class="title">
-                    <div class="slide-title">
-                        <img src="../logos/eng/bad-exorcist-logo.png" width="auto" height="300">
-                        <h4 class="episode">COOPERATION / CO-PRODUCTION</h4>
-                        <p>Bogdan Boner, a self-taught exorcist living near Piaseczno with his friends helpers Marcinek and the demon Domino, fight against the unclean forces that haunt surroundings.
-                        </p>
-                        <a href="https://www.netflix.com/"><button class="button9">
-                            PLAY
-                        </button></a>
-                        <button class="button11" onclick="togglePopup13()">MORE INFO</button>
-                    </div>
-                </div>
-
-                <!--<div class="slide-2-vid">
-                    <video src="./movies/boner_s4.mp4" autoplay muted poster="./images/egzorcysta-tlo.png"></video>
-                </div>-->
-                <div class="slide-2-bc"></div>
-              </div>
-
-
-
-
-
-
-              <div class="slide">
-                <!--SLIDE 3-->
-                <div class="slide-image-gradient-0deg"></div>
-                <div class="slide-image-gradient-90deg"></div>
-
-                <div class="main">
-                    <div class="logo">
-                        <img src="../images/logo.png">
-                    </div>
-                </div>
-
-                <div class="title">
-                    <div class="slide-title">
-                        <img src="../logos/wojny meneli.png" width="auto" height="300">
-                        <h4 class="episode">ORIGINAL PRODUCTION</h4>
-                        <p>Four drinking friends live peacefully in the kingdom of bums until... 
-                            one of them is fed up with being humiliated and treated like the worst 
-                            piece of trash constant robbery. He decides to take over the throne in the 
-                            kingdom and live on it the level it deserves.
-                        </p>
-                        <a href="https://www.youtube.com/@EntangledArtists"><button class="button9">
-                            COMING SOON
-                        </button></a>
-                        <button class="button11" onclick="togglePopup8()">MORE INFO</button>
-                    </div>
-                </div>
-
-                <!--<div class="slide-2-vid">
-                    <video src="./movies/boner_s4.mp4" autoplay muted poster="./images/egzorcysta-tlo.png"></video>
-                </div>-->
-                <div class="slide-3-bc"></div>
-              </div>
-
-
-
-
-
-
-              <div class="slide">
-                <!--SLIDE 4-->
-                <div class="slide-image-gradient-0deg"></div>
-                <div class="slide-image-gradient-90deg"></div>
-
-                <div class="main">
-                    <div class="logo">
-                        <img src="../images/logo.png">
-                    </div>
-                </div>
-
-                <div class="title">
-                    <div class="slide-title">
-                        <h4 class="episode">BLOG - NEWS</h4>
-                        <p>"Miasto Gliwice" the first series and both the first production of the Entangled Artists group (formerly Red Diamond Studio) were announced in July 2022 in the form of a trailer for the second season. [...]
-                        </p>
-                        <a href="./blog/miasto-gliwice-futher-production-cancelled.html"><button class="button11">MORE INFO</button></a>
-                    </div>
-                </div>
-
-                <!--<div class="slide-2-vid">
-                    <video src="./movies/boner_s4.mp4" autoplay muted poster="./images/egzorcysta-tlo.png"></video>
-                </div>-->
-                <div class="slide-4-bc"></div>
-              </div>
-
-
-            </div>
-            
-            <div class="prevNext">
-              <div><a href="#s4" onclick="keepLocation(window.pageYOffset);"><</a><a href="#s2" onclick="keepLocation(window.pageYOffset);">></a></div>
-              <div><a href="#s1" onclick="keepLocation(window.pageYOffset);"><</a><a href="#s3" onclick="keepLocation(window.pageYOffset);">></a></div>
-              <div><a href="#s2" onclick="keepLocation(window.pageYOffset);"><</a><a href="#s4" onclick="keepLocation(window.pageYOffset);">></a></div>
-              <div><a href="#s3" onclick="keepLocation(window.pageYOffset);"><</a><a href="#s1" onclick="keepLocation(window.pageYOffset);">></a></div>
-            </div>
-          
-            <div class="bullets">
-              <a href="#s1" onclick="keepLocation(window.pageYOffset);"></a>
-              <a href="#s2" onclick="keepLocation(window.pageYOffset);"></a>
-              <a href="#s3" onclick="keepLocation(window.pageYOffset);"></a>
-              <a href="#s4" onclick="keepLocation(window.pageYOffset);"></a>
-            </div>
-          
-          </div>
-    </header>
+        </header>
 
 <!-- --------------------------------------------------------------------- -->
-<a id="onas"></a>
+<a id="aboutus"></a>
 <div class="title2">
-
     <h2>ABOUT US</h2>
     <h3></h3>
     <hr>
-    <p>The "Entangled Artists" team is a group that has been producing 2D animations since 2019. We create original films, series as well as short films, 
-        but we do not limit ourselves only to original projects, because we are constantly open to external orders.
-    </p>
-    
-    <p>The group consists of people with various experiences, but the most important thing is that each of us shares the passion for writing complex and extensive 
-        stories, film editing and production, animation, etc. The initial goal of the team was to create content "from people to people", so that everyone participating 
-        in the project can demonstrate their skills and have fun working on our projects. We are currently aiming for the highest one the quality of production we can achieve, 
-        in order to set the bar higher and higher and constantly learn new things.
-    </p>
-
-    <p>We operate mainly on YouTube, but we are also active on social media such as LinkedIn, Vimeo and Instagram, where we also publish content related to our work.
-    </p>
 </div>
 
+<div class="srodkowanie">
+
+    <div class="title3">
+        <p>The "Entangled Artists" team is a group that has been making 2D animations since 2019.
+            We create original animated films, series and short films, but we do not limit ourselves to original projects,
+            because we are always open to external orders.
+        </p>
+        
+        <p>The initial foundation of the band simply served as an interesting hobby and a kind of escape into the world we created, thanks to which
+            everyone involved in the projects could have a great time and develop their interests. At the moment, we aim for the highest
+            quality of production that we can achieve, both in terms of audio-visual and script, and we constantly try to learn new things in order
+            to constantly improve our subsequent works.
+        </p>
+
+        <p>We operate mainly on the YouTube platform, but we are also active on social media such as Instagram, where we also publish content related to our work, but you can also find the animations and graphics we have created in many other places.
+        </p>
+
+    </div>
+
+    <div class="title3">
+        <div class="najnowszy-film">
+            <iframe src="https://www.youtube.com/embed/EkQnN0knJ00" title="MIASTO GLIWICE: 2 SEZON | ZWIASTUN | ENTANGLED ARTISTS" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p>Upload date: 11.07.2022
+        </p>
+        <p class="description">Description: We finally got down to business and will do something different. This trailer is just a joke on ours pages and the series 
+            itself will most likely never be continued. We have finished production right after the premiere of the fourth episode of the first season.
+        </p>
+    </div>
+
+</div>
 <!-- --------------------------------------------------------------------- -->
 
 <div class="background-images-2">
@@ -222,64 +226,27 @@
     <div class="gradient-180deg"></div>
 </div>
 
-<a id="produkcje"></a>
+<a id="productions"></a>
 <div class="title2">
     <h2>ORIGINAL PRODUCTIONS</h2>
     <h3>ANIMATED FILMS AND SERIES</h3>
     <hr>
 </div>
 
+
     <ul class="gallery">
         <div class="container">
                 <div class="item">
                 <div class=item__border>
-                    <a class="button1" onclick="togglePopup8()">
+                    <a class="button1" href="#prod/wm">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 111.21"><title>videos</title><path d="M9.7,91.11a20.47,20.47,0,0,1-6-5.72A20.15,20.15,0,0,1,0,73.81V20.32A20.26,20.26,0,0,1,6,6l.15-.15A20.25,20.25,0,0,1,20.32,0H87.27a20.27,20.27,0,0,1,14,5.66,20.9,20.9,0,0,1,4.15,5.62l-1.44,0H99.07a15.18,15.18,0,0,0-1.51-1.69,14.82,14.82,0,0,0-8.39-4l-3.1,5.71H80.5l3.17-5.83H62.92l-3.16,5.83H54.2l3.17-5.83H36.05L32.69,11.6a27.74,27.74,0,0,0-6.08,1.74L26,13.6l4.45-8.18H20.32A14.85,14.85,0,0,0,9.92,9.66L9.8,9.8A14.81,14.81,0,0,0,5.42,20.32H16.76a27.66,27.66,0,0,0-4.62,7H5.42V73.81A14.75,14.75,0,0,0,8.08,82.3a15.1,15.1,0,0,0,1.62,2v6.86ZM38.29,19.49h64.49a20.16,20.16,0,0,1,20.1,20.1V91.12a20.16,20.16,0,0,1-20.1,20.09H38.29A20.14,20.14,0,0,1,18.2,91.12V39.59a20.16,20.16,0,0,1,20.09-20.1ZM63.52,58.14l19,13.25a4.16,4.16,0,0,1,.15,7L63.78,91.4A4.18,4.18,0,0,1,57,88.16V61.54h0a4.15,4.15,0,0,1,6.54-3.4ZM86.67,40.06l6.8-14.3h-21l-6.8,14.3Zm12.46-14.3-6.8,14.3h22.24a3.11,3.11,0,0,1,2.05.77V39.59a13.88,13.88,0,0,0-13.84-13.83ZM60,40.06l6.79-14.3H45.21l-6.8,14.3Zm-27.29,0,6.8-14.3H38.29A13.86,13.86,0,0,0,24.46,39.59v.47Zm83.87,5.49a3.11,3.11,0,0,1-2.05.77H24.46v44.8A13.86,13.86,0,0,0,38.29,105h64.49a13.9,13.9,0,0,0,13.84-13.83V45.55Z"/></svg>
                         <img class="item__image" src="../logos/wojny meneli.png"/>
-                        <img alt="" class="item__image hover-image" src="../images/wojny-meneli tlo.png" />
-                    </a>
-                </div>
-                </div>
-                
-                <div class="item">
-                <div class=item__border>
-                    <a class="button1" onclick="togglePopup9()">
-                        <img class="item__image" src="../logos/miasto gliwice logo.png"/>
-                        <img alt="" class="item__image hover-image" src="../images/mg tlo.png" />
-                    </a>
-                </div>
-                </div>  
-
-                <div class="item">
-                <div class=item__border>
-                    <a class="button1" onclick="togglePopup10()">
-                        <img class="item__image" src="../logos/ukraine vs russia2.png"/>
-                        <img alt="" class="item__image hover-image" src="../images/uvr tlo.png" />
-                    </a>
-                </div>
-                </div>  
-
-                <div class="item">
-                <div class=item__border>
-                    <a class="button1" onclick="togglePopup11()">
-                        <img class="item__image" src="../logos/ogrodowy wyscig2.png"/>
-                        <img alt="" class="item__image hover-image" src="../images/ow tlo.png" />
-                    </a>
-                </div>
-                </div>  
-
-                <div class="item">
-                <div class=item__border>
-                    <a class="button1" onclick="togglePopup12()">
-                        <img class="item__image" src="../logos/Eleven vs wttg2.png"/>
-                        <img alt="" class="item__image hover-image" src="../images/evwttg2 tlo.png" />
+                        <img alt="" class="item__image hover-image" src="../images/WM-Grubas-poza-zloczyncy-podpis-bez-logo.png" />
                     </a>
                 </div>
                 </div>
                 
         </div>
-        
-        </div>
-
 
     </ul>
 
@@ -291,66 +258,59 @@
     <!--POP-UP wojny meneli-->
 
     <div class="popup" id="popup-8">
-        <div class="overlay" onclick="togglePopup8()"></div>
+        <div class="overlay" onclick="togglePopup8(); urlclear(); toggleBodyScrollOn();"></div>
         <div class="content">
             <div id="wrapper">
             
                 <div class="modal">
                     <div class="modal-header">
-                        <video autoplay muted loop poster="../images/wojny meneli poster v.2.png">
-                        <source src="" />
-                        </video>
+                        <img src="../images/WM-Grubas-poza-zloczyncy-podpis-bez-logo.png">
                 
-                        <div class="close-btn" onclick="togglePopup8()">&times;</div>
+                        <div class="close-btn" onclick="togglePopup8(); urlclear(); toggleBodyScrollOn();">&times;</div>
 
                         <div class="header-content">
                         <div class="header-title">
-                           <img src="../logos/wojny meneli logo1.png" alt="Wojny Meneli" />
-                
-                           <a href="https://www.youtube.com/@EntangledArtists"><div class="header-buttons">
-                            <button type="button" class="button9">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="auto" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16"> <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/> </svg>
-                                COMING SOON 
-                            </button></a>
-
-                            </div>
                         </div>
                         </div>
                     </div>
                     
                     <div class="modal-body">
                         <div class="modal-content-first">
+                            <div class="modal-title">
+                                <span class="modal-prod-title">HOBO WARS</span>
+                                <span class="modal-relese-date"></span>
+                            </div>
                         <div class="modal-description">
-                            <span>2024</span>
-                            <span class="badge">16+ </span>
-                            <span>1 Season</span>
-                            <span class="description-badge">4k</span>
+                            <span>TBA</span>
+                            <span class="description-badge">16+ </span>
+                            <span class="description-badge">FHD</span>
+                        </div>
+
+                        <div class="modal-title-buttons">
+                            <a href="https://www.youtube.com/@EntangledArtists"><button type="button" class="button9">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="auto" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16"> <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/> </svg>
+                                COMING SOON
+                            </button></a>
                         </div>
                 
-                        <p>Four drinking friends live peacefully in the kingdom of bums until... 
-                            one of them is fed up with being humiliated and treated like the worst 
-                            piece of trash constant robbery. He decides to take over the throne in the 
-                            kingdom and live on it the level it deserves.</p>
+                            <div class="modal-prod-decription">
+                            <p>The story of three drinking friends living in a kingdom of bums hidden from 
+                                the world, ruled by a despotic dictator with an exaggerated ego.</p>
+                            </div>
     
                         </div>
                 
                         <div class="modal-content-second">
                         <div class="cast">
                             <h3>Cast:</h3>
-                            <span class="sub-title"><a href="#szczegoly-wm">Sylwester Chęciński,</a></span>
-                            <span class="sub-title"><a href="#szczegoly-wm">Natalia Mazur,</a></span>
-                            <span class="sub-title"><a href="#szczegoly-wm">Jakub Wiśniewski,</a></span>
-                            <span class="sub-title"><a href="#szczegoly-wm">Hubert Aniołek,</a></span>
-                            <span class="sub-title"><a href="#szczegoly-wm">Marcin Malarewicz,</a></span>
-                            <span class="sub-title"><a href="#szczegoly-wm">more.</a></span>
+                            <a href="#prod/wm/szczegoly"><span class="sub-title">-</span></a>
                         </div>
                 
                         <div class="genres">
                             <h3>Genre:</h3>
                             <span class="sub-title">Animated,</span>
                             <span class="sub-title">Comedy,</span>
-                            <span class="sub-title">Fictional,</span>
-                            <span class="sub-title">Mocking</span>
+                            <span class="sub-title">Fictional</span>
                         </div>
                 
                         <div class="show">
@@ -361,7 +321,7 @@
                     </div>
 
                     <hr>
-                    <a id="szczegoly-wm"></a>
+                    <a id="prod/wm/szczegoly"></a>
                     <p>Proporties</p>
 
                     <div class="szczegoly">
@@ -369,8 +329,7 @@
                             <h3>Genre:</h3>
                             <span>Animated,</span>
                             <span>Comedy,</span>
-                            <span>Fictional,</span>
-                            <span>Mocking</span>
+                            <span>Fictional</span>
                         </div>
                         <div class="line">
                             <h3>Direction:</h3>
@@ -379,40 +338,17 @@
                         <div class="line">
                             <h3>Screenwriters:</h3>
                             <span>Jakub Wiśniewski,</span>
-                            <span>Hubrt Aniołek</span>
+                            <span>Hubert Aniołek,</span>
+                            <span>Szymon Domaradzki</span>
                         </div>
                         <div class="line">
                             <h3>Music:</h3>
-                            <span>Eric Castiglia</span>
+                            <span>-TBA</span>
                         </div>
                         <div class="line">
                             <h3>Cast:</h3>
                             <div class="actors">
-                                <span>Sylwester Chęciński,</span>
-                                <span>Natalia Mazur,</span>
-                                <span>Marcin Malarewicz,</span>
-                                <span>Markusknight,</span>
-                                <span>ArgusGorefest,</span>
-                                <span>Jakub Wiśniewski,</span>
-                                <span>Hubert Aniołek,</span>
-                                <span>Wico Wacha,</span>
-                                <span>Sylvaren,</span>
-                                <span>Tascmasc,</span>
-                                <span>Der0_desu,</span>
-                                <span>Kazetsu,</span>
-                                <span>Manieq,</span>
-                                <span>AdiX,</span>
-                                <span>Pinkadermus,</span>
-                                <span>Kristo,</span>
-                                <span>Sawik,</span>
-                                <span>Jackson Teller,</span>
-                                <span>TNG,</span>
-                                <span>Mr.Moon,</span>
-                                <span>Paulinka,</span>
-                                <span>Adamko,</span>
-                                <span>Bedi,</span>
-                                <span>Calunka,</span>
-                                <span>NoBoTak</span>
+                                <span>-TBA</span>
                             </div>
                         </div>
                     </div>
@@ -422,495 +358,13 @@
         </div>
     </div>
 
-    <!--POP-UP miasto gliwice-->
-
-    <div class="popup" id="popup-9">
-        <div class="overlay" onclick="togglePopup9()"></div>
-        <div class="content">
-            <div id="wrapper">
-            
-                <div class="modal">
-                    <div class="modal-header">
-                        <video autoplay loop poster="../images/mg tlo.png">
-                        <source src="" />
-                        </video>
-                
-                        <div class="close-btn" onclick="togglePopup9()">&times;</div>
-                        </button>
-                
-                        <div class="header-content">
-                        <div class="header-title">
-                            <img src="../logos/miasto gliwice logo2.png" alt="Miasto Gliwice" />
-                
-                            <div class="header-buttons">
-                                <a href="https://www.youtube.com/playlist?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><button type="button" class="button9">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
-                                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
-                                    </svg>
-                                    Play
-                                </button></a>
-
-
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="modal-body">
-                        <div class="modal-content-first">
-                        <div class="modal-description">
-                            <span>2020</span>
-                            <span class="badge">16+ </span>
-                            <span>1 Season</span>
-                            <span class="description-badge">FHD</span>
-                        </div>
-                
-                        <p> The world seen through the eyes of four high school students experience various 
-                            adventures and struggling with everyday life in a unique way. The series is a kind 
-                            of mockery of current trends, politicians and everything about us surrounds.</p>
-    
-                        </div>
-                
-                        <div class="modal-content-second">
-                        <div class="cast">
-                            <h3>Cast:</h3>
-                            <span class="sub-title"><a href="#szczegoly-mg">Jakub Wiśniewski,</a></span>
-                            <span class="sub-title"><a href="#szczegoly-mg">Hubert Aniołek, </a></span>
-                            <span class="sub-title"><a href="#szczegoly-mg">Anna Beda,</a></span>
-                            <span class="sub-title"><a href="#szczegoly-mg">Maciej Tryniszewski,</a></span>
-                            <span class="sub-title"><a href="#szczegoly-mg">Jakub Machowski,</a></span>
-                            <span class="sub-title"><a href="#szczegoly-mg">more.</a></span>
-                        </div>
-
-                        <div class="genres">
-                            <h3>Genre:</h3>
-                            <span class="sub-title">Animated,</span>
-                            <span class="sub-title">Comedy,</span>
-                            <span class="sub-title">Dark humor,</span>
-                            <span class="sub-title">Mocking</span>
-                        </div>
-                
-                        <div class="show">
-                            <h3>Direction:</h3>
-                            <span class="sub-title">Jakub Wiśniewski</span>
-                        </div>
-                        </div>
-                    </div>
-
-                    <p>Episodes</p>
-
-                    <select class="season" id="mg" name="form_select" onchange="showDivMG(this)">
-                        <option value="0">Season 1</option>
-                        <option value="1">Extras</option>
-                    </select>
-                    <div id="mgs1" style="display:block;">
-    
-                        <p></p>
-                        <h4></h4>
-                        <p></p>
-
-                        <hr>
-    
-                        <a href="https://youtu.be/gPHyLuiuDCA?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><div class="play-btn">
-                            <button class="btn">
-                                <div id="btn_container"><img src="../images/MINIATURKA_MG_1.png" width="120" height="70" /></div>
-                                <h3><span class="episode">1</span>Tuberocalypse</h3>
-                                <span class="duration">11 min</span>
-                                <h5>Influencers are flocking to the city in droves. Cherry, Fatty, Damian and doro decide to get rid of them to restore peace.</h5>
-                              </button>
-                        </div></a>
-    
-                        <hr>
-    
-                        <a href="https://youtu.be/w7JHnqaOOqs?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><div class="play-btn">
-                            <button class="btn">
-                                <div id="btn_container"><img src="../images/MINIATURKA_MG_2.png" width="120" height="70" /></div>
-                                <h3><span class="episode">2</span>Screw the politicians</h3>
-                                <span class="duration">24 min</span>
-                                <h5>After the government introduces a tax on minced cutlets, the main characters take matters into their own hands and go to Warsaw.</h5>
-                              </button>
-                        </div></a>
-    
-                        <hr>
-    
-                        <a href="https://youtu.be/FYTYPq6DMzE?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><div class="play-btn">
-                            <button class="btn">
-                                <div id="btn_container"><img src="../images/MINIATURKA_MG_3.png" width="120" height="70" /></div>
-                                <h3><span class="episode">3</span>Fatty's Love</h3>
-                                <span class="duration">18 min</span>
-                                <h5>A girl from school, Sarah, falls in love with Fatty. Cherry goes to a furry convention and then ends up at an animal shelter..</h5>
-                              </button>
-                        </div></a>
-    
-                        <hr>
-    
-                        <a href="https://youtu.be/6JOYCHbyGPM?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><div class="play-btn">
-                            <button class="btn">
-                                <div id="btn_container"><img src="../images/MINIATURKA_MG_4.png" width="120" height="70" /></div>
-                                <h3><span class="episode">4</span>Winter advertising block</h3>
-                                <span class="duration">10 min</span>
-                                <h5>There's a charity ad block coming up that the guys want to see. For this purpose, they bring in an animator, Popo, so that they don't have to watch it by themselfs.</h5>
-                              </button>
-                        </div></a>
-    
-                        <hr>
-    
-                        <a href="https://youtu.be/UPFk23rXTPU?list=PLemgGDgsCBJ8z_shgR_BMaPIQBiqDJrAW"><div class="play-btn">
-                            <button class="btn">
-                                <div id="btn_container"><img src="../images/MINIATURKA_MG_5.png" width="120" height="70" /></div>
-                                <h3><span class="episode">5</span>Women's strike</h3>
-                                <span class="duration">35 min</span>
-                                <h5>Women are striking en masse against the absolute ban on abortion. Politicians, knowing that the situation is tense, they decide to hide in a bunker under the political party headquarters.</h5>
-                              </button>
-                        </div></a>
-    
-                        <hr>
-
-                    </div>
-
-                    <div id="mgdod" style="display:none;">
-                        <p></p>
-                        <h4></h4>
-                        <p></p>
-
-                        <hr>
-            
-                        <a href="https://youtu.be/EkQnN0knJ00"><div class="play-btn">
-                            <button class="btn">
-                                <div id="btn_container"><img src="../images/MINIATURKA_MG_SEZON2.png" width="120" height="70" /></div>
-                                <h3><span class="episode">Trailer</span>Season 2</h3>
-                                <span class="duration">1 min</span>
-                                <h5>Originally a trailer for season 2 of the series "Miasta Gliwice", in the end, a serious joke, they were late for the April Fools</h5>
-                            </button>
-                        </div></a>
-
-                        <hr>
-
-                        <a href="https://youtu.be/e6DpWyL7yds"><div class="play-btn">
-                            <button class="btn">
-                                <div id="btn_container"><img src="../images/MINIATURKA_MG_PIOSENKA.png" width="120" height="70" /></div>
-                                <h3><span class="episode">Trailer</span>Song about mother</h3>
-                                <span class="duration">1 min</span>
-                                <h5>A song announcing the 1st season of the series "Miasto Gliwice". The first trailer of the series</h5>
-                            </button>
-                        </div></a>
-
-                        <hr>
-
-                        <a href="https://youtu.be/Bmrvu5NktJc"><div class="play-btn">
-                            <button class="btn">
-                                <div id="btn_container"><img src="../images/MINIATURKA_MG_SEJM.png" width="120" height="70" /></div>
-                                <h3><span class="episode">Trailer</span>Debates in the sejm</h3>
-                                <span class="duration">2 min</span>
-                                <h5>Clip from the second episode, announcing the 1st season of the series "Miasto Gliwice". The second trailer of the series</h5>
-                            </button>
-                        </div></a>
-
-                        <hr>
-                    </div>
-
-                    <p>Proporties</p>
-                    <a id="szczegoly-mg"></a>
-
-                    <div class="szczegoly">
-                        <div class="line">
-                            <h3>Genre:</h3>
-                            <span>Animated,</span>
-                            <span>Comedy,</span>
-                            <span>Dark humor,</span>
-                            <span>Mocking</span>
-                        </div>
-                        <div class="line">
-                            <h3>Direction:</h3>
-                            <span>Jakub Wiśniewski</span>
-                        </div>
-                        <div class="line">
-                            <h3>Screenwriters:</h3>
-                            <span>Jakub Wiśniewski</span>
-                        </div>
-                        <div class="line">
-                            <h3>Cast:</h3>
-                            <div class="actors">
-                                <span>Maciej Tryniszewski,</span>
-                                <span>Hubert Aniołek,</span>
-                                <span>Anna Beda,</span>
-                                <span>Kuba Machowski,</span>
-                                <span>Jakub Wiśniewski,</span>
-                                <span>Lee,</span>
-                                <span>Guwakka Taro,</span>
-                                <span>Kennedy,</span>
-                                <span>Wieczor77,</span>
-                                <span>Jeremi,</span>
-                                <span>popo</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!--POP-UP uvr-->
-
-    <div class="popup" id="popup-10">
-        <div class="overlay" onclick="togglePopup10()"></div>
-        <div class="content">
-            <div id="wrapper">
-            
-                <div class="modal">
-                    <div class="modal-header">
-                        <video autoplay loop poster="../images/MINIATURKA_uvr.png">
-                        <source src="" />
-                        </video>
-                
-                        <div class="close-btn" onclick="togglePopup10()">&times;</div>
-
-                
-                        <div class="header-content">
-                        <div class="header-title">
-                
-                            <a href="https://youtu.be/PUPM8uHa9uM"><div class="header-buttons">
-                            <button type="button" class="button9">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
-                                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
-                                </svg>
-                                Play
-                            </button></a>
-
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="modal-body">
-                        <div class="modal-content-first">
-                        <div class="modal-description">
-                            <span>2022</span>
-                            <span class="badge">14+ </span>
-                            <span>2 min</span>
-                            <span class="description-badge">FHD</span>
-                        </div>
-                
-                        <p>Due to the aggressive attack of the Russian Federation on Ukraine in February 2022, Russian troops presented to the whole 
-                            world their preparation for combat and the ability to think while making a lot of downright comical mistakes that were an 
-                            inspiration to create this short.</p>
-    
-                        </div>
-                
-                        <div class="modal-content-second">
-                
-                        <div class="genres">
-                            <h3>Genre:</h3>
-                            <span class="sub-title">Animated,</span>
-                            <span class="sub-title">Mocking</span>
-                        </div>
-                
-                        <div class="show">
-                            <h3>Direction:</h3>
-                            <span class="sub-title">Jakub Wiśniewski</span>
-                        </div>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="play-btn">
-                        <a href="https://youtu.be/PUPM8uHa9uM"><button class="btn">
-                            <div id="btn_container"><img src="../images/MINIATURKA_uvr.png" width="120" height="70" /></div>
-                            <h3>Ukraine vs Russia</h3>
-                            <span class="duration">2 min</span>
-                            <h5>Comical and almost unbelievable mishaps of the Russian army on the front in the form of a short animation aimed at opposing
-                            </h5>
-                          </button></a>
-                    </div>
-
-                    <hr>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!--POP-UP ogrodowy wys-->
-
-    <div class="popup" id="popup-11">
-        <div class="overlay" onclick="togglePopup11()"></div>
-        <div class="content">
-            <div id="wrapper">
-            
-                <div class="modal">
-                    <div class="modal-header">
-                        <video autoplay loop poster="../images/MINIATURKA_ogrodowy.png">
-                        <source src="" />
-                        </video>
-                
-                        <div class="close-btn" onclick="togglePopup11()">&times;</div>
-
-                
-                        <div class="header-content">
-                        <div class="header-title">
-                
-                            <a href="https://youtu.be/uQh60r4NlqQ"><div class="header-buttons">
-                            <button type="button" class="button9">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
-                                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
-                                </svg>
-                                Play
-                            </button></a>
-                            
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="modal-body">
-                        <div class="modal-content-first">
-                        <div class="modal-description">
-                            <span>2021</span>
-                            <span class="badge">14+ </span>
-                            <span>2 min</span>
-                            <span class="description-badge">FHD</span>
-                        </div>
-                
-                        <p>A short animated film about two ordinary gardeners who... 
-                            they decided to do something crazy and kill time by having fun race, 
-                            destroying everything in the process.</p>
-    
-                        </div>
-                
-                        <div class="modal-content-second">
-                        <div class="cast">
-                            <h3>Cast:</h3>
-                            <span class="sub-title">Jakub Wiśniewski,</span>
-                            <span class="sub-title">Kuba Machowski</span>
-                        </div>
-                
-                        <div class="genres">
-                            <h3>Genre:</h3>
-                            <span class="sub-title">Animated,</span>
-                            <span class="sub-title">For everyone</span>
-                        </div>
-                
-                        <div class="show">
-                            <h3>Direction:</h3>
-                            <span class="sub-title">Jakub Wiśniewski</span>
-                        </div>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="play-btn">
-                        <a href="https://youtu.be/uQh60r4NlqQ"><button class="btn">
-                            <div id="btn_container"><img src="../images/MINIATURKA_ogrodowy.png" width="120" height="70" /></div>
-                            <h3>Garden race</h3>
-                            <span class="duration">2 min</span>
-                            <h5>Two ordinary gardeners who
-                                they decided to do something crazy and kill time by having fun
-                                a race that was the result of a bet between them</h5>
-                          </button></a>
-                    </div>
-
-                    <hr>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--POP-UP Eleven-->
-
-    <div class="popup" id="popup-12">
-        <div class="overlay" onclick="togglePopup12()"></div>
-        <div class="content">
-            <div id="wrapper">
-            
-                <div class="modal">
-                    <div class="modal-header">
-                        <video autoplay loop poster="../images/MINIATURKA_eleven.png">
-                        <source src="" />
-                        </video>
-                
-                        <div class="close-btn" onclick="togglePopup12()">&times;</div>
-
-                
-                        <div class="header-content">
-                        <div class="header-title">
-                
-                            <a href="https://youtu.be/KkkLGWl1PTs"><div class="header-buttons">
-                            <button type="button" class="button9">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
-                                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
-                                </svg>
-                                Play
-                            </button></a>
-                
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="modal-body">
-                        <div class="modal-content-first">
-                        <div class="modal-description">
-                            <span>2021</span>
-                            <span class="badge">16+ </span>
-                            <span>3 min</span>
-                            <span class="description-badge">FHD</span>
-                        </div>
-                
-                        <p>An animated version of the funniest moments from the streams Mateusz "Eleven" Gajewski playing in 
-                            "Welcome To The Game 2". Animation created to celebrate the 10th anniversary of Mateusz's channel.</p>
-    
-                        </div>
-                
-                        <div class="modal-content-second">
-                        <div class="cast">
-                            <h3>Cast:</h3>
-                            <span class="sub-title">Mateusz Gajewski</span>
-                        </div>
-                
-                        <div class="genres">
-                            <h3>Genre:</h3>
-                            <span class="sub-title">Animated,</span>
-                            <span class="sub-title">Comedy</span>
-                        </div>
-                
-                       <div class="show">
-                            <h3>Direction:</h3>
-                            <span class="sub-title">Jakub Wiśniewski</span>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <hr>
-
-                    <div class="play-btn">
-                        <a href="https://youtu.be/KkkLGWl1PTs"><button class="btn">
-                            <div id="btn_container"><img src="../images/MINIATURKA_eleven.png" width="120" height="70" /></div>
-                            <h3>Eleven vs. WTTG2</h3>
-                            <span class="duration">3 min</span>
-                            <h5>An animated version of the funniest moments from the streams
-                                Mateusz Gajewski from the game Welcome to the game 2</h5>
-                          </button></a>
-                    </div>
-
-                    <hr>
-
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 <!-- --------------------------------------------------------------------- -->
 
 <div class="title2">
-    <h2>CO-PRODUCTIONS</h2>
-    <h3>COOPERATION, ANIMATED MOVIES, SERIES, EPISODES</h3>
+    <h2>COLLABORATIONS</h2>
+    <h3>COLLABORATIVE PROJECTS</h3>
     <hr>
 </div>
 
@@ -918,81 +372,244 @@
     <div class="container">
 
         <div class="item">
+        <div class=item__border>
+            <a class="button1" href="#koprod/sylw-egz">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 111.21"><title>videos</title><path d="M9.7,91.11a20.47,20.47,0,0,1-6-5.72A20.15,20.15,0,0,1,0,73.81V20.32A20.26,20.26,0,0,1,6,6l.15-.15A20.25,20.25,0,0,1,20.32,0H87.27a20.27,20.27,0,0,1,14,5.66,20.9,20.9,0,0,1,4.15,5.62l-1.44,0H99.07a15.18,15.18,0,0,0-1.51-1.69,14.82,14.82,0,0,0-8.39-4l-3.1,5.71H80.5l3.17-5.83H62.92l-3.16,5.83H54.2l3.17-5.83H36.05L32.69,11.6a27.74,27.74,0,0,0-6.08,1.74L26,13.6l4.45-8.18H20.32A14.85,14.85,0,0,0,9.92,9.66L9.8,9.8A14.81,14.81,0,0,0,5.42,20.32H16.76a27.66,27.66,0,0,0-4.62,7H5.42V73.81A14.75,14.75,0,0,0,8.08,82.3a15.1,15.1,0,0,0,1.62,2v6.86ZM38.29,19.49h64.49a20.16,20.16,0,0,1,20.1,20.1V91.12a20.16,20.16,0,0,1-20.1,20.09H38.29A20.14,20.14,0,0,1,18.2,91.12V39.59a20.16,20.16,0,0,1,20.09-20.1ZM63.52,58.14l19,13.25a4.16,4.16,0,0,1,.15,7L63.78,91.4A4.18,4.18,0,0,1,57,88.16V61.54h0a4.15,4.15,0,0,1,6.54-3.4ZM86.67,40.06l6.8-14.3h-21l-6.8,14.3Zm12.46-14.3-6.8,14.3h22.24a3.11,3.11,0,0,1,2.05.77V39.59a13.88,13.88,0,0,0-13.84-13.83ZM60,40.06l6.79-14.3H45.21l-6.8,14.3Zm-27.29,0,6.8-14.3H38.29A13.86,13.86,0,0,0,24.46,39.59v.47Zm83.87,5.49a3.11,3.11,0,0,1-2.05.77H24.46v44.8A13.86,13.86,0,0,0,38.29,105h64.49a13.9,13.9,0,0,0,13.84-13.83V45.55Z"/></svg>
+                <img class="item__image" src="../logos/eng/Sylwester-eng-boner.png"/>
+                <img alt="" class="item__image hover-image" src="../images/egzorcysta-sylwester-1.png" />
+            </a>
+        </div>
+        </div>
+
+        <div class="item">
             <div class=item__border>
-                <a class="button1" onclick="togglePopup15()">
+                <a class="button1" href="#koprod/swzmarl-egz">
+                    <svg viewBox="0 0 122.88 111.34"><path d="M23.59,0h75.7a23.68,23.68,0,0,1,23.59,23.59V87.75A23.56,23.56,0,0,1,116,104.41l-.22.2a23.53,23.53,0,0,1-16.44,6.73H23.59a23.53,23.53,0,0,1-16.66-6.93l-.2-.22A23.46,23.46,0,0,1,0,87.75V23.59A23.66,23.66,0,0,1,23.59,0ZM54,47.73,79.25,65.36a3.79,3.79,0,0,1,.14,6.3L54.22,89.05a3.75,3.75,0,0,1-2.4.87A3.79,3.79,0,0,1,48,86.13V50.82h0A3.77,3.77,0,0,1,54,47.73ZM7.35,26.47h14L30.41,7.35H23.59A16.29,16.29,0,0,0,7.35,23.59v2.88ZM37.05,7.35,28,26.47H53.36L62.43,7.38v0Zm32,0L59.92,26.47h24.7L93.7,7.35Zm31.32,0L91.26,26.47h24.27V23.59a16.32,16.32,0,0,0-15.2-16.21Zm15.2,26.68H7.35V87.75A16.21,16.21,0,0,0,12,99.05l.17.16A16.19,16.19,0,0,0,23.59,104h75.7a16.21,16.21,0,0,0,11.3-4.6l.16-.18a16.17,16.17,0,0,0,4.78-11.46V34.06Z"/></svg>
+                    <img class="item__image" src="../logos/eng/Swieto-zmarlych-eng-boner.png"/>
+                    <img alt="" class="item__image hover-image" src="../images/boner-sm.png" />
+                </a>
+            </div>
+            </div>
+
+        <div class="item">
+            <div class=item__border>
+                <a class="button1" href="#koprod/wielk-egz">
+                    <svg viewBox="0 0 122.88 111.34"><path d="M23.59,0h75.7a23.68,23.68,0,0,1,23.59,23.59V87.75A23.56,23.56,0,0,1,116,104.41l-.22.2a23.53,23.53,0,0,1-16.44,6.73H23.59a23.53,23.53,0,0,1-16.66-6.93l-.2-.22A23.46,23.46,0,0,1,0,87.75V23.59A23.66,23.66,0,0,1,23.59,0ZM54,47.73,79.25,65.36a3.79,3.79,0,0,1,.14,6.3L54.22,89.05a3.75,3.75,0,0,1-2.4.87A3.79,3.79,0,0,1,48,86.13V50.82h0A3.77,3.77,0,0,1,54,47.73ZM7.35,26.47h14L30.41,7.35H23.59A16.29,16.29,0,0,0,7.35,23.59v2.88ZM37.05,7.35,28,26.47H53.36L62.43,7.38v0Zm32,0L59.92,26.47h24.7L93.7,7.35Zm31.32,0L91.26,26.47h24.27V23.59a16.32,16.32,0,0,0-15.2-16.21Zm15.2,26.68H7.35V87.75A16.21,16.21,0,0,0,12,99.05l.17.16A16.19,16.19,0,0,0,23.59,104h75.7a16.21,16.21,0,0,0,11.3-4.6l.16-.18a16.17,16.17,0,0,0,4.78-11.46V34.06Z"/></svg>
                     <img class="item__image" src="../logos/eng/bad-exorcist-easter-logo-netflix.png"/>
-                    <img alt="" class="item__image hover-image" src="../images/wielkanoc-1-dark.png" />
+                    <img alt="" class="item__image hover-image" src="../images/wielkanoc-2.png" />
                 </a>
             </div>
             </div>
 
             <div class="item">
             <div class=item__border>
-                <a class="button1" onclick="togglePopup13()">
+                <a class="button1" href="#koprod/egz">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 111.21"><title>videos</title><path d="M9.7,91.11a20.47,20.47,0,0,1-6-5.72A20.15,20.15,0,0,1,0,73.81V20.32A20.26,20.26,0,0,1,6,6l.15-.15A20.25,20.25,0,0,1,20.32,0H87.27a20.27,20.27,0,0,1,14,5.66,20.9,20.9,0,0,1,4.15,5.62l-1.44,0H99.07a15.18,15.18,0,0,0-1.51-1.69,14.82,14.82,0,0,0-8.39-4l-3.1,5.71H80.5l3.17-5.83H62.92l-3.16,5.83H54.2l3.17-5.83H36.05L32.69,11.6a27.74,27.74,0,0,0-6.08,1.74L26,13.6l4.45-8.18H20.32A14.85,14.85,0,0,0,9.92,9.66L9.8,9.8A14.81,14.81,0,0,0,5.42,20.32H16.76a27.66,27.66,0,0,0-4.62,7H5.42V73.81A14.75,14.75,0,0,0,8.08,82.3a15.1,15.1,0,0,0,1.62,2v6.86ZM38.29,19.49h64.49a20.16,20.16,0,0,1,20.1,20.1V91.12a20.16,20.16,0,0,1-20.1,20.09H38.29A20.14,20.14,0,0,1,18.2,91.12V39.59a20.16,20.16,0,0,1,20.09-20.1ZM63.52,58.14l19,13.25a4.16,4.16,0,0,1,.15,7L63.78,91.4A4.18,4.18,0,0,1,57,88.16V61.54h0a4.15,4.15,0,0,1,6.54-3.4ZM86.67,40.06l6.8-14.3h-21l-6.8,14.3Zm12.46-14.3-6.8,14.3h22.24a3.11,3.11,0,0,1,2.05.77V39.59a13.88,13.88,0,0,0-13.84-13.83ZM60,40.06l6.79-14.3H45.21l-6.8,14.3Zm-27.29,0,6.8-14.3H38.29A13.86,13.86,0,0,0,24.46,39.59v.47Zm83.87,5.49a3.11,3.11,0,0,1-2.05.77H24.46v44.8A13.86,13.86,0,0,0,38.29,105h64.49a13.9,13.9,0,0,0,13.84-13.83V45.55Z"/></svg>
                     <img class="item__image" src="../logos/eng/bad-exorcist-logo.png"/>
                     <img alt="" class="item__image hover-image" src="../images/egzorcysta-tlo.png" />
                 </a>
             </div>
             </div>
             
+    </div>
+    
+    </div>
+
+            <div class="container">
+
             <div class="item">
             <div class=item__border>
-                <a class="button1" onclick="togglePopup14()">
+                <a class="button1" href="#koprod/be">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 111.21"><title>videos</title><path d="M9.7,91.11a20.47,20.47,0,0,1-6-5.72A20.15,20.15,0,0,1,0,73.81V20.32A20.26,20.26,0,0,1,6,6l.15-.15A20.25,20.25,0,0,1,20.32,0H87.27a20.27,20.27,0,0,1,14,5.66,20.9,20.9,0,0,1,4.15,5.62l-1.44,0H99.07a15.18,15.18,0,0,0-1.51-1.69,14.82,14.82,0,0,0-8.39-4l-3.1,5.71H80.5l3.17-5.83H62.92l-3.16,5.83H54.2l3.17-5.83H36.05L32.69,11.6a27.74,27.74,0,0,0-6.08,1.74L26,13.6l4.45-8.18H20.32A14.85,14.85,0,0,0,9.92,9.66L9.8,9.8A14.81,14.81,0,0,0,5.42,20.32H16.76a27.66,27.66,0,0,0-4.62,7H5.42V73.81A14.75,14.75,0,0,0,8.08,82.3a15.1,15.1,0,0,0,1.62,2v6.86ZM38.29,19.49h64.49a20.16,20.16,0,0,1,20.1,20.1V91.12a20.16,20.16,0,0,1-20.1,20.09H38.29A20.14,20.14,0,0,1,18.2,91.12V39.59a20.16,20.16,0,0,1,20.09-20.1ZM63.52,58.14l19,13.25a4.16,4.16,0,0,1,.15,7L63.78,91.4A4.18,4.18,0,0,1,57,88.16V61.54h0a4.15,4.15,0,0,1,6.54-3.4ZM86.67,40.06l6.8-14.3h-21l-6.8,14.3Zm12.46-14.3-6.8,14.3h22.24a3.11,3.11,0,0,1,2.05.77V39.59a13.88,13.88,0,0,0-13.84-13.83ZM60,40.06l6.79-14.3H45.21l-6.8,14.3Zm-27.29,0,6.8-14.3H38.29A13.86,13.86,0,0,0,24.46,39.59v.47Zm83.87,5.49a3.11,3.11,0,0,1-2.05.77H24.46v44.8A13.86,13.86,0,0,0,38.29,105h64.49a13.9,13.9,0,0,0,13.84-13.83V45.55Z"/></svg>
                     <img class="item__image" src="../logos/Blok Ekipa logo.png"/>
                     <img alt="" class="item__image hover-image" src="../images/blok-ekipa-tlo.png" />
                 </a>
             </div>
             </div>
-    </div>
     
-    </div>
+                <div class="item">
+                <div class=item__border>
+                    <a class="button1" href="#koprod/egln">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 111.21"><title>videos</title><path d="M9.7,91.11a20.47,20.47,0,0,1-6-5.72A20.15,20.15,0,0,1,0,73.81V20.32A20.26,20.26,0,0,1,6,6l.15-.15A20.25,20.25,0,0,1,20.32,0H87.27a20.27,20.27,0,0,1,14,5.66,20.9,20.9,0,0,1,4.15,5.62l-1.44,0H99.07a15.18,15.18,0,0,0-1.51-1.69,14.82,14.82,0,0,0-8.39-4l-3.1,5.71H80.5l3.17-5.83H62.92l-3.16,5.83H54.2l3.17-5.83H36.05L32.69,11.6a27.74,27.74,0,0,0-6.08,1.74L26,13.6l4.45-8.18H20.32A14.85,14.85,0,0,0,9.92,9.66L9.8,9.8A14.81,14.81,0,0,0,5.42,20.32H16.76a27.66,27.66,0,0,0-4.62,7H5.42V73.81A14.75,14.75,0,0,0,8.08,82.3a15.1,15.1,0,0,0,1.62,2v6.86ZM38.29,19.49h64.49a20.16,20.16,0,0,1,20.1,20.1V91.12a20.16,20.16,0,0,1-20.1,20.09H38.29A20.14,20.14,0,0,1,18.2,91.12V39.59a20.16,20.16,0,0,1,20.09-20.1ZM63.52,58.14l19,13.25a4.16,4.16,0,0,1,.15,7L63.78,91.4A4.18,4.18,0,0,1,57,88.16V61.54h0a4.15,4.15,0,0,1,6.54-3.4ZM86.67,40.06l6.8-14.3h-21l-6.8,14.3Zm12.46-14.3-6.8,14.3h22.24a3.11,3.11,0,0,1,2.05.77V39.59a13.88,13.88,0,0,0-13.84-13.83ZM60,40.06l6.79-14.3H45.21l-6.8,14.3Zm-27.29,0,6.8-14.3H38.29A13.86,13.86,0,0,0,24.46,39.59v.47Zm83.87,5.49a3.11,3.11,0,0,1-2.05.77H24.46v44.8A13.86,13.86,0,0,0,38.29,105h64.49a13.9,13.9,0,0,0,13.84-13.83V45.55Z"/></svg>
+                        <img class="item__image" src="../logos/elektroglinalogo.png"/>
+                        <img alt="" class="item__image hover-image" src="../images/elektroglina-2.png"/>
+                    </a>
+                </div>
+                </div>
+    
+        </div>
+        
+        </div>
 
     
 </ul>
 
-<!--POP-UP Egzorcysta: Wielkanoc-->
+<!--POP-UP Egzorcysta: Święto zmarłych-->
 
-<div class="popup" id="popup-15">
-    <div class="overlay" onclick="togglePopup15()"></div>
+<div class="popup" id="popup-16">
+    <div class="overlay" onclick="togglePopup16(); urlclear(); toggleBodyScrollOn();"></div>
     <div class="content">
         <div id="wrapper">
         
             <div class="modal">
                 <div class="modal-header">
-                    <video autoplay loop poster="../images/wielkanoc-2.png">
-                    <source src="" />
-                    </video>
+                    <img src="../images/boner-sm.png">
             
-                    <div class="close-btn" onclick="togglePopup15()">&times;</div>
+                    <div class="close-btn" onclick="togglePopup16(); urlclear(); toggleBodyScrollOn();">&times;</div>
 
             
                     <div class="header-content">
                     <div class="header-title">
-                        <img src="../logos/eng/bad-exorcist-easter-logo-netflix.png" alt="Bad Exorcist: Easter" />
-            
-                        <a href="https://www.netflix.com/"><div class="header-buttons">
-                            <button type="button" class="button9">
-                                <svg width="24px" height="24px" viewBox="0 0 24 24" role="img" fill="#fff">
-                                    <path d="M5.39.004l4.75 13.46v-.007l.376 1.06c2.088 5.908 3.21 9.075 3.216 9.082.004 0 .32.02.702.04 1.156.05 2.59.18 3.676.31.25.03.466.04.48.03l-4.71-13.36-.436-1.23-2.423-6.85c-.46-1.3-.85-2.408-.87-2.45L10.12 0H5.395zM13.898.012l-.01 5.306-.008 5.306-.437-1.232V9.39l-.565 11.81c.555 1.567.852 2.403.855 2.407.004.004.32.024.702.042 1.157.05 2.59.18 3.68.31.25.03.467.04.48.03s.02-5.42.017-12.01L18.604.01h-4.706zM5.39.002v11.99c0 6.594.007 11.995.015 12.003s.416-.03.907-.086c.49-.06 1.17-.13 1.51-.16.518-.05 2.068-.15 2.248-.15.052 0 .056-.27.063-5.08l.008-5.08.38 1.06.13.376.57-11.8-.19-.546-.88-2.44-.03-.087H5.39z"/>
-                                </svg>
-                                NETFLIX
-                            </button></a>
-
-                        </div>
                     </div>
                     </div>
                 </div>
                 
                 <div class="modal-body">
                     <div class="modal-content-first">
+                        <div class="modal-title">
+                            <span class="modal-prod-title">BAD EXORCIST: ALL SAINT'S DAY</span>
+                            <span class="modal-relese-date"></span>
+                        </div>
+                    <div class="modal-cooperation-type">
+                        <span>Collaboration includes:</span>
+                        <span> Animation, Art</span>
+                    </div>
                     <div class="modal-description">
                         <span>2024</span>
-                        <span class="badge">16+ </span>
-                        <span>12 min</span>
-                        <span class="description-badge">HD</span>
+                        <span class="description-badge">16+ </span>
+                        <span class="description-badge">FHD</span>
+                        <span>10 min</span>
+                    </div>
+
+                    <div class="modal-title-buttons">
+                        <a href="https://www.netflix.com/search?q=święto%20zmarłych&jbv=81677046"><button type="button" class="button9">
+                            <svg width="24px" height="24px" viewBox="0 0 24 24" role="img" fill="#fff">
+                                <path d="M5.39.004l4.75 13.46v-.007l.376 1.06c2.088 5.908 3.21 9.075 3.216 9.082.004 0 .32.02.702.04 1.156.05 2.59.18 3.676.31.25.03.466.04.48.03l-4.71-13.36-.436-1.23-2.423-6.85c-.46-1.3-.85-2.408-.87-2.45L10.12 0H5.395zM13.898.012l-.01 5.306-.008 5.306-.437-1.232V9.39l-.565 11.81c.555 1.567.852 2.403.855 2.407.004.004.32.024.702.042 1.157.05 2.59.18 3.68.31.25.03.467.04.48.03s.02-5.42.017-12.01L18.604.01h-4.706zM5.39.002v11.99c0 6.594.007 11.995.015 12.003s.416-.03.907-.086c.49-.06 1.17-.13 1.51-.16.518-.05 2.068-.15 2.248-.15.052 0 .056-.27.063-5.08l.008-5.08.38 1.06.13.376.57-11.8-.19-.546-.88-2.44-.03-.087H5.39z"/>
+                            </svg>
+                            WATCH
+                        </button></a>
                     </div>
             
-                    <p>A man doesn't keep his Easter tradition, so the evil bunny pays him a visit. Boner asks the good bunny for help.</p>
+
+                    <hr>
+
+                        <div class="modal-prod-decription">
+                        <p>With a rising demand for holy candles on All Saints' Day, Domino ditches Bogdan 
+                            and partners up with a wealthy grave robber and his cemetery schemes.</p>
+                        </div>
+
+                    </div>
+            
+                    <div class="modal-content-second">
+                    <div class="cast">
+                        <h3>Cast:</h3>
+                        <span class="sub-title">Bartosz Walaszek</span>
+                    </div>
+            
+                    <div class="genres">
+                        <h3>Genre:</h3>
+                        <span class="sub-title">Animowane,</span>
+                        <span class="sub-title">Komedia,</span>
+                        <span class="sub-title">Absurdalne</span>
+                    </div>
+            
+                    <div class="show">
+                        <h3>Direction:</h3>
+                        <span class="sub-title">Bartosz Walaszek</span>
+                    </div>
+
+                    <div class="show">
+                        <h3>Productionj:</h3>
+                        <span class="sub-title">Netflix</span>
+                    </div>
+
+                    <div class="show">
+                        <h3>People from "EA" working on the project</h3>
+                        <span class="sub-title">Jakub Wiśniewski</span>
+                    </div>
+
+                    </div>
+                </div>
+
+                <p></p>
+                <h4></h4>
+                <p></p>
+
+                <hr>
+                
+
+                <div class="play-btn">
+                    <a href="https://www.netflix.com/watch/81677046?trackId=255824129&tctx=0%2C0%2C22c3fcb2-5cee-40ce-add8-ef04b3c3a9ae-38955870%2C22c3fcb2-5cee-40ce-add8-ef04b3c3a9ae-38955870%7C2%2Cunknown%2C%2C%2CtitlesResults%2C%2CVideo%3A81677046%2CdetailsPagePlayButton"><button class="btn">
+                        <div id="btn_container"><img src="../images/boner-sm.png" width="120" height="70" /></div>
+                        <h3>Bad Exorcist: All Saint's day</h3>
+                        <span class="duration">10 min</span>
+                        <h5>With a rising demand for holy candles on All Saints' Day, Domino ditches Bogdan and partners up with a wealthy grave robber and his cemetery schemes.</h5>
+                      </button></a>
+                </div>
+
+                <hr>
+
+                </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--POP-UP Egzorcysta: Wielkanoc-->
+
+<div class="popup" id="popup-15">
+    <div class="overlay" onclick="togglePopup15(); urlclear(); toggleBodyScrollOn();"></div>
+    <div class="content">
+        <div id="wrapper">
+        
+            <div class="modal">
+                <div class="modal-header">
+                    <img src="../images/wielkanoc-2.png">
+            
+                    <div class="close-btn" onclick="togglePopup15(); urlclear(); toggleBodyScrollOn();">&times;</div>
+
+            
+                    <div class="header-content">
+                    <div class="header-title">
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="modal-content-first">
+                        <div class="modal-title">
+                            <span class="modal-prod-title">BAD EXORCIST: EASTER</span>
+                            <span class="modal-relese-date"></span>
+                        </div>
+                    <div class="modal-cooperation-type">
+                        <span>Collaboration includes:</span>
+                        <span> Animation, Art</span>
+                    </div>
+                    <div class="modal-description">
+                        <span>2024</span>
+                        <span class="description-badge">16+ </span>
+                        <span class="description-badge">FHD</span>
+                        <span>12 min</span>
+                    </div>
+
+                    <div class="modal-title-buttons">
+                        <a href="https://www.netflix.com/pl-en/title/81677044?tctx=1%2C2%2Cb6323e9f-0fa2-471d-87b8-c9732b3cff82-414517392%2CNES_F1607CD971BB04E81F823317723960-7DA6E02492B0D5-216408B531_p_1712699209591%2CNES_F1607CD971BB04E81F823317723960_p_1712699209591%2C%2C%2C%2C%2CVideo%3A81677044%2CdetailsPagePlayButton&trackId=14170045"><button type="button" class="button9">
+                            <svg width="24px" height="24px" viewBox="0 0 24 24" role="img" fill="#fff">
+                                <path d="M5.39.004l4.75 13.46v-.007l.376 1.06c2.088 5.908 3.21 9.075 3.216 9.082.004 0 .32.02.702.04 1.156.05 2.59.18 3.676.31.25.03.466.04.48.03l-4.71-13.36-.436-1.23-2.423-6.85c-.46-1.3-.85-2.408-.87-2.45L10.12 0H5.395zM13.898.012l-.01 5.306-.008 5.306-.437-1.232V9.39l-.565 11.81c.555 1.567.852 2.403.855 2.407.004.004.32.024.702.042 1.157.05 2.59.18 3.68.31.25.03.467.04.48.03s.02-5.42.017-12.01L18.604.01h-4.706zM5.39.002v11.99c0 6.594.007 11.995.015 12.003s.416-.03.907-.086c.49-.06 1.17-.13 1.51-.16.518-.05 2.068-.15 2.248-.15.052 0 .056-.27.063-5.08l.008-5.08.38 1.06.13.376.57-11.8-.19-.546-.88-2.44-.03-.087H5.39z"/>
+                            </svg>
+                            WATCH
+                        </button></a>
+                    </div>
+
+                    <hr>
+
+                        <div class="modal-prod-decription">
+                        <p>A man doesn't keep his Easter tradition, so the evil bunny 
+                            pays him a visit. Boner asks the good bunny for help.</p>
+                        </div>
 
                     </div>
             
@@ -1028,7 +645,7 @@
                 </div>
 
                 <p></p>
-                <h4>LIST OF EPISODES CREATED IN COLLABORATION:</h4>
+                <h4></h4>
                 <p></p>
 
                 <hr>
@@ -1052,50 +669,58 @@
     </div>
 </div>
 
+<!--POP-UP Egzorcysta: Sylwester-->
 
-<!--POP-UP Egzorcysta-->
-
-<div class="popup" id="popup-13">
-    <div class="overlay" onclick="togglePopup13()"></div>
+<div class="popup" id="popup-18">
+    <div class="overlay" onclick="togglePopup18(); urlclear(); toggleBodyScrollOn();"></div>
     <div class="content">
         <div id="wrapper">
         
             <div class="modal">
                 <div class="modal-header">
-                    <video autoplay loop poster="../images/egzorcysta-tlo.png">
-                    <source src="" />
-                    </video>
+                    <img src="../images/egzorcysta-sylwester-1.png">
             
-                    <div class="close-btn" onclick="togglePopup13()">&times;</div>
+                    <div class="close-btn" onclick="togglePopup18(); urlclear(); toggleBodyScrollOn();">&times;</div>
 
             
                     <div class="header-content">
                     <div class="header-title">
-                        <img src="../logos/eng/bad-exorcist-logo.png" alt="Bad Exorcist" />
-            
-                        <a href="https://www.netflix.com/"><div class="header-buttons">
-                        <button type="button" class="button9">
-                            <svg width="24px" height="24px" viewBox="0 0 24 24" role="img" fill="#fff">
-                                <path d="M5.39.004l4.75 13.46v-.007l.376 1.06c2.088 5.908 3.21 9.075 3.216 9.082.004 0 .32.02.702.04 1.156.05 2.59.18 3.676.31.25.03.466.04.48.03l-4.71-13.36-.436-1.23-2.423-6.85c-.46-1.3-.85-2.408-.87-2.45L10.12 0H5.395zM13.898.012l-.01 5.306-.008 5.306-.437-1.232V9.39l-.565 11.81c.555 1.567.852 2.403.855 2.407.004.004.32.024.702.042 1.157.05 2.59.18 3.68.31.25.03.467.04.48.03s.02-5.42.017-12.01L18.604.01h-4.706zM5.39.002v11.99c0 6.594.007 11.995.015 12.003s.416-.03.907-.086c.49-.06 1.17-.13 1.51-.16.518-.05 2.068-.15 2.248-.15.052 0 .056-.27.063-5.08l.008-5.08.38 1.06.13.376.57-11.8-.19-.546-.88-2.44-.03-.087H5.39z"/>
-                            </svg>
-                            NETFLIX
-                        </button></a>
-
-                        </div>
                     </div>
                     </div>
                 </div>
                 
                 <div class="modal-body">
                     <div class="modal-content-first">
-                    <div class="modal-description">
-                        <span>2023</span>
-                        <span class="badge">16+ </span>
-                        <span>4 Seasons</span>
-                        <span class="description-badge">HD</span>
+                        <div class="modal-title">
+                            <span class="modal-prod-title">BAD EXORCIST: NEW YEAR'S EVE</span>
+                            <span class="modal-relese-date"></span>
+                        </div>
+                    <div class="modal-cooperation-type">
+                        <span>Collaboration includes:</span>
+                        <span> Animation, Art</span>
                     </div>
-            
-                    <p>Bogdan Boner, a self-taught exorcist living near Piaseczno with his friends helpers Marcinek and the demon Domino, fight against the unclean forces that haunt surroundings.</p>
+                    <div class="modal-description">
+                        <span>2025</span>
+                        <span class="description-badge">16+ </span>
+                        <span class="description-badge">FHD</span>
+                        <span>12 min</span>
+                    </div>
+
+                    <div class="modal-title-buttons">
+                        <a href="https://www.netflix.com/search?q=sylwe&jbv=81944912"><button type="button" class="button9">
+                            <svg width="24px" height="24px" viewBox="0 0 24 24" role="img" fill="#fff">
+                                <path d="M5.39.004l4.75 13.46v-.007l.376 1.06c2.088 5.908 3.21 9.075 3.216 9.082.004 0 .32.02.702.04 1.156.05 2.59.18 3.676.31.25.03.466.04.48.03l-4.71-13.36-.436-1.23-2.423-6.85c-.46-1.3-.85-2.408-.87-2.45L10.12 0H5.395zM13.898.012l-.01 5.306-.008 5.306-.437-1.232V9.39l-.565 11.81c.555 1.567.852 2.403.855 2.407.004.004.32.024.702.042 1.157.05 2.59.18 3.68.31.25.03.467.04.48.03s.02-5.42.017-12.01L18.604.01h-4.706zM5.39.002v11.99c0 6.594.007 11.995.015 12.003s.416-.03.907-.086c.49-.06 1.17-.13 1.51-.16.518-.05 2.068-.15 2.248-.15.052 0 .056-.27.063-5.08l.008-5.08.38 1.06.13.376.57-11.8-.19-.546-.88-2.44-.03-.087H5.39z"/>
+                            </svg>
+                            WATCH
+                        </button></a>
+                    </div>
+
+                    <hr>
+
+                        <div class="modal-prod-decription">
+                        <p>Marcinek's New Year's party takes a wild turn when Boner arrives with a 
+                            bad attitude and lots of booze — plus an uninvited guest in the back of his van.</p>
+                        </div>
 
                     </div>
             
@@ -1130,57 +755,19 @@
                     </div>
                 </div>
 
-                <p>Episodes</p>
-
-                <select class="season" id="egz" name="form_select" onchange="showDiv(this)">
-                    <option value="0">Season 4</option>
-                </select>
-
                 <p></p>
-                <h4>LIST OF EPISODES CREATED IN COLLABORATION:</h4>
+                <h4></h4>
                 <p></p>
 
                 <hr>
+                
 
                 <div class="play-btn">
-                    <a href="https://www.netflix.com/watch/81677096?trackId=200257859"><button class="btn">
-                        <div id="btn_container"><img src="../images/uczicwy boner.png" width="120" height="70" /></div>
-                        <h3><span class="episode">6</span> Honest Boner</h3>
-                        <span class="duration">11 min</span>
-                        <h5>Domino and Marcinek discover that as punishment for Boner's bungling, nasty old Whisper makes him honest and even registers business activities.  </h5>
-                      </button></a>
-                </div>
-
-                <hr>
-
-                <div class="play-btn">
-                    <a href="https://www.netflix.com/watch/81677098?trackId=14170289&tctx=2%2C0%2C01720a8f-4096-496c-bc3a-457c48bcf0cd-472542269%2CNES_F1607CD971BB04E81F823317723960-994911DC4F528C-60A9F31389_p_1698831348168%2CNES_F1607CD971BB04E81F823317723960_p_1698829174288%2C%2C%2C%2C81297404%2CVideo%3A81677098%2CdetailsPageEpisodePlayButton"><button class="btn">
-                        <div id="btn_container"><img src="../images/krystian 125p.png" width="120" height="70" /></div>
-                        <h3><span class="episode">8</span> Krystian 125p</h3>
-                        <span class="duration">10 min</span>
-                        <h5>Fed up with constantly asking for his boss's decaying car, Marcinek decides to invest in his own car. Over time, the car turns out to be possessed.</h5>
-                      </button></a>
-                </div>
-
-                <hr>
-
-                <div class="play-btn">
-                    <a href="https://www.netflix.com/watch/81677099?trackId=14170289"><button class="btn">
-                        <div id="btn_container"><img src="../images/krystian 125p2.png" width="120" height="70" /></div>
-                        <h3><span class="episode">9</span> Krystian 125p część 2</h3>
-                        <span class="duration">11 min</span>
-                        <h5>Something bad is happening to Marcinek's car. The main characters do not know that this will turn out to be both their salvation and their curse.</h5>
-                      </button></a>
-                </div>
-
-                <hr>
-
-                <div class="play-btn">
-                    <a href="https://www.netflix.com/watch/81677103?trackId=200257859"><button class="btn">
-                        <div id="btn_container"><img src="../images/prima sort mma2.png" width="120" height="70" /></div>
-                        <h3><span class="episode">13</span> First class MMA 2</h3>
-                        <span class="duration">17 min</span>
-                        <h5>The next MMA gala in hell is even more of a hit than the first one. Boner and Marcin are fighting for their lives, but it will not be easy for them.</h5>
+                    <a href="https://www.netflix.com/search?q=sylwe&jbv=81944912"><button class="btn">
+                        <div id="btn_container"><img src="../images/wielkanoc-3.png" width="120" height="70" /></div>
+                        <h3>Bad Exorcist: New Year's Eve</h3>
+                        <span class="duration">12 min</span>
+                        <h5>Marcinek's New Year's party takes a wild turn when Boner arrives with a bad attitude and lots of booze — plus an uninvited guest in the back of his van.</h5>
                       </button></a>
                 </div>
 
@@ -1193,52 +780,421 @@
     </div>
 </div>
 
-<!--POP-UP Blok Ekipa-->
 
-<div class="popup" id="popup-14">
-    <div class="overlay" onclick="togglePopup14()"></div>
+<!--POP-UP Egzorcysta-->
+
+<div class="popup" id="popup-13">
+    <div class="overlay" onclick="togglePopup13(); urlclear(); toggleBodyScrollOn();"></div>
     <div class="content">
         <div id="wrapper">
         
             <div class="modal">
                 <div class="modal-header">
-                    <video autoplay loop poster="../images/blok-ekipa-tlo.png">
-                    <source src="" />
-                    </video>
+                    <img src="../images/egzorcysta-tlo.png">
             
-                    <div class="close-btn" onclick="togglePopup14()">&times;</div>
-                    </button>
+                    <div class="close-btn" onclick="togglePopup13(); urlclear(); toggleBodyScrollOn();">&times;</div>
+
             
                     <div class="header-content">
                     <div class="header-title">
-                        <img src="../logos/blok ekipa logo2.png" alt="Blok Ekipa" />
-            
-                        <div class="header-buttons">
-                            <a href="https://www.youtube.com/spinkafilmstudio"><button type="button" class="button9">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
-                                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
-                                </svg>
-                                YOUTUBE
-                            </button></a>
-
-                        </div>
                     </div>
                     </div>
                 </div>
                 
                 <div class="modal-body">
                     <div class="modal-content-first">
+                        <div class="modal-title">
+                            <span class="modal-prod-title">BAD EXORCIST</span>
+                            <span class="modal-relese-date"></span>
+                        </div>
+                    <div class="modal-cooperation-type">
+                        <span>Collaboration includes:</span>
+                        <span> Animation, Art</span>
+                    </div>
                     <div class="modal-description">
-                        <span>2013-</span>
-                        <span class="badge">16+ </span>
-                        <span></span>
+                        <span>2025</span>
+                        <span class="description-badge">16+ </span>
                         <span class="description-badge">FHD</span>
+                        <span>6 Seasons</span>
+                    </div>
+
+                    <div class="modal-title-buttons">
+                        <a href="https://www.netflix.com/pl-en/"><button type="button" class="button9">
+                            <svg width="24px" height="24px" viewBox="0 0 24 24" role="img" fill="#fff">
+                                <path d="M5.39.004l4.75 13.46v-.007l.376 1.06c2.088 5.908 3.21 9.075 3.216 9.082.004 0 .32.02.702.04 1.156.05 2.59.18 3.676.31.25.03.466.04.48.03l-4.71-13.36-.436-1.23-2.423-6.85c-.46-1.3-.85-2.408-.87-2.45L10.12 0H5.395zM13.898.012l-.01 5.306-.008 5.306-.437-1.232V9.39l-.565 11.81c.555 1.567.852 2.403.855 2.407.004.004.32.024.702.042 1.157.05 2.59.18 3.68.31.25.03.467.04.48.03s.02-5.42.017-12.01L18.604.01h-4.706zM5.39.002v11.99c0 6.594.007 11.995.015 12.003s.416-.03.907-.086c.49-.06 1.17-.13 1.51-.16.518-.05 2.068-.15 2.248-.15.052 0 .056-.27.063-5.08l.008-5.08.38 1.06.13.376.57-11.8-.19-.546-.88-2.44-.03-.087H5.39z"/>
+                            </svg>
+                            WATCH
+                        </button></a>
+                    </div>
+
+                    <hr>
+
+                        <div class="modal-prod-decription">
+                        <p>Bogdan Boner, a self-taught exorcist living near Piaseczno with his friends helpers 
+                            Marcinek and the demon Domino, fight against the unclean forces that haunt surroundings.</p>
+                        </div>
+
                     </div>
             
-                    <p> Spejson, Wojtas and Walo are three friends from Grochów, Warsaw. Together they spend their time in blissful idleness. 
-                        Coming up with more and more different ideas on how to get out on your own and sometimes while avoiding your mortal enemies. 
-                    </p>
+                    <div class="modal-content-second">
+                    <div class="cast">
+                        <h3>Cast:</h3>
+                        <span class="sub-title">Bartosz Walaszek</span>
+                    </div>
+            
+                    <div class="genres">
+                        <h3>Genre:</h3>
+                        <span class="sub-title">Animated,</span>
+                        <span class="sub-title">Comedy,</span>
+                        <span class="sub-title">Absurd</span>
+                    </div>
+            
+                    <div class="show">
+                        <h3>Direction:</h3>
+                        <span class="sub-title">Bartosz Walaszek</span>
+                    </div>
 
+                    <div class="show">
+                        <h3>Production:</h3>
+                        <span class="sub-title">Netflix</span>
+                    </div>
+
+                    <div class="show">
+                        <h3>People from "EA" working on the project</h3>
+                        <span class="sub-title">Jakub Wiśniewski</span>
+                    </div>
+
+                    </div>
+                </div>
+
+                <div class="episode-list-title">
+                    <p>EPISODES CREATED IN COLLABORATION:</p>
+                </div>
+
+                <select class="season" id="egz" name="form_select" onchange="showDivEGZ(this)">
+                    <option value="2">Season 6</option>
+                    <option value="1">Season 5</option>
+                    <option value="0">Season 4</option>
+                    <option value="3">All episodes</option>
+                </select>
+                    <div id="egzs4" style="display:none;">
+
+                        <p></p>
+                        <h4></h4>
+                        <p></p>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81677096?trackId=200257859"><button class="btn">
+                                <div id="btn_container"><img src="../images/uczicwy boner.png" width="120" height="70" /></div>
+                                <h3><span class="episode">6</span> Honest Boner</h3>
+                                <span class="duration">11 min</span>
+                                <h5>Domino and Marcinek discover that as punishment for Boner's bungling, nasty old Whisper makes him honest and even registers business activities.  </h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81677098?trackId=14170289&tctx=2%2C0%2C01720a8f-4096-496c-bc3a-457c48bcf0cd-472542269%2CNES_F1607CD971BB04E81F823317723960-994911DC4F528C-60A9F31389_p_1698831348168%2CNES_F1607CD971BB04E81F823317723960_p_1698829174288%2C%2C%2C%2C81297404%2CVideo%3A81677098%2CdetailsPageEpisodePlayButton"><button class="btn">
+                                <div id="btn_container"><img src="../images/krystian 125p.png" width="120" height="70" /></div>
+                                <h3><span class="episode">8</span> Krystian 125p</h3>
+                                <span class="duration">10 min</span>
+                                <h5>Fed up with constantly asking for his boss's decaying car, Marcinek decides to invest in his own car. Over time, the car turns out to be possessed.</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81677099?trackId=14170289"><button class="btn">
+                                <div id="btn_container"><img src="../images/krystian 125p2.png" width="120" height="70" /></div>
+                                <h3><span class="episode">9</span> Krystian 125p część 2</h3>
+                                <span class="duration">11 min</span>
+                                <h5>Something bad is happening to Marcinek's car. The main characters do not know that this will turn out to be both their salvation and their curse.</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81677103?trackId=200257859"><button class="btn">
+                                <div id="btn_container"><img src="../images/prima sort mma2.png" width="120" height="70" /></div>
+                                <h3><span class="episode">13</span> First class MMA 2</h3>
+                                <span class="duration">17 min</span>
+                                <h5>The next MMA gala in hell is even more of a hit than the first one. Boner and Marcin are fighting for their lives, but it will not be easy for them.</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+                    </div>
+
+                    <div id="egzs5" style="display:none;">
+
+                        <p></p>
+                        <h4></h4>
+                        <p></p>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81677105?trackId=200257859"><button class="btn">
+                                <div id="btn_container"><img src="../images/bestia_apokalipsy.png" width="120" height="70" /></div>
+                                <h3><span class="episode">2</span>The Beast of the Apocalypse</h3>
+                                <span class="duration">11 min</span>
+                                <h5>When a demon steals the Vatican's nuclear codes and launches a missile at the Baltic Sea, Boner must battle the beast it awakens.</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81677106?trackId=14170289"><button class="btn">
+                                <div id="btn_container"><img src="../images/pies_wloczega.png" width="120" height="70" /></div>
+                                <h3><span class="episode">3</span>Stray Dog</h3>
+                                <span class="duration">12 min</span>
+                                <h5>Police tap Boner to investigate a stray dog that has attacked and killed multiple people. Could there be something supernatural behind it?</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81677116?trackId=200257858"><button class="btn">
+                                <div id="btn_container"><img src="../images/faksietszajs.png" width="120" height="70" /></div>
+                                <h3><span class="episode">13</span>Doctor Freakstoolcrap</h3>
+                                <span class="duration">12 min</span>
+                                <h5>After an experiment by Beelzebutt goes horribly right, Boner must fight an immortal fusion of all the demons he has previously killed.</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+                    </div>
+
+                    <div id="egzs6" style="display:block;">
+
+                        <p></p>
+                        <h4></h4>
+                        <p></p>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81942426?trackId=254983298&tctx=0%2C0%2C37d17bc2-ca3c-4682-b4cd-3e83e61bcdb9-610752173%2CNES_3BB412D3B54F46BF844466C9B1CC20-A09B79D2507423-59B2D42957_p_1761835027374%2CNES_3BB412D3B54F46BF844466C9B1CC20_p_1761835027374%2C%2C%2C%2C81297404%2CVideo%3A81942426%2CdetailsPageEpisodePlayButton"><button class="btn">
+                                <div id="btn_container"><img src="../images/biala-dama-miniaturka.png" width="120" height="70" /></div>
+                                <h3><span class="episode">4</span> White lady</h3>
+                                <span class="duration">11 min</span>
+                                <h5>During a museum heist, a pair of thieves dies. Boner arrives to deal with the murderer - the lustful spirit of a noblewoman.</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81942422?trackId=254983298"><button class="btn">
+                                <div id="btn_container"><img src="../images/GDMD-miniaturka.png" width="120" height="70" /></div>
+                                <h3><span class="episode">7</span> Where the devil says goodnight</h3>
+                                <span class="duration">10 min</span>
+                                <h5>Boner puts the car up for sale and answers a phone call about a haunted airport. It turns out that the demon is much bigger than he expected.</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81942418?trackId=200257859"><button class="btn">
+                                <div id="btn_container"><img src="../images/korona-miniaturka.png" width="120" height="70" /></div>
+                                <h3><span class="episode">13</span> The Crazy King's Crown</h3>
+                                <span class="duration">13 min</span>
+                                <h5>Boner, Domino, and Marcinek are plundering the tomb of the King of Albania. One of them becomes the victim of an ancient curse.</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+                    </div>
+
+
+                    <div id="egzall" style="display:none;">
+
+                        <p></p>
+                        <h4></h4>
+                        <p></p>
+
+                        <p>Season 4</p>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81677096?trackId=200257859"><button class="btn">
+                                <div id="btn_container"><img src="../images/uczicwy boner.png" width="120" height="70" /></div>
+                                <h3><span class="episode">6</span> Honest Boner</h3>
+                                <span class="duration">11 min</span>
+                                <h5>Domino and Marcinek discover that as punishment for Boner's bungling, nasty old Whisper makes him honest and even registers business activities.  </h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81677098?trackId=14170289&tctx=2%2C0%2C01720a8f-4096-496c-bc3a-457c48bcf0cd-472542269%2CNES_F1607CD971BB04E81F823317723960-994911DC4F528C-60A9F31389_p_1698831348168%2CNES_F1607CD971BB04E81F823317723960_p_1698829174288%2C%2C%2C%2C81297404%2CVideo%3A81677098%2CdetailsPageEpisodePlayButton"><button class="btn">
+                                <div id="btn_container"><img src="../images/krystian 125p.png" width="120" height="70" /></div>
+                                <h3><span class="episode">8</span> Krystian 125p</h3>
+                                <span class="duration">10 min</span>
+                                <h5>Fed up with constantly asking for his boss's decaying car, Marcinek decides to invest in his own car. Over time, the car turns out to be possessed.</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81677099?trackId=14170289"><button class="btn">
+                                <div id="btn_container"><img src="../images/krystian 125p2.png" width="120" height="70" /></div>
+                                <h3><span class="episode">9</span> Krystian 125p część 2</h3>
+                                <span class="duration">11 min</span>
+                                <h5>Something bad is happening to Marcinek's car. The main characters do not know that this will turn out to be both their salvation and their curse.</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81677103?trackId=200257859"><button class="btn">
+                                <div id="btn_container"><img src="../images/prima sort mma2.png" width="120" height="70" /></div>
+                                <h3><span class="episode">13</span> First class MMA 2</h3>
+                                <span class="duration">17 min</span>
+                                <h5>The next MMA gala in hell is even more of a hit than the first one. Boner and Marcin are fighting for their lives, but it will not be easy for them.</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+
+                        <p>Season 5</p>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81677105?trackId=200257859"><button class="btn">
+                                <div id="btn_container"><img src="../images/bestia_apokalipsy.png" width="120" height="70" /></div>
+                                <h3><span class="episode">2</span>The Beast of the Apocalypse</h3>
+                                <span class="duration">11 min</span>
+                                <h5>When a demon steals the Vatican's nuclear codes and launches a missile at the Baltic Sea, Boner must battle the beast it awakens.</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81677106?trackId=14170289"><button class="btn">
+                                <div id="btn_container"><img src="../images/pies_wloczega.png" width="120" height="70" /></div>
+                                <h3><span class="episode">3</span>Stray Dog</h3>
+                                <span class="duration">12 min</span>
+                                <h5>Police tap Boner to investigate a stray dog that has attacked and killed multiple people. Could there be something supernatural behind it?</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81677116?trackId=200257858"><button class="btn">
+                                <div id="btn_container"><img src="../images/faksietszajs.png" width="120" height="70" /></div>
+                                <h3><span class="episode">13</span>Doctor Freakstoolcrap</h3>
+                                <span class="duration">12 min</span>
+                                <h5>After an experiment by Beelzebutt goes horribly right, Boner must fight an immortal fusion of all the demons he has previously killed.</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+                        <p>Season 6</p>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81942426?trackId=254983298&tctx=0%2C0%2C37d17bc2-ca3c-4682-b4cd-3e83e61bcdb9-610752173%2CNES_3BB412D3B54F46BF844466C9B1CC20-A09B79D2507423-59B2D42957_p_1761835027374%2CNES_3BB412D3B54F46BF844466C9B1CC20_p_1761835027374%2C%2C%2C%2C81297404%2CVideo%3A81942426%2CdetailsPageEpisodePlayButton"><button class="btn">
+                                <div id="btn_container"><img src="../images/biala-dama-miniaturka.png" width="120" height="70" /></div>
+                                <h3><span class="episode">4</span> White lady</h3>
+                                <span class="duration">11 min</span>
+                                <h5>During a museum heist, a pair of thieves dies. Boner arrives to deal with the murderer - the lustful spirit of a noblewoman.</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81942422?trackId=254983298"><button class="btn">
+                                <div id="btn_container"><img src="../images/GDMD-miniaturka.png" width="120" height="70" /></div>
+                                <h3><span class="episode">7</span> Where the devil says goodnight</h3>
+                                <span class="duration">10 min</span>
+                                <h5>Boner puts the car up for sale and answers a phone call about a haunted airport. It turns out that the demon is much bigger than he expected.</h5>
+                            </button></a>
+                        </div>
+
+                        <hr>
+
+                        <div class="play-btn">
+                            <a href="https://www.netflix.com/watch/81942418?trackId=200257859"><button class="btn">
+                                <div id="btn_container"><img src="../images/korona-miniaturka.png" width="120" height="70" /></div>
+                                <h3><span class="episode">13</span> The Crazy King's Crown</h3>
+                                <span class="duration">13 min</span>
+                                <h5>Boner, Domino, and Marcinek are plundering the tomb of the King of Albania. One of them becomes the victim of an ancient curse.</h5>
+                            </button></a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--POP-UP Blok Ekipa-->
+
+<div class="popup" id="popup-14">
+    <div class="overlay" onclick="togglePopup14(); urlclear(); toggleBodyScrollOn();"></div>
+    <div class="content">
+        <div id="wrapper">
+        
+            <div class="modal">
+                <div class="modal-header">
+                    <img src="../images/blok-ekipa-tlo.png">
+            
+                    <div class="close-btn" onclick="togglePopup14(); urlclear(); toggleBodyScrollOn();">&times;</div>
+                    </button>
+            
+                    <div class="header-content">
+                    <div class="header-title">
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="modal-content-first">
+                        <div class="modal-title">
+                            <span class="modal-prod-title">HOODIES SQUAD</span>
+                            <span class="modal-relese-date"></span>
+                        </div>
+                    <div class="modal-cooperation-type">
+                        <span>Collaboration includes:</span>
+                        <span> Animation, Art</span>
+                    </div>
+                    <div class="modal-description">
+                        <span>2013-</span>
+                        <span class="description-badge">16+ </span>
+                        <span class="description-badge">FHD</span>
+                    </div>
+
+                    <div class="modal-title-buttons">
+                        <a href="https://www.youtube.com/spinkafilmstudio"><button type="button" class="button9">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                            </svg>
+                            WATCH
+                        </button></a>
+                    </div>
+
+                    <hr>
+
+                        <div class="modal-prod-decription">
+                        <p>Spejson, Wojtas and Walo are three friends from Grochów, Warsaw. Together they spend their time in 
+                            blissful idleness. Coming up with more and more different ideas on how to get out on your own and 
+                            sometimes while avoiding your mortal enemies. </p>
+                        </div>
 
                     </div>
             
@@ -1272,9 +1228,9 @@
                     </div>
                 </div>
 
-                <p></p>
-                <h4>LIST OF EPISODES CREATED IN COLLABORATION:</h4>
-                <p></p>
+                <div class="episode-list-title">
+                    <p>EPISODES CREATED IN COLLABORATION:</p>
+                </div>
 
                 <hr>
 
@@ -1294,54 +1250,161 @@
     </div>
 </div>
 
-<!-- --------------------------------------------------------------------- -->
+<!--POP-UP Elektroglina-->
 
-<div class="background-images-3">
-    <div class="gradient-0deg"></div>
-    <div class="gradient-180deg"></div>
-</div>
+<div class="popup" id="popup-17">
+    <div class="overlay" onclick="togglePopup17(); urlclear(); toggleBodyScrollOn();"></div>
+    <div class="content">
+        <div id="wrapper">
+        
+            <div class="modal">
+                <div class="modal-header">
+                    <img src="../images/elektroglina-1.png">
+            
+                    <div class="close-btn" onclick="togglePopup17(); urlclear(); toggleBodyScrollOn();">&times;</div>
 
-<a id="blog"></a>
-    <div class="title2">
-        <h2>NEWS</h2>
-        <h3>BLOG - LATEST ARTICLES</h3>
-        <hr>
-    </div>
-
-    <div class="blog-posts">
-
-        <div class="blog-btn">
-            <a href="blog/miasto-gliwice-futher-production-cancelled.html"><button class="blog-btn">
-                <div id="blog-btn-container"><img src="../artykuly_miniturki/artykul-miniaturka-2.png" width="300" height="170" /></div>
-                <div class="article-title">
-                    <h3>"Miasto Gliwice" further production cancelled</h3>
+            
+                    <div class="header-content">
+                    <div class="header-title">
+                    </div>
+                    </div>
                 </div>
-                <h5>"Miasto Gliwice" the first series and both the first production of the Entangled Artists group (formerly Red Diamond Studio) were announced in July 2022 in the form of a trailer for the second season. [...]</h5>
-                <div class="blog-posted-by">
-                    <h6></h6>
-                    <h7></h7>
+                
+                <div class="modal-body">
+                    <div class="modal-content-first">
+                        <div class="modal-title">
+                            <span class="modal-prod-title">ELECTROCOP 2050</span>
+                            <span class="modal-relese-date"></span>
+                        </div>
+                    <div class="modal-cooperation-type">
+                        <span>Collaboration includes:</span>
+                        <span> Animation, Art</span>
+                    </div>
+                    <div class="modal-description">
+                        <span>2025</span>
+                        <span class="description-badge">16+ </span>
+                        <span class="description-badge">FHD</span>
+                        <span>6 Episodes</span>
+                    </div>
+
+                    <div class="modal-title-buttons">
+                        <a href="https://www.canalplus.com/pl/serial/elektroglina-2050/h/16493531_70026/sezony/"><button type="button" class="button9">
+                            <svg width="24px" height="24px" role="img" fill="#fff" xmlns="http://www.w3.org/2000/svg" id="Warstwa_1" data-name="Warstwa 1" viewBox="0 0 930 600"><path d="M419.55,733.38a351.63,351.63,0,0,1-93.37,12.84q-193.73,0-177.19-200.83Q156.51,454,206.7,404.2t126.78-49.8q36.07,0,66,12.5,26.94,11.28,44.34,31c2.65-16.07,5.24-32.15,7.89-48.22,4.08-24.74,9.17-49.45,11.82-74.39-4.06-1.95-8.26-3.8-12.64-5.54q-47-18.65-109.8-18.65-139.39,0-222,78.08T24.85,549.49q-24.69,300,277.69,300a501.19,501.19,0,0,0,110-12.09C415.93,802.81,418.45,768.12,419.55,733.38Z" transform="translate(-22.99 -251.12)"/><path d="M440.85,624.8V494.51H962V624.8ZM631.59,830.14v-541H771.26v541Z" transform="translate(-22.99 -251.12)"/></svg>
+                            WATCH
+                        </button></a>
+                    </div>
+
+                    <hr>
+
+                        <div class="modal-prod-decription">
+                        <p>The year is 2050. Evil artificial intelligence has taken over most of the world's electronics. 
+                                Warsaw is struggling with cybercrime, rebellious robots, and cyborg gangs.</p>
+                        </div>
+
+                    </div>
+            
+                    <div class="modal-content-second">
+                    <div class="cast">
+                        <h3>Cast:</h3>
+                        <span class="sub-title">Bartosz Walaszek</span>
+                    </div>
+            
+                    <div class="genres">
+                        <h3>Genre:</h3>
+                        <span class="sub-title">Animated,</span>
+                        <span class="sub-title">Comedy,</span>
+                        <span class="sub-title">Absurd</span>
+                    </div>
+            
+                    <div class="show">
+                        <h3>Direction:</h3>
+                        <span class="sub-title">Bartosz Walaszek</span>
+                    </div>
+
+                    <div class="show">
+                        <h3>Production:</h3>
+                        <span class="sub-title">Canal+</span>
+                    </div>
+
+                    <div class="show">
+                        <h3>People from "EA" working on the project</h3>
+                        <span class="sub-title">Jakub Wiśniewski</span>
+                    </div>
+
+                    </div>
                 </div>
-                <h8>3 November 2023</h8>
-            </button></a>
+
+                <p></p>
+                <h4></h4>
+                <p></p>
+
+                <div class="episode-list-title">
+                    <p>EPISODES CREATED IN COLLABORATION:</p>
+                </div>
+
+                <hr>
+                
+                                <div class="play-btn">
+                    <a href="https://www.canalplus.com/pl/serial/elektroglina-2050/h/16493531_70026/sezony/"><button class="btn">
+                        <div id="btn_container"><img src="../images/elektroglina-e01.png" width="120" height="70" /></div>
+                        <h3><span class="episode">1</span>Episode 1</h3>
+                        <span class="duration">7 min</span>
+                        <h5>A certain Radzio and a not-so-intelligent insurance robot rob the MPO bank. All in the name of dreams.</h5>
+                      </button></a>
+                </div>
+                <hr>
+                <div class="play-btn">
+                    <a href="https://www.canalplus.com/pl/serial/elektroglina-2050/h/16493531_70026/sezony/"><button class="btn">
+                        <div id="btn_container"><img src="../images/elektroglina-e02.png" width="120" height="70" /></div>
+                        <h3><span class="episode">2</span>Episode 2</h3>
+                        <span class="duration">9 min</span>
+                        <h5>The electrocop returns to the station. He is quickly assigned a new case and a troublesome assistant. URSUS 2000, the technological gem of the metropolitan police.</h5>
+                      </button></a>
+                </div>
+                <hr>
+                <div class="play-btn">
+                    <a href="https://www.canalplus.com/pl/serial/elektroglina-2050/h/16493531_70026/sezony/"><button class="btn">
+                        <div id="btn_container"><img src="../images/elektroglina-e03.png" width="120" height="70" /></div>
+                        <h3><span class="episode">3</span>Episode 3</h3>
+                        <span class="duration">7 min</span>
+                        <h5>An electrocop and his accomplice witness a robbery of a popular chain store, Sraczka, but according to the regulations they can only issue a parking ticket.</h5>
+                      </button></a>
+                </div>
+                <hr>
+                <div class="play-btn">
+                    <a href="https://www.canalplus.com/pl/serial/elektroglina-2050/h/16493531_70026/sezony/"><button class="btn">
+                        <div id="btn_container"><img src="../images/elektroglina-e04.png" width="120" height="70" /></div>
+                        <h3><span class="episode">4</span>Episode 4</h3>
+                        <span class="duration">9 min</span>
+                        <h5>Kosa and Toilet are back. This time they have to deal with dangerous villains, the Brave Pigs Boxing</h5>
+                      </button></a>
+                </div>
+                <hr>
+                <div class="play-btn">
+                    <a href="https://www.canalplus.com/pl/serial/elektroglina-2050/h/16493531_70026/sezony/"><button class="btn">
+                        <div id="btn_container"><img src="../images/elektroglina-e05.png" width="120" height="70" /></div>
+                        <h3><span class="episode">5</span>Episode 5</h3>
+                        <span class="duration">8 min</span>
+                        <h5>Błażej and Miłosz Szczawek run a vulcanization plant called SZCZAWGUM, but instead of changing tires, they kidnap the son of a businessman, Gminowiejski, for ransom.</h5>
+                      </button></a>
+                </div>
+                <hr>
+                <div class="play-btn">
+                    <a href="https://www.canalplus.com/pl/serial/elektroglina-2050/h/16493531_70026/sezony/"><button class="btn">
+                        <div id="btn_container"><img src="../images/elektroglina-e06.png" width="120" height="70" /></div>
+                        <h3><span class="episode">6</span>Episode 6</h3>
+                        <span class="duration">8 min</span>
+                        <h5>Robokiller is loose in the area, attacking innocent people. He murders brutally and effectively, but Electrocop has a plan to lure him into a trap.</h5>
+                      </button></a>
+                </div>
+
+                <hr>
+
+                </div>
+
+            </div>
         </div>
-
-    <div class="blog-btn">
-            <a href="blog/bad-exorcist-4-season-on-netflix.html"><button class="blog-btn">
-                <div id="blog-btn-container"><img src="../artykuly_miniturki/artykul-miniaturka-1.png" width="300" height="170" /></div>
-                <div class="article-title">
-                    <h3>"Bad Exorcist" 4th season on Netflix!</h3>
-                </div>
-                <h5>The return of the average, drunken, vulgar and deadly exorcist Bogdan Boner and his crew, in new episodes and with completely new adventures will provide a lot of entertainment to every fan of this series. [...]</h5>
-                <div class="blog-posted-by">
-                    <h6></h6>
-                    <h7></h7>
-                </div>
-                <h8>31 October 2023</h8>
-            </button></a>
-        </div>
-    
     </div>
-
 </div>
 
 <!-- --------------------------------------------------------------------- -->
@@ -1351,7 +1414,7 @@
 
         <div class="footer-content">
     
-          <h3>Entangled Artists © 2024</h3>
+          <h3>Entangled Artists 2025</h3>
     <p></p>
         
           <ul class="socials">
@@ -1365,30 +1428,9 @@
                     </button>
                 </a>
             </li>
-    
-            <li>      
-                <a href="https://pl.linkedin.com/company/entangled-artists?trk=public_profile_topcard-current-company">
-                    <button class="button6">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50"
-                        style="fill:#FFFFFF;">
-                            <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
-                        </svg>
-                    </button>
-                </a>
-            </li>
-    
-            <li>      
-                <a href="https://vimeo.com/entangledartists">
-                    <button class="button6">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:#FFFFFF;">
-                            <path d="M22.875 10.063c-2.442 5.217-8.337 12.319-12.063 12.319-3.672 0-4.203-7.831-6.208-13.043-.987-2.565-1.624-1.976-3.474-.681l-1.128-1.455c2.698-2.372 5.398-5.127 7.057-5.28 1.868-.179 3.018 1.098 3.448 3.832.568 3.593 1.362 9.17 2.748 9.17 1.08 0 3.741-4.424 3.878-6.006.243-2.316-1.703-2.386-3.392-1.663 2.673-8.754 13.793-7.142 9.134 2.807z"/>
-                        </svg>
-                    </button>
-                </a>
-            </li>
 
             <li>      
-                <a href="https://www.instagram.com/entangled.artists/">
+                <a href="https://www.instagram.com/entangledartists/">
                     <button class="button6">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:#FFFFFF">
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -1408,26 +1450,62 @@
 <!-- --------------------------------------------------------------------- -->
 
 
-    <input type="checkbox" id="active">
-    <label for="active" class="menu-btn"><span></span></label>
-    <label for="active" class="close"></label>
-    <div class="wrapper">
+<input type="checkbox" id="active">
+<label for="active" class="menu-btn"><span></span></label>
+<label for="active" class="close"></label>
+
+        <!--LOGO W NAVBARZE-->
+
+<div class="navbar">
+    <div class="main">
+        <a href="index.html">
+            <div class="logo">
+                <img src="../images/logo.png">
+            </div>
+        </a>
+    </div>
+
+        <!--POWRÓT NA GÓRĘ STRONY-->
+
+    <div class="tooltip2">
+
+        <div class="tooltiptext">
+            <h1>Back to top</h1>
+        </div>
+
+        <a href="#top">
+            <label class="back-to-top-btn">
+                <span>
+                    <svg viewBox="0 -10 32 32"><path d="m26.71 10.29-10-10a1 1 0 0 0-1.41 0l-10 10 1.41 1.41L15 3.41V32h2V3.41l8.29 8.29z"/></svg>
+                </span>
+            </label>
+        </a>
+    </div>
+
+    <div id="powiadomienia-eng"></div>
+
+</div>
+<div class="wrapper">
     <ul>
         <li><a href="index.html">HOME PAGE</a></li>
+        <li><a href="#aboutus">ABOUT US</a></li>
+        <li><a href="#productions">PRODUCTIONS</a></li>
         <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="contact.html#faq">FAQ</a></li>
         <a href="../index.html">
             <button class="button6">
                 <img src="../images/pl-flag.png" alt="">
             </button>
         </a>      
-        <a href="index.html">
+        <a href="../eng/index.html">
             <button class="button6">
                 <img src="../images/gb-flag.png" alt="">
             </button>
         </a>
-        <li><h2>Entangled Artists © 2024</h2></li>
+        <li><h2>Entangled Artists 2025</h2></li>
+
     </ul>
-    </div>
+</div>
 
 </body>
 </html>

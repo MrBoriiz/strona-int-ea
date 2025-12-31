@@ -4,7 +4,7 @@
     bottom: 100;
     left: 0;
     right: 0;
-    background: #111;
+    background: #101013;
     height: auto;
     width: 100vw;
     padding-top: 40px;
@@ -33,16 +33,6 @@
     font-weight: 500;
     text-transform: capitalize;
     line-height: 1rem;
-  }
-  
-  .footer-content p {
-    position: relative;
-    left:%;
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 18px;
-    font-size: 14px;
-    color: #c5c5c5;
   }
   
   .socials {

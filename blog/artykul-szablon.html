@@ -16,8 +16,9 @@
     <link rel="stylesheet" href="../moviecard.css" />
     <link rel="stylesheet" href="../moviemodal.css" />
     <link rel="stylesheet" href="../footer.css" />
+    <link rel="stylesheet" href="../tooltip.css" />
 
-    <script src="popup.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -26,11 +27,6 @@
 </head>
 <body>
     <header>
-        <div class="main">
-            <div class="logo">
-                <img src="../images/logo.png">
-            </div>
-        </div>
         <div class="title">
             <div class="home-title">
             </div>
@@ -42,7 +38,7 @@
 
 <!-- --------------------------------------------------------------------- -->
 <div class="title2">
-    <h2>NAGŁÓWEK</h2>
+    <div class="main-title"><h2>NAGŁÓWEK</h2></div>
     <span>Data dodania: xx.yy.zzzz</span>
     <hr>
 
@@ -120,7 +116,7 @@
 </div>
 
 <div class="title2">
-    <h4>POZOSTAŁE ARTYKUŁY</h4>
+    <h4>POZOSTAŁE WPISY</h4>
     <hr>
 
     <div class="text-description">
@@ -200,26 +196,61 @@
 
 <!-- --------------------------------------------------------------------- -->
 
-    <input type="checkbox" id="active">
-    <label for="active" class="menu-btn"><span></span></label>
-    <label for="active" class="close"></label>
-    <div class="wrapper">
-        <ul>
-            <li><a href="../index.html">HOME PAGE</a></li>
-            <li><a href="../kontakt.html">KONTAKT</a></li>
-            <a href="artykul-szablon.html">
-                <button class="button6">
-                    <img src="../images/pl-flag.png" alt="">
-                </button>
-            </a>      
-            <a href="../eng/blog/article-template.html">
-                <button class="button6">
-                    <img src="../images/gb-flag.png" alt="">
-                </button>
-            </a>
-            <li><h2>Entangled Artists © 2024</h2></li>
-        </ul>
+<input type="checkbox" id="active">
+<label for="active" class="menu-btn"><span></span></label>
+<label for="active" class="close"></label>
+
+        <!--LOGO W NAVBARZE-->
+
+<div class="navbar">
+    <div class="main">
+        <a href="../index.html">
+            <div class="logo">
+                <img src="../images/logo.png">
+            </div>
+        </a>
     </div>
+
+        <!--POWRÓT NA GÓRĘ STRONY-->
+
+    <div class="tooltip2">
+
+        <div class="tooltiptext">
+            <h1>Powrót na górę</h1>
+        </div>
+
+        <a href="#top">
+            <label class="back-to-top-btn">
+                <span>
+                    <svg viewBox="0 -10 32 32"><path d="m26.71 10.29-10-10a1 1 0 0 0-1.41 0l-10 10 1.41 1.41L15 3.41V32h2V3.41l8.29 8.29z"/></svg>
+                </span>
+            </label>
+        </a>
+    </div>
+
+</div>
+<div class="wrapper">
+    <ul>
+        <li><a href="../index.html">HOME PAGE</a></li>
+        <li><a href="../index.html#onas">O NAS</a></li>
+        <li><a href="../index.html#produkcje">PRODUKCJE</a></li>
+        <li><a href="../index.html#aktualnosci">AKTUALNOŚCI</a></li>
+        <li><a href="../kontakt.html">KONTAKT</a></li>
+        <li><a href="../kontakt.html#faq">FAQ</a></li>
+        <a href="../index.html">
+            <button class="button6">
+                <img src="../images/pl-flag.png" alt="">
+            </button>
+        </a>      
+        <a href="../eng/index.html">
+            <button class="button6">
+                <img src="../images/gb-flag.png" alt="">
+            </button>
+        </a>
+        <li><h2>Entangled Artists © 2024</h2></li>
+
+    </ul>
+</div>
 
 </body>
 </html>
