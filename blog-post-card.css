@@ -83,14 +83,6 @@
     top: 135px;
   }
 
-  #blog-btn-container {
-    width: 120px;
-    height: 70px;
-    border-radius: 5px;
-    float: left;
-    text-align: center;
-  }
-
   .article-title{
     position: absolute;
     left: 100px; 
@@ -101,51 +93,60 @@
 
   @media only screen and (min-width: 360px) and (max-width: 400px) {
 
+    .blog-posts{
+      position: relative;
+      display: flex;
+      grid-gap: 10px;
+      max-width: 360px;
+      transform: translate(-25%, 0%);
+    }
+
     .blog-btn img {
       position: absolute;
-      margin-top: -175px;
-      margin-right: 20px;
+      margin: none;
       border-radius: 10px;
-      left: 25px;
+      left: 5px;
+      top: 55px;
+      width: 160px;
+      height: 100px;
     }
   
     .blog-btn {
       position: relative;
-      width: 350px;
+      width: 170px;
       right: -2.5px;
-      height: 450px;
+      height: 250px;
       margin-bottom: 20px;
       text-align: left;
       font-size: 16px;
       color: rgb(121, 121, 121);
       background: rgb(34, 34, 34);
       border-radius: 10px;
-      left: 50%;
-      transform: translate(-50%, 0%);
     }
 
     .blog-btn h3{
-      position: relative;
-      left: -115px;
-      bottom: -10px;
+      position: absolute;
+      left: -15px;
+      bottom: 25px;
       font-size: 1.0em;
       font-weight: 600;
-      min-width: 300px;
-      max-width: 320px;
-      color: rgb(255, 255, 255); 
+      min-width: 160px;
+      max-width: 160px;
+      color: rgb(255, 255, 255);
       line-height: 1.2em;
     }
 
     .article-title{
-      position: absolute;
-      left: 100px; 
-      margin-left: 40px;
+      position: relative;
+      left: 0px; 
+      margin-left: 0px;
       width: 100px;
+      top: 105px;
     }
     
     .blog-btn h5{
-      position: absolute;
-      font-size: 1em;
+      position: relative;
+      font-size: 0em;
       font-weight: 100;
       color: rgba(255, 255, 255, 0.664);
       line-height: 1.2em;
@@ -162,79 +163,75 @@
       text-align: center;
   }
   
-  .blog-btn h7{
-      font-size: 1.00em;
-      font-weight: 300;
-      color: rgb(150, 150, 150); 
-      line-height: 1.2em;
-      text-align: center;
-      position: relative;
-  }
-  
   .blog-btn h8{
       position: absolute;
+      width: 160px;
       font-size: 1.00em;
       font-weight: 300;
       color: rgb(150, 150, 150); 
       line-height: 1.2em;
-      left: 225px;
-      top: 400px;
-  }
-
-  .blog-posted-by{
-    position: absolute;
-    left: 7%;
-    top: 400px;
+      left: 10px;
+      top: 220px;
   }
 
   }
   
   @media only screen and (min-width: 401px) and (max-width: 415px) {
+
+    .blog-posts{
+      position: relative;
+      display: flex;
+      grid-gap: 10px;
+      max-width: 360px;
+      transform: translate(-20%, 0%);
+    }
+
     .blog-btn img {
       position: absolute;
-      margin-top: -175px;
-      margin-right: 20px;
+      margin: none;
       border-radius: 10px;
-      left: 25px;
+      left: 5px;
+      top: 55px;
+      width: 180px;
+      height: 120px;
     }
   
     .blog-btn {
       position: relative;
-      width: 350px;
-      height: 450px;
-      right: 0px;
+      width: 190px;
+      right: -2.5px;
+      height: 250px;
       margin-bottom: 20px;
       text-align: left;
       font-size: 16px;
       color: rgb(121, 121, 121);
       background: rgb(34, 34, 34);
       border-radius: 10px;
-      left: 50%;
-      transform: translate(-50%, 0%);
     }
 
     .blog-btn h3{
-      position: relative;
-      bottom: -10px;
-      left: -115px;
+      position: absolute;
+      left: -15px;
+      bottom: px;
       font-size: 1.0em;
       font-weight: 600;
-      color: rgb(255, 255, 255); 
+      min-width: 160px;
+      max-width: 160px;
+      color: rgb(255, 255, 255);
       line-height: 1.2em;
-      min-width: 300px;
-      max-width: 320px;
     }
 
     .article-title{
-      position: absolute;
-      left: 100px; 
-      margin-left: 40px;
+      position: relative;
+      left: 0px; 
+      margin-left: 0px;
       width: 100px;
+      top: 145px;
     }
     
     .blog-btn h5{
-      position: absolute;
-      font-size: 1em;
+      position: relative;
+      font-size: 0em;
       font-weight: 100;
       color: rgba(255, 255, 255, 0.664);
       line-height: 1.2em;
@@ -251,34 +248,20 @@
       text-align: center;
   }
   
-  .blog-btn h7{
-      font-size: 1.00em;
-      font-weight: 300;
-      color: rgb(150, 150, 150); 
-      line-height: 1.2em;
-      text-align: center;
-      position: relative;
-  }
-  
   .blog-btn h8{
       position: absolute;
+      width: 160px;
       font-size: 1.00em;
       font-weight: 300;
       color: rgb(150, 150, 150); 
       line-height: 1.2em;
-      left: 225px;
-      top: 400px;
-  }
-
-  .blog-posted-by{
-    position: absolute;
-    left: 7%;
-    top: 400px;
+      left: 10px;
+      top: 220px;
   }
 
   }
   
-  @media only screen and (min-width: 416px) and (max-width: 920px) {
+  @media only screen and (min-width: 416px) and (max-width: 460px) {
     .blog-btn img {
       position: absolute;
       margin-top: -175px;
@@ -365,6 +348,94 @@
   }
 
   }
+
+  @media only screen and (min-width: 461px) and (max-width: 759px) {
+    .blog-btn img {
+      position: absolute;
+      margin-top: -175px;
+      margin-right: 20px;
+      border-radius: 10px;
+      left: 25px;
+    }
+
+    .blog-btn {
+      position: relative;
+      width: 350px;
+      right: 35px;
+      height: 450px;
+      margin-bottom: 20px;
+      text-align: left;
+      font-size: 16px;
+      color: rgb(121, 121, 121);
+      background: rgb(34, 34, 34);
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
+
+    .blog-btn h3{
+      position: relative;
+      left: -115px;
+      bottom: -10px;
+      font-size: 1.0em;
+      font-weight: 600;
+      color: rgb(255, 255, 255); 
+      line-height: 1.2em;
+      flex-wrap: wrap;
+    }
+
+    .article-title{
+      position: absolute;
+      left: 100px;
+      width: auto;
+      margin-left: 40px;
+    }
+    
+    .blog-btn h5{
+      position: absolute;
+      font-size: 1em;
+      font-weight: 100;
+      color: rgba(255, 255, 255, 0.664);
+      line-height: 1.2em;
+      padding-left: 0px;
+      top: 250px;
+    }
+
+  .blog-btn h6{
+      position: relative;
+      font-size: 1.00em;
+      font-weight: 300;
+      color: rgb(150, 150, 150); 
+      line-height: 1.2em;
+      text-align: center;
+  }
+
+  .blog-btn h7{
+      font-size: 1.00em;
+      font-weight: 300;
+      color: rgb(150, 150, 150); 
+      line-height: 1.2em;
+      text-align: center;
+      position: relative;
+  }
+
+  .blog-btn h8{
+      position: absolute;
+      font-size: 1.00em;
+      font-weight: 300;
+      color: rgb(150, 150, 150); 
+      line-height: 1.2em;
+      left: 225px;
+      top: 400px;
+  }
+
+  .blog-posted-by{
+    position: absolute;
+    left: 7%;
+    top: 400px;
+  }
+
+}
   
   @media only screen and (min-width: 760px) and (max-width: 800px) {
 

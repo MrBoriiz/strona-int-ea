@@ -8,7 +8,7 @@
 }
 
 :root {
-    --background-color: #222222;
+    --background-color: #070709;
   }
 
   header{
@@ -37,18 +37,6 @@
 
 h6{
     color: #fff;
-}
-
-.logo img{
-    width: 150px;
-    margin: 20px;
-    height: auto;
-}
-
-.main{
-    margin: auto;
-    max-width: 1200px;
-    position: absolute;
 }
 
 .home-title{
@@ -99,20 +87,41 @@ h6{
 .email{
     position: relative;
     height: auto;
-    max-width: 915px;
+    max-width: 615px;
     left: 50%;
     transform: translate(-50%, 0%);
     flex-wrap: wrap;
 }
 
+.email svg{
+    position: relative;
+    top: 6px;
+}
+
 .email p{
     font-family: 'Poppins', 'sans-serif';
     font-weight: 700;
-    display: block;
+    display: inline;
     text-align: center;
-    border-radius: 3px;
-    color: hsla(0, 0%, 100%, 0.61);
+    border-radius: 15px;
+    color: hsl(0, 0%, 100%);
     font-size: 2.5rem;
+    text-align: center;
+}
+
+.logo{
+    cursor: pointer;
+    float: left;
+    width: 200px;
+    margin: 15px;
+    height: auto;
+}
+
+.logo img{
+    float: left;
+    width: 200px;
+    margin: 0px;
+    height: auto;
 }
 
 .blog-img{

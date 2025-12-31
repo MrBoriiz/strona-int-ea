@@ -6,8 +6,8 @@
     left: 0px;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2;
     display: none;
 }
 
@@ -24,6 +24,7 @@
     z-index: 2;
     text-align: center;
     box-sizing: border-box;
+    overscroll-behavior-block: contain;
 }
 
 .popup .content::-webkit-scrollbar {
@@ -174,7 +175,7 @@ border-radius: 2px;
     text-align: left;
     font-size: 16px;
     color: rgb(121, 121, 121);
-    background: #181818;
+    background: #070709;
   }
   
   #btn_container {
@@ -193,8 +194,8 @@ border-radius: 2px;
   }
   
   .btn h3{
-    position: absolute;
-    top: 55px;
+    position: relative;
+    top: 40px;
     font-size: 1.00em;
     font-weight: 600;
     color: rgb(255, 255, 255); 
@@ -204,7 +205,7 @@ border-radius: 2px;
   
   .btn h5{
     position: relative;
-    top: 20px;
+    top: 35px;
     font-size: 0.75em;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.664); 
@@ -212,15 +213,15 @@ border-radius: 2px;
     padding-left: 130px;
   }
 
-    .btn h6{
-        position: relative;
-        font-size: 1.00em;
-        font-weight: 600;
-        color: rgb(255, 255, 255); 
-        line-height: 1.2em;
-        padding-left: 710px;
-        margin-top: -55px;
-    }
+  .btn h6{
+      position: relative;
+      font-size: 1.00em;
+      font-weight: 600;
+      color: rgb(255, 255, 255); 
+      line-height: 1.2em;
+      padding-left: 710px;
+      margin-top: -55px;
+  }
 
 
 .plus{
@@ -275,7 +276,7 @@ border-radius: 2px;
 
 .duration {
   position: absolute;
-  top: 40px;
+  top: 60px;
   color: rgba(255, 255, 255, 0.322);
   padding: 4px 4px;
   text-align: center;
@@ -317,6 +318,7 @@ border-radius: 2px;
   margin-top: 60px;
   margin-bottom: 40px;
   font-size: 20px;
+  max-width: 1000px;
 }
 
 .line{
@@ -380,6 +382,7 @@ border-radius: 2px;
   }
 
   .duration {
+    margin-top: -10px;
     position: absolute;
     left: 135px;
     font-size: 16px;
@@ -408,7 +411,7 @@ border-radius: 2px;
         text-align: left;
         font-size: 16px;
         color: rgb(121, 121, 121);
-        background: #181818;
+        background: #070709;
       }
 
       .btn h6{
@@ -441,7 +444,7 @@ border-radius: 2px;
         color: rgb(255, 255, 255); 
         line-height: 1.2em;
         padding-left: 130px;
-        margin-top: -40px;
+        margin-top: -50px;
       }
       
       .btn h5{
@@ -450,8 +453,14 @@ border-radius: 2px;
         color: rgba(255, 255, 255, 0.664); 
         line-height: 1.2em;
         padding-left: 0px;
-        margin-top: 35px;
+        margin-top: 45px;
       }
+
+      .popup .close-btn{
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+    }
 
   }
   
@@ -482,6 +491,7 @@ border-radius: 2px;
     }
 
   .duration {
+    margin-top: 0px;
     position: absolute;
     left: 155px;
     font-size: 16px;
@@ -505,7 +515,7 @@ border-radius: 2px;
         text-align: left;
         font-size: 16px;
         color: rgb(121, 121, 121);
-        background: #181818;
+        background: #070709;
       }
 
       .btn h6{
@@ -551,6 +561,11 @@ border-radius: 2px;
         padding-left: 0px;
         margin-top: 50px;
       }
+      .popup .close-btn{
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+    }
 
   }
 
@@ -589,8 +604,9 @@ border-radius: 2px;
     }
 
     .duration {
-      position: absolute;
-      left: 155px;
+      margin-top: 10px;
+      position: relative;
+      left: 145px;
       font-size: 18px;
     }
 
@@ -612,7 +628,7 @@ border-radius: 2px;
         text-align: left;
         font-size: 16px;
         color: rgb(121, 121, 121);
-        background: #181818;
+        background: #070709;
       }
 
       .btn h6{
@@ -647,7 +663,7 @@ border-radius: 2px;
         color: rgb(255, 255, 255); 
         line-height: 1.2em;
         padding-left: 150px;
-        margin-top: -40px;
+        margin-top: -50px;
       }
       
       .btn h5{
@@ -659,7 +675,63 @@ border-radius: 2px;
         margin-top: 50px;
       }
 
+      .popup .close-btn{
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+    }
   }
+
+  @media only screen and (min-width: 501px) and (max-width: 550px) {
+    .duration{
+      position: relative;
+      top: -30px;
+      font-size: 18px;
+      left: 400px;
+    }
+}
+
+  @media only screen and (min-width: 551px) and (max-width: 650px) {
+    .duration{
+      position: relative;
+      top: -30px;
+      font-size: 18px;
+      left: 450px;
+    }
+
+    .btn h5{
+      max-width: 540px;
+    }
+
+}
+
+
+  @media only screen and (min-width: 601px) and (max-width: 650px) {
+    .duration{
+      position: relative;
+      top: -30px;
+      font-size: 18px;
+      left: 500px;
+    }
+}
+
+  @media only screen and (min-width: 651px) and (max-width: 689px) {
+    .duration{
+      position: relative;
+      top: -30px;
+      font-size: 18px;
+      left: 550px;
+    }
+}
+
+  @media only screen and (min-width: 690px) and (max-width: 759px) {
+    .duration{
+      position: relative;
+      top: -30px;
+      font-size: 18px;
+      left: 580px;
+    }
+}
 
   @media only screen and (min-width: 501px) and (max-width: 759px) {
 
@@ -703,13 +775,13 @@ border-radius: 2px;
     }
 
     .btn h5{
-      position: absolute;
+      position: relative;
       font-size: 0.75em;
       font-weight: 600;
       color: rgba(255, 255, 255, 0.664); 
       line-height: 1.2em;
       padding-left: 0px;
-      margin-top: 50px;
+      margin-top: -30px;
       width: auto;
     }
 
@@ -718,12 +790,11 @@ border-radius: 2px;
       top: 10px;
     }
 
-    .duration{
+    .popup .close-btn{
+      cursor: pointer;
       position: absolute;
-      top: 15px;
-      font-size: 18px;
-      left: 420px;
-    }
+      top: 20px;
+  }
 
   }
 
@@ -767,7 +838,7 @@ border-radius: 2px;
         text-align: left;
         font-size: 16px;
         color: rgb(121, 121, 121);
-        background: #181818;
+        background: #070709;
       }
 
       .btn h6{
@@ -862,7 +933,7 @@ border-radius: 2px;
         text-align: left;
         font-size: 16px;
         color: rgb(121, 121, 121);
-        background: #181818;
+        background: #070709;
       }
 
       .btn h6{
@@ -929,7 +1000,7 @@ border-radius: 2px;
         text-align: left;
         font-size: 16px;
         color: rgb(121, 121, 121);
-        background: #181818;
+        background: #070709;
       }
 
       .btn h6{

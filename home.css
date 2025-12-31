@@ -7,7 +7,7 @@
 }
 
 :root {
-    --background-color: #222222;
+    --background-color: #070709;
   }
 
 header{
@@ -85,7 +85,7 @@ header{
     align-items: center;
     align-self: center;
     text-decoration: none;
-    width: 70%;
+    width: auto;
     margin: auto;
     display: flex;
 }
@@ -108,7 +108,7 @@ header{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('arts/eleven.png');
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('images/pijany-bogaty.png');
 }
 
 .background-images-3{
@@ -124,18 +124,6 @@ header{
 
 h6{
     color: #fff;
-}
-
-.logo img{
-    width: 150px;
-    margin: 20px;
-    height: auto;
-}
-
-.main{
-    margin: auto;
-    max-width: 1200px;
-    position: absolute;
 }
 
 .home-title{
@@ -175,6 +163,20 @@ p{
     font-size: 2rem;
 }
 
+.episode-list-title p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    display: flex;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    padding-left: 4%;
+    padding-right: 3%;
+    text-align: center;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.5);
+    font-size: 2rem;
+}
+
 .title2 p{
     position: relative;
     font-family: 'Poppins', 'sans-serif';
@@ -186,9 +188,20 @@ p{
     color: hsla(0, 0%, 100%, 0.9);
     font-size: 2rem;
     min-width: 350px;
-    max-width: 1500px;
+    max-width: 1100px;
     left: 50%;
     transform: translate(-50%, 0%);
+}
+
+.title2 .description{
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 400;
+    display: block;
+    padding-top: 1.5%;
+    text-align: center;
+    border-radius: 3px;
+    font-style: italic;
+    color: hsla(0, 0%, 100%, 0.534);
 }
 
 .background-images-2 .title2{
@@ -228,6 +241,70 @@ p{
     text-align: center;
 }
 
+.title3 p{
+    position: relative;
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 400;
+    display: block;
+    padding-top: 1.5%;
+    text-align: center;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.9);
+    font-size: 2rem;
+    min-width: 350px;
+    max-width: 1100px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.title3 .description{
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 400;
+    display: block;
+    padding-top: 1.5%;
+    text-align: center;
+    border-radius: 3px;
+    font-style: italic;
+    color: hsla(0, 0%, 100%, 0.534);
+}
+
+.background-images-2 .title3{
+    position: relative;
+    top: 30%;
+    text-decoration: none;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.title3{
+    text-decoration: none;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.title3 h2{
+    color: #fff;
+    font-size: 45px;
+    text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6), 0px 0px 25px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    text-align: center;
+}
+
+.title3 h1{
+    color: #fff;
+    font-size: 70px;
+    text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6), 0px 0px 25px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    text-align: center;
+}
+.title3 h3{
+    color:rgba(241, 255, 39, 0.808);
+    font-size: 25px;
+    text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6), 0px 0px 25px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    text-align: center;
+}
+
 .slide2{
     text-decoration: none;
     margin-top: 60px;
@@ -243,39 +320,48 @@ p{
     font-size: 24px;
     width: 150px;
     height: 50px;
-    background-color: #181818;
+    background-color: #070709;
     border-radius: 10px;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0.137);
 }
 
+.najnowszy-film{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+iframe{
+    border-radius: 20px;
+    aspect-ratio: 16 / 9;
+    width: 100% !important;
+    max-width: 630px;
+    max-height: 360px;
+}
 
 
+.logo{
+    cursor: pointer;
+    float: left;
+    width: 200px;
+    margin: 15px;
+    height: auto;
+}
 
-
-
-@keyframes slideInFromTop {
-    0% {
-        position: relative;
-      top: -50%;
-    }
-    100% {
-        position: relative;
-      top: 0%;
-    }
-  }
-
-  @keyframes slideInFromTop2 {
-    0% {
-      top: -600%;
-    }
-    100% {
-      top: 0%;
-    }
-  }
-
-
-
+.logo img{
+    float: left;
+    width: 200px;
+    margin: 0px;
+    height: auto;
+}
+.slide-buttons1 a{
+    justify-content: center;
+    position: relative;
+    left: -6%;
+}
 
   @media only screen and (min-width: 360px) and (max-width: 374px) {
 
@@ -286,8 +372,8 @@ p{
 
     .logo img{
         float: left;
-        width: 100px;
-        margin: 20px;
+        width: 110px;
+        margin: 0px;
         height: auto;
     }
 
@@ -329,9 +415,107 @@ p{
     }
 
     .slide-title img{
+        position: relative;
         width: 360px;
         height: auto;
+        left: 0;
     }
+
+    .project-badges{
+        position: relative;
+        left: -5px;
+        height: auto;
+    }
+
+    .slide-buttons a{
+        justify-content: center;
+        position: relative;
+        left: 50%;
+    }
+
+    .slide-buttons1 a{
+        justify-content: center;
+        position: relative;
+        left: 33%;
+    }
+
+    .slide-title .info-badge-1{
+        margin-right: 5px;
+        position: relative;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        background-color: rgba(42, 42, 42, 0.521);
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.9);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 14px;
+      }
+      
+      .slide-title .info-badge-2{
+        margin-right: 5px;
+        position: relative;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.9);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 14px;
+      }
+      
+      .slide-title .info-badge-3{
+        margin-right: 5px;
+        position: relative;
+        font-weight: 800;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.8);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 14px;
+      }
+      
+      .slide-title .info-badge-prod-org{
+        margin-right: 0px;
+        position: relative;
+        display: inline;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        color: hsl(0, 0%, 100%);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 14px;
+        border: 2px solid rgba(255, 251, 0, 0.7);
+        background-color: rgba(68, 67, 0, 0.685);
+        border-radius: 8px;
+      }
+      
+      .slide-title .info-badge-prod-ko{
+        margin-right: 80px;
+        position: relative;
+        display: inline;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        color: hsl(0, 0%, 100%);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 14px;
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        background-color: rgba(42, 42, 42, 0.521);
+        border-radius: 8px;
+      }
     
   }
 
@@ -344,8 +528,8 @@ p{
 
     .logo img{
         float: left;
-        width: 100px;
-        margin: 20px;
+        width: 120px;
+        margin: 0px;
         height: auto;
     }
 
@@ -389,7 +573,112 @@ p{
         min-width: 375px;
         max-width: 400px;
         height: auto;
+        position: relative;
+        left: 0;
     }
+
+    .slide-title p{
+        position: relative;
+        font-size: 18px;
+        left: 0;
+    }
+
+    .slide-buttons a{
+        justify-content: center;
+        position: relative;
+        left: 40%;
+    }
+
+    .slide-buttons1 a{
+        justify-content: center;
+        position: relative;
+        left: 28%;
+    }
+
+    .project-badges{
+        position: relative;
+        left: -20px;
+        height: auto;
+    }
+
+    .slide-title .info-badge-1{
+        margin-right: 5px;
+        position: relative;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        background-color: rgba(42, 42, 42, 0.521);
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.9);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 14px;
+      }
+      
+      .slide-title .info-badge-2{
+        margin-right: 5px;
+        position: relative;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.9);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 14px;
+      }
+      
+      .slide-title .info-badge-3{
+        margin-right: 5px;
+        position: relative;
+        font-weight: 800;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.8);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 14px;
+      }
+      
+      .slide-title .info-badge-prod-org{
+        margin-right: 0px;
+        position: relative;
+        display: inline;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        color: hsl(0, 0%, 100%);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 14px;
+        border: 2px solid rgba(255, 251, 0, 0.7);
+        background-color: rgba(68, 67, 0, 0.685);
+        border-radius: 8px;
+      }
+      
+      .slide-title .info-badge-prod-ko{
+        margin-right: 60px;
+        position: relative;
+        display: inline;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        color: hsl(0, 0%, 100%);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 14px;
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        background-color: rgba(42, 42, 42, 0.521);
+        border-radius: 8px;
+      }
+
   }
 
   @media only screen and (min-width: 401px) and (max-width: 415px) {
@@ -399,8 +688,8 @@ p{
 
     .logo img{
         float: left;
-        width: 100px;
-        margin: 20px;
+        width: 130px;
+        margin: 0px;
         height: auto;
     }
 
@@ -424,9 +713,108 @@ p{
     }
 
     .slide-title img{
+        position: relative;
+        left: 0;
         width: 401px;
         height: auto;
     }
+
+    .slide-buttons a{
+        justify-content: center;
+        position: relative;
+        left: 35%;
+    }
+
+    .slide-buttons1 a{
+        justify-content: center;
+        position: relative;
+        left: 25%;
+    }
+
+    .project-badges{
+        position: relative;
+        left: -15px;
+        height: auto;
+    }
+
+    .slide-title .info-badge-1{
+        margin-right: 5px;
+        position: relative;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        background-color: rgba(42, 42, 42, 0.521);
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.9);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 16px;
+      }
+      
+      .slide-title .info-badge-2{
+        margin-right: 5px;
+        position: relative;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.9);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 16px;
+      }
+      
+      .slide-title .info-badge-3{
+        margin-right: 5px;
+        position: relative;
+        font-weight: 800;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.8);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 16px;
+      }
+      
+      .slide-title .info-badge-prod-org{
+        margin-right: 0px;
+        position: relative;
+        display: inline;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        color: hsl(0, 0%, 100%);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 16px;
+        border: 2px solid rgba(255, 251, 0, 0.7);
+        background-color: rgba(68, 67, 0, 0.685);
+        border-radius: 8px;
+      }
+      
+      .slide-title .info-badge-prod-ko{
+        margin-right: 60px;
+        position: relative;
+        display: inline;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        color: hsl(0, 0%, 100%);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        background-color: rgba(42, 42, 42, 0.521);
+        border-radius: 8px;
+      }
+
   }
 
   @media only screen and (min-width: 416px) and (max-width: 500px) {
@@ -436,8 +824,8 @@ p{
 
     .logo img{
         float: left;
-        width: 100px;
-        margin: 20px;
+        width: 140px;
+        margin: 0px;
         height: auto;
     }
 
@@ -461,7 +849,106 @@ p{
     .slide-title img{
         width: 416px;
         height: auto;
+        position: relative;
+        left: 0;
     }
+
+    .slide-buttons a{
+        justify-content: center;
+        position: relative;
+        left: 35%;
+    }
+
+    .slide-buttons1 a{
+        justify-content: center;
+        position: relative;
+        left: 22%;
+    }
+    
+    .project-badges{
+        position: relative;
+        left: -20px;
+        height: auto;
+    }
+
+    .slide-title .info-badge-1{
+        margin-right: 5px;
+        position: relative;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        background-color: rgba(42, 42, 42, 0.521);
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.9);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 16px;
+      }
+      
+      .slide-title .info-badge-2{
+        margin-right: 5px;
+        position: relative;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.9);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 16px;
+      }
+      
+      .slide-title .info-badge-3{
+        margin-right: 5px;
+        position: relative;
+        font-weight: 800;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.8);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 16px;
+      }
+      
+      .slide-title .info-badge-prod-org{
+        margin-right: 0px;
+        position: relative;
+        display: inline;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        color: hsl(0, 0%, 100%);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 16px;
+        border: 2px solid rgba(255, 251, 0, 0.7);
+        background-color: rgba(68, 67, 0, 0.685);
+        border-radius: 8px;
+      }
+      
+      .slide-title .info-badge-prod-ko{
+        margin-right: 65px;
+        position: relative;
+        display: inline;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        color: hsl(0, 0%, 100%);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        background-color: rgba(42, 42, 42, 0.521);
+        border-radius: 8px;
+      }
+
   }
 
   @media only screen and (min-width: 501px) and (max-width: 759px) {
@@ -499,17 +986,24 @@ p{
         color: hsla(0, 0%, 100%, 0.9);
         font-size: 1.6rem;
     }
+
+    .slide-buttons a{
+        justify-content: center;
+        position: relative;
+        left: 20%;
+    }
+
     .logo img{
         float: left;
-        width: 100px;
-        margin: 20px;
+        width: 150px;
+        margin: 0px;
         height: auto;
     }
 
     .slider{
         position: relative;
         min-width: 501px;
-        max-width: 759px;
+        max-width: 1200px;
     }
 
     .slide{
@@ -524,8 +1018,99 @@ p{
     }
 
     .slide-title img{
+        position: relative;
+        left: 0;
         width: 501px;
         height: auto;
+    }
+    .project-badges{
+        position: relative;
+        left: -10px;
+        height: auto;
+    }
+
+    .slide-title .info-badge-1{
+        margin-right: 25px;
+        position: relative;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        background-color: rgba(42, 42, 42, 0.521);
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.9);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 16px;
+      }
+      
+      .slide-title .info-badge-2{
+        margin-right: 25px;
+        position: relative;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.9);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 16px;
+      }
+      
+      .slide-title .info-badge-3{
+        margin-right: 25px;
+        position: relative;
+        font-weight: 800;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.8);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 16px;
+      }
+      
+      .slide-title .info-badge-prod-org{
+        margin-right: 25px;
+        position: relative;
+        display: inline;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        color: hsl(0, 0%, 100%);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 16px;
+        border: 2px solid rgba(255, 251, 0, 0.7);
+        background-color: rgba(68, 67, 0, 0.685);
+        border-radius: 8px;
+      }
+      
+      .slide-title .info-badge-prod-ko{
+        margin-right: 100px;
+        position: relative;
+        display: inline;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        color: hsl(0, 0%, 100%);
+        padding: 0 0.5em;
+        white-space: nowrap;
+        font-size: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        background-color: rgba(42, 42, 42, 0.521);
+        border-radius: 8px;
+      }
+
+    .slide-buttons1 a{
+        justify-content: center;
+        position: relative;
+        left: 10%;
     }
   }
 
@@ -567,8 +1152,8 @@ p{
 
     .logo img{
         float: left;
-        width: 100px;
-        margin: 20px;
+        width: 160px;
+        margin: 0px;
         height: auto;
     }
 
@@ -585,7 +1170,71 @@ p{
 
     .slide-title{
         position: relative;
-        left: 1%;
+        left: 0%;
+        width: 760px;
+    }
+
+
+
+  }
+
+  @media only screen and (min-width: 900px) and (max-width: 1000px) {
+    .home-title{
+        right: 0%;
+    }
+
+    .title h1{
+        color: #fff;
+        font-size: 40px;
+        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6), 0px 0px 15px rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+        text-align: center;
+    }
+    .title h3{
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        color:rgb(0, 0, 0);
+        font-size: 24px;
+        padding: 5px;
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    p{
+        font-family: 'Poppins', 'sans-serif';
+        font-weight: 400;
+        display: flex;
+        padding-top: 1.5%;
+        padding-left: 4%;
+        padding-right: 3%;
+        text-align: center;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.9);
+        font-size: 1.6rem;
+    }
+
+    .logo img{
+        float: left;
+        width: 180px;
+        margin: 0px;
+        height: auto;
+    }
+
+    .slider{
+        position: relative;
+        min-width: 760px;
+        max-width: 1000px;
+    }
+
+    .slide{
+        position: relative;
+        width: 760px;
+    }
+
+    .slide-title{
+        position: relative;
+        left: -12%;
         width: 760px;
     }
 
@@ -593,9 +1242,86 @@ p{
         width: 501px;
         height: auto;
     }
+
   }
 
-  @media only screen and (min-width: 1001px) and (max-width: 1500px) {
+
+  @media only screen and (min-width: 1001px) and (max-width: 1100px) {
+
+    .slider{
+      position: relative;
+      min-width: 1001px;
+      max-width: 1500px;
+      }
+  
+      .slide{
+          position: relative;
+          width: 1000px;
+      }
+  
+      .slide-title{
+          position: relative;
+          left: -15%;
+          width: 1000px;
+      }
+  
+      .slide-title img{
+          width: 600px;
+          height: auto;
+      }
+  }
+
+  @media only screen and (min-width: 1101px) and (max-width: 1269px) {
+
+    .slider{
+      position: relative;
+      min-width: 1001px;
+      max-width: 1500px;
+      }
+  
+      .slide{
+          position: relative;
+          width: 1000px;
+      }
+  
+      .slide-title{
+          position: relative;
+          left: -25%;
+          width: 1000px;
+      }
+  
+      .slide-title img{
+          width: 600px;
+          height: auto;
+      }
+  }
+
+  @media only screen and (min-width: 1270px) and (max-width: 1419px) {
+
+    .slider{
+      position: relative;
+      min-width: 1001px;
+      max-width: 1500px;
+      }
+  
+      .slide{
+          position: relative;
+          width: 1000px;
+      }
+  
+      .slide-title{
+          position: relative;
+          left: -40%;
+          width: 1000px;
+      }
+  
+      .slide-title img{
+          width: 600px;
+          height: auto;
+      }
+  }
+
+  @media only screen and (min-width: 1420px) and (max-width: 1500px) {
 
   .slider{
     position: relative;
@@ -610,7 +1336,7 @@ p{
 
     .slide-title{
         position: relative;
-        left: 1%;
+        left: -50%;
         width: 1000px;
     }
 
@@ -618,7 +1344,6 @@ p{
         width: 600px;
         height: auto;
     }
-
 }
 
 @media only screen and (min-width: 1501px) and (max-width: 1700px) {
@@ -636,15 +1361,16 @@ p{
   
       .slide-title{
           position: relative;
-          left: 1%;
+          left: -50%;
           width: 1501px;
       }
   
       .slide-title img{
           width: 600px;
           height: auto;
+          position: relative;
       }
-  
+    
   }
 
   @media only screen and (min-width: 1701px) and (max-width: 2600px) {
@@ -671,6 +1397,20 @@ p{
       }
   
   }
+  @media only screen and (min-width: 2600px) {
+  
+      .slide-title{
+          left: -130%;
+          position: fixed;
+          width: 2000px;
+      }
+  
+      .slide-title img{
+          width: 700px;
+          height: auto;
+      }
+  
+  }
 
   .backgound-clip{
     object-fit: cover;
@@ -681,4 +1421,75 @@ p{
     left: 0;
     overflow: hidden;
     z-index: 0;
+  }
+
+
+  @media only screen and (min-width: 1803px) {
+
+    .srodkowanie{
+        display: flex;
+        grid-gap: 20px;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .title3 p{
+        position: relative;
+        font-family: 'Poppins', 'sans-serif';
+        font-weight: 400;
+        display: block;
+        padding-top: 1.5%;
+        text-align: left;
+        border-radius: 3px;
+        color: hsla(0, 0%, 100%, 0.9);
+        font-size: 2rem;
+        min-width: 350px;
+        max-width: 1100px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    
+    .title3 .description{
+        font-family: 'Poppins', 'sans-serif';
+        font-weight: 400;
+        display: block;
+        padding-top: 1.5%;
+        text-align: left;
+        border-radius: 3px;
+        font-style: italic;
+        color: hsla(0, 0%, 100%, 0.534);
+    }
+
+    
+    .title3{
+        display: inline-block;
+        text-decoration: none;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        max-width: 900px;
+    }
+    
+    .title3 h2{
+        color: #fff;
+        font-size: 45px;
+        text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6), 0px 0px 25px rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    .title3 h1{
+        color: #fff;
+        font-size: 70px;
+        text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6), 0px 0px 25px rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+        text-align: center;
+    }
+    .title3 h3{
+        color:rgba(241, 255, 39, 0.808);
+        font-size: 25px;
+        text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6), 0px 0px 25px rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+        text-align: center;
+    }
+
   }

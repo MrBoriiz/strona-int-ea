@@ -4,8 +4,8 @@
 
 /* Cores */
 :root {
-  --background: #141414;
-  --modal: #181818;
+  --background: #070709;
+  --modal: #070709;
   --white: #ffffff;
 }
 
@@ -74,6 +74,8 @@ html {
 
 .modal .modal-header {
   position: relative;
+  max-height: 500px;
+  overflow: hidden;
 }
 
 .modal .modal-header::before {
@@ -85,6 +87,18 @@ html {
   content: "";
   background: linear-gradient(0deg, var(--modal), transparent 50%);
 }
+
+/* --------------TEST-------------- */
+
+.modal .modal-header img {
+  border-radius: 6px 6px 0 0;
+  display: block;
+  width: 100%;
+  opacity: 1;
+}
+
+/* --------------TEST-------------- */
+
 
 .modal .modal-header video {
   border-radius: 6px 6px 0 0;
@@ -265,19 +279,50 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15px;
+  height: 24px;
   border: 1px solid hsla(0, 0%, 100%, 0.4);
   border-radius: 3px;
   color: hsla(0, 0%, 100%, 0.9);
   font-size: 1.2rem;
   padding: 0 0.5em;
   white-space: nowrap;
+  font-size: 16px;
 }
 
-.modal .modal-body .modal-content-first p {
-  font-size: 1.4rem;
-  line-height: 24px;
-  word-break: break-word;
+.modal-prod-decription{
+  position: relative;
+  top: 0px;
+  left: -25px;
+}
+
+.modal .modal-body .modal-content-first .modal-prod-decription p {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  display: block;
+  text-align: left;
+  border-radius: 3px;
+  color: hsla(0, 0%, 100%, 0.9);
+  font-size: 18px;
+}
+
+.modal-cooperation-type{
+  position: relative;
+  top: -20px;
+  left: -175px;
+}
+
+.modal-cooperation-type span{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  display: inline-block;
+  text-align: left;
+  border-radius: 3px;
+  font-size: 20px;
+  color: #ffffff85;
+}
+
+.modal-cooperation-type span:first-child{
+  color: white;
 }
 
 .modal .modal-body .modal-content-second {
@@ -305,6 +350,10 @@ html {
   text-decoration: underline;
 }
 
+span.sub-title{
+  color: #ffffff85;
+}
+
 .modal .modal-body .modal-content-first,
 .modal .modal-body .modal-content-second {
   width: 100%;
@@ -319,6 +368,87 @@ html {
   opacity: 0;
 }
 
+.modal-title{
+  text-align: left;
+  display: grid;
+}
+
+.modal-title .modal-prod-title{
+  line-height: 42px;
+  font-size: 42px;
+  position: relative;
+  padding-bottom: 12px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.modal-title .modal-relese-date{
+  color:#777;
+  font-size: 22px;
+  position: relative;
+  padding-bottom: 12px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.modal-title-buttons{
+  position: relative;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.modal-title-buttons .button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  cursor: pointer;
+  max-height: 42px;
+  min-height: 32px;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+.modal-description .info-badge-prod-ko{
+  margin-right: 120px;
+  position: relative;
+  display: inline;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  color: hsl(0, 0%, 100%);
+  padding: 0 0.5em;
+  white-space: nowrap;
+  font-size: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background-color: rgba(42, 42, 42, 0.521);
+  border-radius: 8px;
+}
+
+.modal-description .info-badge-prod-org{
+  margin-right: 25px;
+  position: relative;
+  display: inline;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  color: hsl(0, 0%, 100%);
+  padding: 0 0.5em;
+  white-space: nowrap;
+  font-size: 20px;
+  border: 2px solid rgba(255, 251, 0, 0.7);
+  background-color: rgba(68, 67, 0, 0.685);
+  border-radius: 8px;
+}
+
+.modal-title-buttons svg{
+  height: 24px;
+  width: 24px;
+  margin-bottom: -6px;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 1080px) {
 }
 
@@ -326,6 +456,29 @@ html {
 }
 
 @media screen and (max-width: 768px) {
+
+  .modal-title{
+    text-align: left;
+    display: grid;
+  }
+  
+  .modal-title .modal-prod-title{
+    font-size: 32px;
+    position: relative;
+    padding-bottom: 12px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .modal-title .modal-relese-date{
+    color:#777;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 12px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+
+
   .modal .modal-header .header-content .header-title .header-buttons .add,
   .modal .modal-header .header-content .header-title .header-buttons .rate,
   .modal .modal-header .header-content .header-title .header-buttons .volume {
@@ -360,11 +513,50 @@ html {
 @media only screen and (min-width: 360px) and (max-width: 400px) {
   .modal .modal-body .modal-content-first{
     position: relative;
-    left: 7%;
+    left: -20px;
   }
   .modal {
     width: 360px;
     height: auto;
+  }
+
+  .modal-prod-decription{
+    position: relative;
+    top: 0px;
+    left: -20px;
+    width: 300px;
+  }
+  
+  .modal .modal-body .modal-content-first .modal-prod-decription p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.9);
+    font-size: 18px;
+  }
+
+  .modal-content-second{
+    position: relative;
+    left: -40px;
+  }
+
+
+  .modal-cooperation-type{
+    position: relative;
+    top: -20px;
+    left: -10px;
+  }
+  
+  .modal-cooperation-type span{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    text-align: left;
+    border-radius: 3px;
+    font-size: 18px;
+    color: #ffffff85;
   }
 
 }
@@ -372,11 +564,49 @@ html {
 @media only screen and (min-width: 401px) and (max-width: 415px) {
   .modal .modal-body .modal-content-first{
     position: relative;
-    left: 7%;
+    left: -20px;
   }
   .modal {
     width: 400px;
     height: auto;
+  }
+
+  .modal-prod-decription{
+    position: relative;
+    top: 0px;
+    left: -10px;
+  }
+  
+  .modal .modal-body .modal-content-first .modal-prod-decription p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.9);
+    font-size: 18px;
+    width: 400px;
+  }
+
+  .modal-content-second{
+    position: relative;
+    left: -70px;
+  }
+
+  .modal-cooperation-type{
+    position: relative;
+    top: -20px;
+    left: -45px;
+  }
+  
+  .modal-cooperation-type span{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    text-align: left;
+    border-radius: 3px;
+    font-size: 18px;
+    color: #ffffff85;
   }
 
 }
@@ -384,11 +614,49 @@ html {
 @media only screen and (min-width: 416px) and (max-width: 500px) {
   .modal .modal-body .modal-content-first{
     position: relative;
-    left: 5%;
+    left: -30px;
   }
   .modal {
     width: 420px;
     height: auto;
+  }
+
+  .modal-prod-decription{
+    position: relative;
+    top: 0px;
+    left: -10px;
+  }
+  
+  .modal .modal-body .modal-content-first .modal-prod-decription p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.9);
+    font-size: 18px;
+    width: 400px;
+  }
+
+  .modal-content-second{
+    position: relative;
+    left: -60px;
+  }
+
+  .modal-cooperation-type{
+    position: relative;
+    top: -20px;
+    left: -45px;
+  }
+  
+  .modal-cooperation-type span{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    text-align: left;
+    border-radius: 3px;
+    font-size: 18px;
+    color: #ffffff85;
   }
 
 }
@@ -396,7 +664,7 @@ html {
 @media only screen and (min-width: 501px) and (max-width: 550px) {
   .modal .modal-body .modal-content-first{
     position: relative;
-    left: 4%;
+    left: -25px;
   }
 
   .modal {
@@ -409,12 +677,67 @@ html {
     height: auto;
   }
 
+  .modal-prod-decription{
+    position: relative;
+    top: 0px;
+    left: -15px;
+  }
+  
+  .modal .modal-body .modal-content-first .modal-prod-decription p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.9);
+    font-size: 18px;
+    width: 500px;
+  }
+
+  .modal-content-second{
+    position: relative;
+    left: -50px;
+    max-width: 480px;
+  }
+
+  .modal-cooperation-type{
+    position: relative;
+    top: -20px;
+    left: -95px;
+  }
+  
+  .modal-cooperation-type span{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    text-align: left;
+    border-radius: 3px;
+    font-size: 18px;
+    color: #ffffff85;
+  }
+
 }
 
 @media only screen and (min-width: 551px) and (max-width: 600px) {
   .modal .modal-body .modal-content-first{
     position: relative;
-    left: 4%;
+    left: -20px;
+  }
+
+  .modal .modal-body .modal-content-first .modal-prod-decription p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.9);
+    width: 550px;
+  }
+
+  .modal-content-second{
+    position: relative;
+    left: -20px;
+    max-width: 480px;
   }
 
   .modal {
@@ -425,6 +748,22 @@ html {
   .play-btn h5{
     width: 550px;
     height: auto;
+  }
+
+  .modal-cooperation-type{
+    position: relative;
+    top: -20px;
+    left: -110px;
+  }
+  
+  .modal-cooperation-type span{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    text-align: left;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #ffffff85;
   }
 
 }
@@ -432,7 +771,24 @@ html {
 @media only screen and (min-width: 601px) and (max-width: 650px) {
   .modal .modal-body .modal-content-first{
     position: relative;
-    left: 4%;
+    left: -15px;
+  }
+
+  .modal .modal-body .modal-content-first .modal-prod-decription p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.9);
+    font-size: 18px;
+    width: 600px;
+  }
+
+  .modal-content-second{
+    position: relative;
+    left: -50px;
+    max-width: 580px;
   }
 
   .modal {
@@ -445,19 +801,47 @@ html {
     height: auto;
   }
 
+  .modal-cooperation-type{
+    position: relative;
+    top: -20px;
+    left: -135px;
+  }
+  
+  .modal-cooperation-type span{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    text-align: left;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #ffffff85;
+  }
+
 }
 
-@media only screen and (min-width: 651px) and (max-width: 700px) {
+@media only screen and (min-width: 651px) and (max-width: 689px) {
   .modal .modal-body .modal-content-first{
     position: relative;
-    left: 4%;
+    left: -20px;
   }
 
-  .modal .modal-body .modal-content-first p {
-    font-size: 1.5rem;
-    line-height: 24px;
-    word-break: break-word;
+  .modal .modal-body .modal-content-first .modal-prod-decription p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.9);
+    font-size: 18px;
+    width: 650px;
   }
+
+  .modal-content-second{
+    position: relative;
+    left: -30px;
+    max-width: 600px;
+  }
+  
   .modal {
     width: 651px;
     height: auto;
@@ -468,9 +852,25 @@ html {
     height: auto;
   }
 
+  .modal-cooperation-type{
+    position: relative;
+    top: -20px;
+    left: -160px;
+  }
+  
+  .modal-cooperation-type span{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    text-align: left;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #ffffff85;
+  }
+
 }
 
-@media only screen and (min-width: 701px) and (max-width: 759px) {
+@media only screen and (min-width: 690px) and (max-width: 759px) {
   .modal .modal-body .modal-content-first p {
     font-size: 1.6rem;
     line-height: 24px;
@@ -486,6 +886,22 @@ html {
     height: auto;
   }
 
+.modal-cooperation-type{
+  position: relative;
+  top: -20px;
+  left: -25px;
+}
+
+.modal-cooperation-type span{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  display: inline-block;
+  text-align: left;
+  border-radius: 3px;
+  font-size: 20px;
+  color: #ffffff85;
+}
+
 }
 
 @media only screen and (min-width: 760px) and (max-width: 850px) {
@@ -499,6 +915,22 @@ html {
     height: auto;
   }
 
+  .modal .modal-body .modal-content-first .modal-prod-decription p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.9);
+    font-size: 18px;
+  }
+  
+  .modal-cooperation-type{
+    position: relative;
+    top: -20px;
+    left: -40px;
+  }
+
 }
 
 @media only screen and (min-width: 851px) and (max-width: 1199px) {
@@ -506,6 +938,22 @@ html {
     font-size: 1.7rem;
     line-height: 24px;
     word-break: break-word;
+  }
+
+  .modal .modal-body .modal-content-first .modal-prod-decription p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+    border-radius: 3px;
+    color: hsla(0, 0%, 100%, 0.9);
+    font-size: 18px;
+  }
+  
+  .modal-cooperation-type{
+    position: relative;
+    top: -20px;
+    left: -75px;
   }
 }
 

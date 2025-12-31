@@ -16,8 +16,9 @@
     <link rel="stylesheet" href="../moviecard.css" />
     <link rel="stylesheet" href="../moviemodal.css" />
     <link rel="stylesheet" href="../footer.css" />
+    <link rel="stylesheet" href="../tooltip.css" />
 
-    <script src="popup.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -26,11 +27,6 @@
 </head>
 <body>
     <header>
-        <div class="main">
-            <div class="logo">
-                <img src="../images/logo.png">
-            </div>
-        </div>
         <div class="title">
             <div class="home-title">
             </div>
@@ -42,17 +38,17 @@
 
 <!-- --------------------------------------------------------------------- -->
 <div class="title2">
-    <h2>"Miasto Gliwice" dalsza produkcja anulowana</h2>
+    <div class="main-title"><h2>"Miasto Gliwice" dalsza produkcja anulowana</h2></div>
     <span>Data dodania: 03.11.2023</span>
     <hr>
 
 
         <div class="text-description">
-            <p>"Miasto Gliwice" pierwszy serial jak i zarówno pierwsza produkcja grupy Entangled Artists (dawniej Red Diamond Studio) w Lipcu 2022 roku doczekała się zapowiedzi w postaci zwiastuna drugiego sezonu.
+            <p>Serial "Miasto Gliwice" chąc nie chcąc nie był, nie jest i nigdy nie będzie w pełni oryginalną produkcją tzn. bazował on na stylu, który został wypracowany przez twórców "South Park" i od początku był uznawany przez nas jak i przez widzów jako produkcja fanowska.
             </p>
-            <p>Na pierwszy rzut oka było widać, że kolejny sezon, jak mogłoby się wydawać, chętnie rozwijanej produkcji, będzie wyglądać znacznie lepiej od pierwszego z racji na wiele zmian, które zaszły w tym zmiana programu, w którym miał powstawać serial, poprawa animacji oraz nowi aktorzy głosowi.
+            <p>Tworząc ten projekt stawialiśmy swoje pierwsze kroki w tworzeniu animacji a sam mini serial był jedynie poligonem doświadczalnym, który pozwolił nam nauczyć się w.w. animacji, podszkolić się w montażu, postprodukcji, pisaniu scenariuszy jak i wypracować odpowiedni schemat tego jak powinna przebiegać produkcja.
             </p>
-            <p>Byłby to niemalże idealny sposób na dalszy rozwój kanału YouTube grupy oraz wkupienie się w łaski fanów serii. Dlatego skąd decyzja o zakończeniu produkcji serialu i anulowanie 2 sezonu?
+            <p>Bazowanie na nieoryginalnym pomyśle, stylu i niekiedy postaciach nie daje nam szans na odpowiedni rozwój. Dlatego dalsza produkcja projektu zostaje anulowana a sam serial "Miasto Gliwice" (z wyjątkiem żartu w postaci zwiastuna do 2 sezonu) już nigdy nie otrzyma kontynuacji.
             </p>
         </div>
 
@@ -63,30 +59,15 @@
 
 
         <div class="text-description">
-            <p>"Miasto Gliwice" to niszowy i bezbudżetowy serial animowany inspirowany oraz utrzymany w stylu "South Park'u". Serial doczekał się 5 odcinków pierwszego sezonu, które pomimo tego, że nie były górnych lotów to spotkały się z w większości pozytywnym odbiorem ze strony publiczności.
+            <p>Mimo to jesteśmy wdzięczni widzom kanału, że wspierali nas jak mogli przy tworzeniu tego fanowskiego serialu, ale już czas ruszyć dalej i zabrać się za inne, lepsze i bardziej emocjonujące projekty. Dziękujemy!
             </p>
-            <p>Po zakończeniu pierwszej serii odcinków, twórcy skupili się na tworzeniu krótkich animacji w zupełnie innym, oryginalnym stylu. Po pewnym czasie jednak postanowili rozpalić w widzach kanału światełko nadziei na powrót lubianego przez nich serialu.
-            </p>
-            <p>W momencie publikacji zwiastuna do drugiego sezonu niemalże natychmiast pojawiły się komentarze pokazujące zadowolenie z przyszłego powrotu do tworzenia serii z poprawioną oprawą wizualną, świeżymi i zabawnymi przygodami bohaterów
-                oraz regularnością publikacji filmów. Niestety fani nie doczekali się ani drugiego sezonu, ani regularności na kanale za to mogli przeczytać w opisie filmu, że zwiastun jest jedynie żartem.
-            </p>
-        </div>
-
-        <div class="text-description">
-            <p class="quote">" W końcu zabraliśmy się do roboty i będziemy robić coś innego. Ten zwiastun jest jedynie żartem z naszej strony a sam serial najprawdopodobniej już nigdy nie doczeka się kontynuacji. Produkcję zakończylismy zaraz po premierze czwartego odcinka pierwszego sezonu. "
-            </p>
-            <span class="quote-author">- Brzmi opis zwiastuna</sp>
-        </div>
-
-        <div class="text-description">
-            <p>Czytając ten opis można czuć się nieco rozczarowanym po tym jak po tak długim czasie oczekiwania okazuje się, że produkcja, na którą się czekało tyle czasu i, która nawet dostała zwiastun "nadchodzących" nowości, nigdy nie powstanie.
-            </p>
+            <p>- Grupa Entangled Artists</p>
         </div>
     
 </div>
 
 <div class="title2">
-    <h4>POZOSTAŁE ARTYKUŁY</h4>
+    <h4>POZOSTAŁE WPISY</h4>
     <hr>
 
     <div class="text-description">
@@ -158,26 +139,61 @@
 
 <!-- --------------------------------------------------------------------- -->
 
-    <input type="checkbox" id="active">
-    <label for="active" class="menu-btn"><span></span></label>
-    <label for="active" class="close"></label>
-    <div class="wrapper">
-        <ul>
-            <li><a href="../index.html">HOME PAGE</a></li>
-            <li><a href="../kontakt.html">KONTAKT</a></li>
-            <a href="./miasto-gliwice-dalsza-produkcja-anulowana.html">
-                <button class="button6">
-                    <img src="../images/pl-flag.png" alt="">
-                </button>
-            </a>      
-            <a href="../eng/blog/miasto-gliwice-futher-production-cancelled.html">
-                <button class="button6">
-                    <img src="../images/gb-flag.png" alt="">
-                </button>
-            </a>
-            <li><h2>Entangled Artists © 2024</h2></li>
-        </ul>
+<input type="checkbox" id="active">
+<label for="active" class="menu-btn"><span></span></label>
+<label for="active" class="close"></label>
+
+        <!--LOGO W NAVBARZE-->
+
+<div class="navbar">
+    <div class="main">
+        <a href="../index.html">
+            <div class="logo">
+                <img src="../images/logo.png">
+            </div>
+        </a>
     </div>
+
+        <!--POWRÓT NA GÓRĘ STRONY-->
+
+    <div class="tooltip2">
+
+        <div class="tooltiptext">
+            <h1>Powrót na górę</h1>
+        </div>
+
+        <a href="#top">
+            <label class="back-to-top-btn">
+                <span>
+                    <svg viewBox="0 -10 32 32"><path d="m26.71 10.29-10-10a1 1 0 0 0-1.41 0l-10 10 1.41 1.41L15 3.41V32h2V3.41l8.29 8.29z"/></svg>
+                </span>
+            </label>
+        </a>
+    </div>
+
+</div>
+<div class="wrapper">
+    <ul>
+        <li><a href="../index.html">HOME PAGE</a></li>
+        <li><a href="../index.html#onas">O NAS</a></li>
+        <li><a href="../index.html#produkcje">PRODUKCJE</a></li>
+        <li><a href="../index.html#aktualnosci">AKTUALNOŚCI</a></li>
+        <li><a href="../kontakt.html">KONTAKT</a></li>
+        <li><a href="../kontakt.html#faq">FAQ</a></li>
+        <a href="../blog/miasto-gliwice-dalsza-produkcja-anulowana.html">
+            <button class="button6">
+                <img src="../images/pl-flag.png" alt="">
+            </button>
+        </a>      
+        <a href="../eng/blog/miasto-gliwice-futher-production-cancelled.html">
+            <button class="button6">
+                <img src="../images/gb-flag.png" alt="">
+            </button>
+        </a>
+        <li><h2>Entangled Artists © 2024</h2></li>
+
+    </ul>
+</div>
 
 </body>
 </html>

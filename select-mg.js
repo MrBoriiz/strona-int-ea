@@ -11,4 +11,10 @@ function showDivMG(select){
        } else{
         document.getElementById('mgdod').style.display = "none";
        }
+    if(select.value==2){
+    document.getElementById('mgall').style.display = "block";
+    } else{
+    document.getElementById('mgall').style.display = "none";
+    }
+
  } 

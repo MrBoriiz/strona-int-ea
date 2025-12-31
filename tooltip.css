@@ -1,0 +1,274 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext{
+    visibility: hidden;
+    width: 420px;
+    background-color: #0c0c0e;
+    right: 100px;
+    top: 80px;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 4px;
+    position: fixed;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .notif-btn:hover{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .tooltiptext h1{
+    position: relative;
+    font-size: 2.0em;
+    font-weight: 600;
+    padding: 5px;
+    left: -150px;
+  }
+
+  .tooltiptext hr{
+    color: rgba(255, 255, 255, 0.192);  
+    width: auto;
+  }
+
+  .notification-btn {
+    position: relative;
+    width: 400px;
+    height: 100px;
+    margin-bottom: 0px;
+    padding: 0 10px;
+    text-align: left;
+    font-size: 16px;
+    color: rgb(121, 121, 121);
+    background: #0c0c0e;
+  }
+  
+  #notification-btn-container {
+    position: relative;
+    top: 45px;
+    width: 120px;
+    height: 70px;
+    border-radius: 5px;
+    float: left;
+    text-align: center;
+  }
+  
+  .notification-btn img {
+    margin-top: 0px;
+    position: absolute;
+    top: -45px;
+    left: 0px;
+    border-radius: 10px;
+  }
+  
+  .notification-btn h3{
+    position: absolute;
+    top: 15px;
+    font-size: 1.10em;
+    font-weight: 600;
+    color: rgb(255, 255, 255); 
+    line-height: 1.2em;
+    padding-left: 130px;
+  }
+
+  .notification-btn p{
+    position: absolute;
+    top: 65px;
+    font-size: 0.75em;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.37); 
+    line-height: 1.2em;
+    padding-left: 130px;
+  }
+
+  .notification-btn h4{
+    position: relative;
+    top: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.473); 
+    line-height: 1.2em;
+    padding-left: 130px;
+    text-shadow: none;
+  }
+
+
+  /*STRZAŁECZKA SKIEROWANA KU GÓRZE*/
+
+  .tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 96.5%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #070709 transparent;
+  }
+
+  .tooltip2 .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #070709 transparent;
+  }
+
+
+    /*TOOLTIP 2 - back to top*/
+
+    .tooltip2 {
+      position: relative;
+      display: inline-block;
+    }
+    
+    /* Tooltip text */
+    .tooltip2 .tooltiptext{
+      visibility: hidden;
+      width: 120px;
+      background-color: #070709;
+      right: 110px;
+      top: 80px;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 4px;
+      position: fixed;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }
+  
+    .back-to-top-btn:hover{
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip2:hover .tooltiptext {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    .tooltip2 .tooltiptext h1{
+      position: relative;
+      font-size: 1.5em;
+      font-weight: 600;
+      padding: 5px;
+      left: 0px;
+    }
+
+    @media only screen and (min-width: 360px) and (max-width: 600px) {
+      .tooltip .tooltiptext{
+        visibility: hidden;
+        width: 360px;
+        background-color: #181818;
+        right: 00px;
+        top: 80px;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 4px;
+        position: fixed;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .tooltip .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        bottom: 100%;  /* At the top of the tooltip */
+        left: 68%;
+        margin-left: -8px;
+        border-width: 8px;
+        border-style: solid;
+        border-color: transparent transparent #181818 transparent;
+      }
+
+      .tooltiptext h1{
+        position: relative;
+        font-size: 2.0em;
+        font-weight: 600;
+        padding: 5px;
+        left: -125px;
+      }
+    
+      .tooltiptext hr{
+        color: rgba(255, 255, 255, 0.192);  
+        width: auto;
+      }
+    
+      .notification-btn {
+        position: relative;
+        width: 360px;
+        height: 100px;
+        margin-bottom: 0px;
+        padding: 0 10px;
+        text-align: left;
+        font-size: 16px;
+        color: rgb(121, 121, 121);
+        background: #181818;
+      }
+      
+      #notification-btn-container {
+        position: relative;
+        top: 45px;
+        width: 120px;
+        height: 70px;
+        border-radius: 5px;
+        float: left;
+        text-align: center;
+      }
+      
+      .notification-btn img {
+        margin-top: 0px;
+        position: absolute;
+        top: -45px;
+        left: 0px;
+        border-radius: 10px;
+      }
+      
+      .notification-btn h3{
+        position: absolute;
+        top: 15px;
+        font-size: 0.9em;
+        font-weight: 600;
+        color: rgb(255, 255, 255); 
+        line-height: 1.2em;
+        padding-left: 130px;
+      }
+    
+      .notification-btn p{
+        position: absolute;
+        top: 65px;
+        font-size: 0.75em;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.37); 
+        line-height: 1.2em;
+        padding-left: 130px;
+      }
+    
+      .notification-btn h4{
+        position: relative;
+        top: 20px;
+        font-size: 0.9em;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.473); 
+        line-height: 1.2em;
+        padding-left: 130px;
+        text-shadow: none;
+      }
+      
+    }
