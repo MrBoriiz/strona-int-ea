@@ -17,6 +17,11 @@ function showDivEGZ(select){
         document.getElementById('egzs6').style.display = "none";
        }
     if(select.value==3){
+        document.getElementById('egzs7').style.display = "block";
+       } else{
+        document.getElementById('egzs7').style.display = "none";
+       }
+    if(select.value==4){
         document.getElementById('egzall').style.display = "block";
         } else{
         document.getElementById('egzall').style.display = "none";
