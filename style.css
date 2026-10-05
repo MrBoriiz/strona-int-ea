@@ -6,6 +6,12 @@
     padding: 0;
     font-family: 'Poppins', 'sans-serif';
 }
+
+html{
+    width: 100%;
+    overflow-x: clip;
+}
+
 button{
     padding: 9px 25px;
     border-radius: 10px;
@@ -276,12 +282,13 @@ button:hover{
 body{
     background-color: #070709;
     font-family: Arial;
-    min-width: 100vw;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
     min-height: 100vh;
     color: #dedede;
-    display: inline-block;
-    flex-direction: center;
-    overflow-x: hidden;
+    display: block;
+    overflow-x: clip;
 }
 h1{
     font-size: 28px;

@@ -975,3 +975,393 @@ a {
   color: white;
 }
 
+.popup .content {
+  width: min(1100px, calc(100vw - 24px));
+  height: auto;
+  max-height: calc(100dvh - 24px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.popup #wrapper {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  color: var(--white);
+  background: transparent;
+}
+
+.popup .modal {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.popup .modal .modal-header {
+  height: clamp(180px, 34vw, 420px);
+  max-height: none;
+}
+
+.popup .modal .modal-header img,
+.popup .modal .modal-header video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.popup .modal .modal-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(220px, 0.8fr);
+  align-items: start;
+  gap: 32px;
+  padding: 24px clamp(20px, 4vw, 48px);
+}
+
+.popup .modal .modal-body .modal-content-first,
+.popup .modal .modal-body .modal-content-second {
+  position: static;
+  left: auto;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  padding: 0;
+}
+
+.popup .modal .modal-title {
+  display: grid;
+  text-align: left;
+}
+
+.popup .modal .modal-title .modal-prod-title {
+  overflow-wrap: anywhere;
+  line-height: 1.1;
+}
+
+.popup .modal .modal-cooperation-type {
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin: 0 0 16px;
+}
+
+.popup .modal .modal-cooperation-type span {
+  position: static;
+  display: inline;
+}
+
+.popup .modal .modal-description {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+
+.popup .modal .modal-description span,
+.popup .modal .modal-description svg {
+  margin: 0;
+}
+
+.popup .modal .modal-title-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 20px;
+}
+
+.popup .modal .modal-prod-decription {
+  position: static;
+  width: 100%;
+  max-width: 100%;
+}
+
+.popup .modal .modal-body .modal-content-first .modal-prod-decription p,
+.popup .modal .modal-body .modal-content-first p {
+  width: auto !important;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
+.popup .modal .modal-body .modal-content-second {
+  text-align: left;
+}
+
+.popup .modal .modal-body .modal-content-second .cast,
+.popup .modal .modal-body .modal-content-second .genres,
+.popup .modal .modal-body .modal-content-second .show {
+  margin: 0 0 18px;
+}
+
+.popup .modal .modal-body .modal-content-second .project-details-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.popup .modal .modal-body .modal-content-second .project-details-link:hover {
+  text-decoration: underline;
+}
+
+.popup .modal .modal-body .modal-content-second h3 {
+  margin: 0 0 4px;
+}
+
+.popup .content .episode-list-title,
+.popup .content .season,
+.popup .content .play-btn,
+.popup .content .play-btn-plus {
+  margin-right: clamp(20px, 4vw, 48px);
+  margin-left: clamp(20px, 4vw, 48px);
+}
+
+.popup .content .episode-list-title p {
+  display: block;
+  padding: 18px 0 12px;
+  text-align: left;
+}
+
+.popup .content .season {
+  position: static;
+  display: block;
+  max-width: calc(100% - 40px);
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.popup .content .play-btn {
+  padding: 0;
+}
+
+.popup .content .play-btn > a {
+  display: block;
+  width: 100%;
+}
+
+.popup .content .btn {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 8px 16px;
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  padding: 12px;
+  text-align: left;
+}
+
+.popup .content #btn_container {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1 / 4;
+  align-self: center;
+  float: none;
+  width: 120px;
+  height: auto;
+  margin: 0;
+  top: auto;
+}
+
+.popup .content #btn_container::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 20px solid #fff;
+  content: "";
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.8));
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.65);
+  transition: opacity 180ms ease, transform 180ms ease;
+  pointer-events: none;
+}
+
+.popup .content .play-btn .btn:hover #btn_container::after,
+.popup .content .play-btn .btn:focus-visible #btn_container::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup .content .play-btn .btn:hover #btn_container img,
+.popup .content .play-btn .btn:focus-visible #btn_container img {
+  filter: brightness(0.55);
+}
+
+.popup .content .btn img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 12 / 7;
+  object-fit: cover;
+  margin: 0;
+  transition: filter 180ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .popup .content #btn_container::after,
+  .popup .content .btn img {
+    transition: none;
+  }
+}
+
+.popup .content .btn h3,
+.popup .content .btn h5,
+.popup .content .btn h6,
+.popup .content .btn .duration {
+  position: static;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.popup .content .btn h3 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.popup .content .btn .duration {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.popup .content .btn h5 {
+  grid-column: 2 / -1;
+  grid-row: 2;
+  text-align: left;
+}
+
+.popup .content .btn h6 {
+  grid-column: 2 / -1;
+  grid-row: 3;
+}
+
+.popup .content .szczegoly {
+  position: static;
+  max-width: none;
+  margin: 0 clamp(20px, 4vw, 48px) 40px;
+}
+
+.popup .content .project-details-title {
+  margin: 24px clamp(20px, 4vw, 48px) 12px;
+  color: #fff;
+  font-size: clamp(20px, 3vw, 28px);
+  line-height: 1.25;
+  text-align: left;
+}
+
+.popup .content .line {
+  display: grid;
+  grid-template-columns: minmax(140px, 240px) minmax(0, 1fr);
+  align-items: start;
+  gap: 8px;
+  max-width: none;
+  margin-top: 18px;
+}
+
+.popup .content .line h3 {
+  margin: 0;
+}
+
+.popup .content .line > span,
+.popup .content .line > .actors,
+.popup .content .line > .detail-values {
+  max-width: 100%;
+  padding: 0;
+  overflow-wrap: anywhere;
+}
+
+.popup .content .line > .detail-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 6px;
+}
+
+.popup .content .szczegoly .line span:hover {
+  cursor: inherit;
+  text-decoration: none;
+}
+
+.popup .content .project-details .szczegoly:empty {
+  min-height: 8px;
+}
+
+.popup .content hr {
+  width: auto;
+  margin-right: clamp(20px, 4vw, 48px);
+  margin-left: clamp(20px, 4vw, 48px);
+}
+
+@media (max-width: 688px) {
+  .popup .modal .modal-body {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 24px;
+  }
+
+  .popup .modal .modal-body .modal-content-second {
+    grid-row: auto;
+  }
+
+  .popup .modal .modal-header {
+    height: clamp(160px, 48vw, 300px);
+  }
+
+  .popup .modal .modal-title .modal-prod-title {
+    font-size: clamp(26px, 7vw, 36px);
+  }
+
+  .popup .content .btn {
+    grid-template-columns: minmax(72px, 120px) minmax(0, 1fr) auto;
+    gap: 8px 12px;
+    padding: 10px;
+  }
+
+  .popup .content #btn_container {
+    width: 100%;
+  }
+
+  .popup .content .btn h5 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .popup .content {
+    width: calc(100vw - 16px);
+    max-height: calc(100dvh - 16px);
+  }
+
+  .popup .modal .modal-body {
+    padding: 20px 16px;
+  }
+
+  .popup .content .episode-list-title,
+  .popup .content .season,
+  .popup .content .play-btn,
+  .popup .content .play-btn-plus {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  .popup .content .szczegoly {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  .popup .content hr {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  .popup .content .line {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+}
