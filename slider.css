@@ -13,9 +13,8 @@
   .CSSgal .slider {
     position: relative;
     height: 100%;
-    white-space: nowrap;
-    font-size: 0;
-    transition: 0.8s;
+    white-space: normal;
+    font-size: 1rem;
   }
   
   /* SLIDES */
@@ -34,31 +33,6 @@
   
   /* NAVIGATION */
   
-  .bullets {
-    bottom: 40px;
-    padding: 10px 0;
-    width: 100%;
-    text-align: center;
-  }
-  .bullet {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    margin: 0 5px;
-  }
-  .bullet.active {
-    background: rgb(255, 255, 255);
-  }
-  
-  .CSSgal .prevNext {
-    position: absolute;
-    width: 100%;
-    top: -30px;
-    height: 0;
-  }
-
   .slider-buttons{
     display: flex;
     z-index: 1;
@@ -66,56 +40,6 @@
     position: relative;
   }
 
-  .slider-button{
-    position: relative;
-    border-radius: 50%;
-    top: -45px;
-    background: rgba(255, 255, 255, 0.685);
-  }
-
-  .slider-button-prev{
-    position: relative;
-    left: -25px;
-  }
-
-  .slider-button-next{
-    position: relative;
-    left: 35px;
-  }
-
-  .slider-buttons button{
-    z-index: 1;
-    font-weight: 700;
-    margin-top: 25px;
-    margin-right: 10px;
-    text-decoration: none;
-    width: auto;
-    min-width: 40px;
-    min-height: 30px;
-    height: auto;
-    background-color: rgba(255, 255, 255, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    border-width: 2px;
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-    color: rgba(24, 24, 24, 1);
-    border-radius: 50%;
-    border-color: white
-  }
-
-  .slider-buttons button span{
-    position: relative;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1em;
-  }
-
-  .slider-buttons button:hover{
-    background: rgba(255, 255, 255, 0.6);
-  }
-
-  
-  
-  
   /* YOU'RE THE DESIGNER! 
      ____________________
      All above was mainly to get it working :)
@@ -124,7 +48,12 @@
   .CSSgal{
     color: #fff;  
     text-align: center;
-  }
+      box-sizing: border-box;
+      border: 2px solid rgba(249, 249, 249, 0.1);
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+      background-color: #101013;
+    }
   .CSSgal .slider h2 {
     margin-top: 40vh;
     font-weight: 200;
@@ -290,8 +219,8 @@
   padding: 0 0.5em;
   white-space: nowrap;
   font-size: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  background-color: rgba(42, 42, 42, 0.521);
+  border: 2px solid rgba(255, 0, 0, 0.7);
+  background-color: rgba(85, 0, 0, 0.521);
   border-radius: 8px;
 }
 
@@ -315,11 +244,617 @@
     background: linear-gradient(90deg, var(--background-color), transparent 25%);
 }
 
-.produckja-napis-tlo {
-  background-color: rgba(250, 250, 255, 0.178);
-  color: white;
-  padding: 2px 6px;
-  text-align: center;
-  border-radius: 5px;
-  margin-right: 6px;
+/*----------------*/
+
+.slider-container {
+  position: relative;
+  display:grid;
+  width: max-content;
+  height: max-content;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-container .controls .timeline {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-right: 3px solid #ccc;
+  border-left: 3px solid #ccc;
+}
+.slider-container .controls .timeline .bar{
+  background: rgb(1, 1, 65);
+  height: 4px;
+  flex: 1;
+}
+.slider-container .controls .timeline .bar .inner{
+  background: #ccc;
+  width: 0%;
+  height: 100%;
+}
+
+header {
+  box-sizing: border-box;
+  display: grid;
+  height: 100vh;
+  height: 100svh;
+  min-height: 480px;
+  overflow-x: clip;
+  padding: 96px 16px 16px;
+  place-items: center;
+}
+
+html {
+  display: block;
+}
+
+.slider-container {
+  isolation: isolate;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  place-items: center;
+}
+
+.slider-container::before {
+  position: absolute;
+  z-index: -1;
+  inset: -12%;
+  content: "";
+  background-image:
+    linear-gradient(135deg, rgba(7, 7, 9, 0.2), rgba(7, 7, 9, 0.75)),
+    var(--active-slide-artwork, none);
+  background-position: center;
+  background-size: cover;
+  filter: blur(70px) saturate(1.5);
+  opacity: 0.75;
+  pointer-events: none;
+  transition: opacity 300ms ease;
+}
+
+.CSSgal {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  justify-self: stretch;
+  align-self: stretch;
+}
+
+.CSSgal .slider {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  max-width: none;
+}
+
+.CSSgal .slider > .slide {
+  position: absolute;
+  inset: 0;
+  top: auto;
+  left: auto;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  max-width: none;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.96);
+  z-index: 0;
+  transition:
+    opacity 700ms ease,
+    transform 900ms cubic-bezier(0.2, 0.7, 0.25, 1),
+    visibility 0s linear 700ms;
+}
+
+.CSSgal .slider > .slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: scale(1);
+  z-index: 1;
+  transition:
+    opacity 700ms ease,
+    transform 900ms cubic-bezier(0.2, 0.7, 0.25, 1),
+    visibility 0s;
+}
+
+.CSSgal .slide > .title {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 24px 24px 24px 38px;
+  transform: none;
+}
+
+.CSSgal .slide > .title::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.54) 12%,
+      rgba(0, 0, 0, 0.24) 25%,
+      transparent 38%
+    );
+  pointer-events: none;
+}
+
+.CSSgal .slide > .title > .slide-title {
+  z-index: 1;
+}
+
+.CSSgal .slide-title > img,
+.CSSgal .slide-title > .project-badges,
+.CSSgal .slide-title > p,
+.CSSgal .slide-title > .slide-buttons {
+  opacity: 0;
+  transform: translateY(14px) scale(0.96);
+  transition:
+    opacity 550ms ease,
+    transform 700ms cubic-bezier(0.2, 0.7, 0.25, 1);
+}
+
+.CSSgal .slide.is-active .slide-title > img,
+.CSSgal .slide.is-active .slide-title > .project-badges,
+.CSSgal .slide.is-active .slide-title > p,
+.CSSgal .slide.is-active .slide-title > .slide-buttons {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.CSSgal .slide.is-active .slide-title > img {
+  transition-delay: 450ms;
+}
+
+.CSSgal .slide.is-active .slide-title > .project-badges {
+  transition-delay: 560ms;
+}
+
+.CSSgal .slide.is-active .slide-title > p {
+  transition-delay: 670ms;
+}
+
+.CSSgal .slide.is-active .slide-title > .slide-buttons {
+  transition-delay: 780ms;
+}
+
+.CSSgal .slider-buttons {
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 18px;
+  left: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.CSSgal .bullets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  pointer-events: auto;
+}
+
+.CSSgal .bullet {
+  appearance: none;
+  display: block;
+  flex: 0 0 10px;
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+  cursor: pointer;
+  transition:
+    flex-basis 350ms cubic-bezier(0.2, 0.7, 0.25, 1),
+    background-color 250ms ease,
+    transform 250ms ease;
+}
+
+.CSSgal .bullet:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: scale(1.15);
+}
+
+.CSSgal .bullet.active {
+  flex-basis: 28px;
+  background: rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+  position: relative;
+}
+
+.CSSgal .bullet.active::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #fff;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: bullet-progress var(--slider-autoplay-duration, 5000ms) linear forwards;
+  pointer-events: none;
+}
+
+.CSSgal .bullets.is-paused .bullet.active::after {
+  animation-play-state: paused;
+}
+
+@keyframes bullet-progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.CSSgal .bullet:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .CSSgal .bullet.active::after {
+    animation: none;
+    transform: scaleX(1);
+  }
+}
+
+.CSSgal .slider {
+  touch-action: pan-y;
+  cursor: grab;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.CSSgal .slider img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+.CSSgal .slider:active {
+  cursor: grabbing;
+}
+
+.CSSgal .slider a,
+.CSSgal .slider button {
+  cursor: pointer;
+}
+
+.CSSgal .slide-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  width: min(700px, 100%);
+  min-width: 0;
+  max-width: 700px;
+  transform: none;
+}
+
+.CSSgal .slide-title img {
+  display: block;
+  position: relative;
+  right: auto;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  height: min(300px, 34vh);
+  object-fit: contain;
+  object-position: left center;
+}
+
+.CSSgal .slide-title p,
+.CSSgal .slide-title button,
+.CSSgal .slide-title .button9,
+.CSSgal .slide-title .button9 svg,
+.CSSgal .project-badges {
+  right: auto;
+}
+
+.CSSgal .slide-title p {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.CSSgal .slide-title > div:empty {
+  display: none;
+}
+
+.CSSgal .project-badges {
+  display: flex;
+  position: static;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.CSSgal .project-badges > span {
+  margin-right: 0;
+}
+
+.CSSgal .project-badges > span.info-badge-3 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  min-height: 30px;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  transform: none;
+}
+
+.CSSgal .project-badges > span.info-badge-3::after {
+  height: 16px;
+  border-left: 2px solid hsla(0, 0%, 100%, 0.8);
+  content: "";
+}
+
+.CSSgal .info-badge-prod-ko,
+.CSSgal .info-badge-prod-org {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+  color: hsl(0, 0%, 100%);
+  white-space: nowrap;
+  border: 2px solid;
+  border-radius: 8px;
+}
+
+.CSSgal .info-badge-prod-ko {
+  border-color: rgba(255, 0, 0, 0.7);
+  background-color: rgba(85, 0, 0, 0.521);
+}
+
+.CSSgal .info-badge-prod-org {
+  border-color: rgba(255, 251, 0, 0.7);
+  background-color: rgba(68, 67, 0, 0.685);
+}
+
+.CSSgal .project-badges::-webkit-scrollbar {
+  height: 4px;
+}
+
+.CSSgal .slide-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.CSSgal .slide-buttons a {
+  display: inline-flex;
+  flex: 0 1 auto;
+  position: static;
+  left: auto;
+  min-width: 0;
+  align-items: center;
+  margin: 0;
+  text-decoration: none;
+}
+
+.CSSgal .slide-buttons button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex: 0 1 auto;
+  width: auto;
+  min-width: 0;
+  min-height: 40px;
+  margin: 0;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+.CSSgal .slide-buttons .button9 {
+  padding-left: 12px;
+}
+
+.CSSgal .slide-buttons .button9 svg {
+  position: static;
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+
+.CSSgal .slide > .slide-1-bc,
+.CSSgal .slide > .slide-2-bc,
+.CSSgal .slide > .slide-3-bc {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 900ms cubic-bezier(0.2, 0.7, 0.25, 1);
+}
+
+.CSSgal .slide.is-active > .slide-1-bc,
+.CSSgal .slide.is-active > .slide-2-bc,
+.CSSgal .slide.is-active > .slide-3-bc {
+  animation: slide-background-zoom 20s linear forwards;
+}
+
+.CSSgal.is-paused .slide.is-active > .slide-1-bc,
+.CSSgal.is-paused .slide.is-active > .slide-2-bc,
+.CSSgal.is-paused .slide.is-active > .slide-3-bc {
+  animation-play-state: paused;
+}
+
+@keyframes slide-background-zoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .CSSgal .slide.is-active > .slide-1-bc,
+  .CSSgal .slide.is-active > .slide-2-bc,
+  .CSSgal .slide.is-active > .slide-3-bc {
+    transform: scale(1);
+    transition: none;
+    animation: none;
+  }
+}
+
+@media (max-height: 700px) {
+  header {
+    min-height: 0;
+    padding-top: 88px;
+  }
+
+  .CSSgal .slide-title img {
+    max-width: min(100%, 540px);
+    height: auto;
+    max-height: 22vh;
+  }
+
+  .CSSgal .project-badges > span {
+    font-size: 12px;
+    padding-right: 0.3em;
+    padding-left: 0.3em;
+  }
+
+  .CSSgal .slide-title p {
+    padding: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .CSSgal .slide-buttons {
+    gap: 8px;
+  }
+
+  .CSSgal .slide-buttons button {
+    font-size: 14px;
+  }
+
+  .CSSgal .slide-buttons .button11 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .CSSgal .slide-buttons {
+    gap: 6px;
+  }
+
+  .CSSgal .slide-buttons button {
+    padding-right: 8px;
+    padding-left: 8px;
+    font-size: clamp(10px, 3vw, 12px);
+  }
+
+  .CSSgal .slide-buttons .button9,
+  .CSSgal .slide-buttons .button9:hover,
+  .CSSgal .slide-buttons .button11 {
+    font-size: clamp(10px, 3vw, 12px);
+  }
+
+  .CSSgal .slide-buttons .button9,
+  .CSSgal .slide-buttons .button9:hover {
+    padding-left: 8px;
+  }
+
+  .CSSgal .slide-buttons .button9 svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 759.98px) {
+  .CSSgal .slide-title {
+    top: clamp(-36px, -4vh, -20px);
+  }
+
+  .CSSgal .slide-title > img {
+    margin-bottom: -8px;
+  }
+
+  .CSSgal .project-badges {
+    flex-wrap: nowrap;
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    gap: clamp(2px, 1vw, 8px);
+    min-width: 0;
+    scrollbar-width: thin;
+  }
+
+  .CSSgal .project-badges > span {
+    display: inline-flex;
+    flex: 0 1 auto;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 0;
+    height: auto;
+    min-height: 1.6em;
+    margin: 0;
+    padding-right: clamp(2px, 0.7vw, 6px);
+    padding-left: clamp(2px, 0.7vw, 6px);
+    font-size: clamp(14.5px, calc(2.75vw - 0.9px), 20px);
+    line-height: 1.1;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 550px) {
+  .CSSgal .slide-title > img {
+    height: auto;
+    max-height: 30vh;
+  }
+}
+
+@media (max-width: 379.98px) {
+  .CSSgal .project-badges {
+    gap: clamp(1px, 0.5vw, 2px);
+    overflow-x: hidden;
+  }
+
+  .CSSgal .project-badges > span {
+    padding-right: clamp(1px, 0.4vw, 1.5px);
+    padding-left: clamp(1px, 0.4vw, 1.5px);
+    font-size: clamp(12px, calc(2.04vw + 6.77px), 14.5px);
+  }
 }

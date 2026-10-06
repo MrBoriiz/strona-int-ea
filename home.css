@@ -109,6 +109,20 @@ header{
     background-position: center;
     background-attachment: fixed;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('images/pijany-bogaty.png');
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        #000 20%,
+        #000 80%,
+        transparent
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        #000 20%,
+        #000 80%,
+        transparent
+    );
 }
 
 .background-images-3{
@@ -117,7 +131,7 @@ header{
     width: auto;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('images/background_image_1.png');
 }
 
@@ -512,8 +526,8 @@ iframe{
         padding: 0 0.5em;
         white-space: nowrap;
         font-size: 14px;
-        border: 2px solid rgba(255, 255, 255, 0.7);
-        background-color: rgba(42, 42, 42, 0.521);
+        border: 2px solid rgba(255, 0, 0, 0.7);
+        background-color: rgba(85, 0, 0, 0.521);
         border-radius: 8px;
       }
     
@@ -674,8 +688,8 @@ iframe{
         padding: 0 0.5em;
         white-space: nowrap;
         font-size: 14px;
-        border: 2px solid rgba(255, 255, 255, 0.7);
-        background-color: rgba(42, 42, 42, 0.521);
+        border: 2px solid rgba(255, 0, 0, 0.7);
+        background-color: rgba(85, 0, 0, 0.521);
         border-radius: 8px;
       }
 
@@ -810,8 +824,8 @@ iframe{
         padding: 0 0.5em;
         white-space: nowrap;
         font-size: 16px;
-        border: 2px solid rgba(255, 255, 255, 0.7);
-        background-color: rgba(42, 42, 42, 0.521);
+        border: 2px solid rgba(255, 0, 0, 0.7);
+        background-color: rgba(85, 0, 0, 0.521);
         border-radius: 8px;
       }
 
@@ -944,8 +958,8 @@ iframe{
         padding: 0 0.5em;
         white-space: nowrap;
         font-size: 16px;
-        border: 2px solid rgba(255, 255, 255, 0.7);
-        background-color: rgba(42, 42, 42, 0.521);
+        border: 2px solid rgba(255, 0, 0, 0.7);
+        background-color: rgba(85, 0, 0, 0.521);
         border-radius: 8px;
       }
 
@@ -1102,8 +1116,8 @@ iframe{
         padding: 0 0.5em;
         white-space: nowrap;
         font-size: 16px;
-        border: 2px solid rgba(255, 255, 255, 0.7);
-        background-color: rgba(42, 42, 42, 0.521);
+        border: 2px solid rgba(255, 0, 0, 0.7);
+        background-color: rgba(85, 0, 0, 0.521);
         border-radius: 8px;
       }
 

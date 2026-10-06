@@ -6,6 +6,12 @@
     padding: 0;
     font-family: 'Poppins', 'sans-serif';
 }
+
+html{
+    width: 100%;
+    overflow-x: clip;
+}
+
 button{
     padding: 9px 25px;
     border-radius: 10px;
@@ -276,13 +282,126 @@ button:hover{
 body{
     background-color: #070709;
     font-family: Arial;
-    min-width: 100vw;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
     min-height: 100vh;
     color: #dedede;
-    display: inline-block;
-    flex-direction: center;
-    overflow-x: hidden;
+    display: block;
+    overflow-x: clip;
 }
+
+body.ambient-background {
+    --ambient-intensity: 1.3;
+    --ambient-glow-layers:
+        radial-gradient(ellipse 46rem 62rem at -10% 8%, rgba(226, 75, 169, calc(0.19 * var(--ambient-intensity))), transparent 72%),
+        radial-gradient(ellipse 42rem 58rem at 110% 15%, rgba(137, 83, 234, calc(0.18 * var(--ambient-intensity))), transparent 72%),
+        radial-gradient(ellipse 42rem 58rem at 110% 48%, rgba(48, 153, 226, calc(0.18 * var(--ambient-intensity))), transparent 72%),
+        radial-gradient(ellipse 32rem 48rem at -5% 55%, rgba(232, 192, 57, calc(0.12 * var(--ambient-intensity))), transparent 74%),
+        radial-gradient(ellipse 30rem 46rem at 0% 90%, rgba(77, 181, 118, calc(0.13 * var(--ambient-intensity))), transparent 74%);
+    --ambient-glow-shift-layers:
+        radial-gradient(ellipse 42rem 58rem at 110% 8%, rgba(226, 75, 169, calc(0.16 * var(--ambient-intensity))), transparent 72%),
+        radial-gradient(ellipse 46rem 62rem at -10% 35%, rgba(137, 83, 234, calc(0.16 * var(--ambient-intensity))), transparent 72%),
+        radial-gradient(ellipse 30rem 46rem at 0% 72%, rgba(48, 153, 226, calc(0.15 * var(--ambient-intensity))), transparent 74%),
+        radial-gradient(ellipse 42rem 58rem at 105% 85%, rgba(232, 192, 57, calc(0.1 * var(--ambient-intensity))), transparent 72%),
+        radial-gradient(ellipse 32rem 48rem at 85% 42%, rgba(77, 181, 118, calc(0.11 * var(--ambient-intensity))), transparent 74%);
+    background-color: #070709;
+    background-image: var(--ambient-glow-layers);
+}
+
+@media (max-width: 759.98px) {
+    body.ambient-background {
+        --ambient-intensity: 0.7;
+    }
+}
+
+.ambient-home .srodkowanie,
+.ambient-home .gallery,
+.ambient-contact .title2 {
+    position: relative;
+    isolation: isolate;
+}
+
+.ambient-home .srodkowanie::after,
+.ambient-home .gallery::after,
+.ambient-contact .title2::after {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    background: var(--ambient-glow-shift-layers);
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        #000 20%,
+        #000 80%,
+        transparent
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        #000 20%,
+        #000 80%,
+        transparent
+    );
+    animation: ambient-color-shift 36s ease-in-out infinite;
+    content: "";
+    pointer-events: none;
+}
+
+.ambient-home .srodkowanie::after {
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        #000 100px,
+        #000 calc(100% - 100px),
+        transparent
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        #000 100px,
+        #000 calc(100% - 100px),
+        transparent
+    );
+}
+
+@keyframes ambient-color-shift {
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ambient-home .srodkowanie::after,
+    .ambient-home .gallery::after,
+    .ambient-contact .title2::after {
+        animation: none;
+        opacity: 0.35;
+    }
+}
+
+.ambient-home .srodkowanie > *,
+.ambient-home .gallery > *,
+.ambient-contact .title2 > * {
+    position: relative;
+    z-index: 1;
+}
+
+.ambient-home .gallery {
+    background-color: transparent;
+}
+
+body.ambient-home > header,
+.ambient-home .background-images-3,
+.ambient-contact > header {
+    background-color: #070709;
+}
+
 h1{
     font-size: 28px;
     text-align: center;

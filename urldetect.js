@@ -1,98 +1,78 @@
-//Otwiera kartę z serialem / filmem jeśli URL zawiera odpowiedni fragment tekstu
+var projectRoutes = {
+    "prod/wm": "popup-8",
+    "prod/mg": "popup-9",
+    "prod/uvr": "popup-10",
+    "prod/ow": "popup-11",
+    "prod/evwttg2": "popup-12",
+    "koprod/egz": "popup-13",
+    "koprod/be": "popup-14",
+    "koprod/wielk-egz": "popup-15",
+    "koprod/swzmarl-egz": "popup-16",
+    "koprod/egln": "popup-17",
+    "koprod/sylw-egz": "popup-18"
+};
 
-let currentPage = location.href;
-    //Otwiera kartę bez odświeżania strony
-    setInterval(function()
-    {
-        if (currentPage != location.href)
-        {
-            // page has changed, set new page as 'current'
-            currentPage = location.href;
-            $(document).ready(function() {
-                if (window.location.href.indexOf("#prod/wm") > -1) {
-                    togglePopup8();
-                }
-                if (window.location.href.indexOf("#prod/mg") > -1) {
-                    togglePopup9();
-                }
-                if (window.location.href.indexOf("#prod/uvr") > -1) {
-                    togglePopup10();
-                }
-                if (window.location.href.indexOf("#prod/ow") > -1) {
-                    togglePopup11();
-                }
-                if (window.location.href.indexOf("#prod/evwttg2") > -1) {
-                    togglePopup12();
-                }
-                if (window.location.href.indexOf("#koprod/egz") > -1) {
-                    togglePopup13();
-                }
-                if (window.location.href.indexOf("#koprod/be") > -1) {
-                    togglePopup14();
-                }
-                if (window.location.href.indexOf("#koprod/wielk-egz") > -1) {
-                    togglePopup15();
-                }
-                if (window.location.href.indexOf("#koprod/swzmarl-egz") > -1) {
-                    togglePopup16();
-                }
-                if (window.location.href.indexOf("#koprod/egln") > -1) {
-                    togglePopup17();
-                }
-                if (window.location.href.indexOf("#koprod/sylw-egz") > -1) {
-                    togglePopup18();
-                }
+function openProjectFromHash(hashValue) {
+    var hash = (typeof hashValue === "string" ? hashValue : window.location.hash).replace(/^#/, "");
+    var isDetailsRoute = hash.endsWith("/szczegoly");
+    var route = isDetailsRoute ? hash.slice(0, -"/szczegoly".length) : hash;
+    var popupId = projectRoutes[route];
 
-    //Szczegóły na kartach projektów
-    
-                if (window.location.href.indexOf("#prod/wm/szczegoly") > -1) {
-                    togglePopup8();
-                    document.getElementById("prod/wm/szczegoly").scrollIntoView();
-                }
+    if (!popupId) {
+        return;
+    }
 
-                if (window.location.href.indexOf("#prod/mg/szczegoly") > -1) {
-                    togglePopup9();
-                    document.getElementById("prod/mg/szczegoly").scrollIntoView();
-                }
-
-
-            });
-        }
-    }, 50);
-
-    //Otwiera kartę gdy został wprowadzony / kliknięty link z hastagiem bądź przy odświeżeniu strony kiedy wprowadzony jest w URL hashtag znajdujący się w kodzie poniżej 
-    $(document).ready(function() {
-        if (window.location.href.indexOf("#prod/wm") > -1) {
-            togglePopup8();
-        }
-        if (window.location.href.indexOf("#prod/mg") > -1) {
-            togglePopup9();
-        }
-        if (window.location.href.indexOf("#prod/uvr") > -1) {
-            togglePopup10();
-        }
-        if (window.location.href.indexOf("#prod/ow") > -1) {
-            togglePopup11();
-        }
-        if (window.location.href.indexOf("#prod/evwttg2") > -1) {
-            togglePopup12();
-        }
-        if (window.location.href.indexOf("#koprod/egz") > -1) {
-            togglePopup13();
-        }
-        if (window.location.href.indexOf("#koprod/be") > -1) {
-            togglePopup14();
-        }
-        if (window.location.href.indexOf("#koprod/wielk-egz") > -1) {
-            togglePopup15();
-        }
-        if (window.location.href.indexOf("#koprod/swzmarl-egz") > -1) {
-            togglePopup16();
-        }
-        if (window.location.href.indexOf("#koprod/egln") > -1) {
-            togglePopup17();
-        }
-        if (window.location.href.indexOf("#koprod/sylw-egz") > -1) {
-            togglePopup18();
+    document.querySelectorAll(".popup.active").forEach(function (popup) {
+        if (popup.id !== popupId) {
+            popup.classList.remove("active");
         }
     });
+
+    var popup = document.getElementById(popupId);
+    if (!popup) {
+        return;
+    }
+
+    var wasActive = popup.classList.contains("active");
+    popup.classList.add("active");
+    toggleBodyScrollOff();
+
+    if (isDetailsRoute) {
+        var scrollToDetails = function () {
+            if (window.location.hash.slice(1) !== hash || !popup.classList.contains("active")) {
+                return;
+            }
+
+            var details = popup.querySelector(".project-details");
+            var content = popup.querySelector(".content");
+            if (details && content) {
+                var top = details.getBoundingClientRect().top -
+                    content.getBoundingClientRect().top +
+                    content.scrollTop;
+                content.scrollTo({ top: top, behavior: "smooth" });
+            }
+        };
+
+        if (wasActive) {
+            window.requestAnimationFrame(scrollToDetails);
+        } else {
+            window.setTimeout(scrollToDetails, 650);
+        }
+    }
+}
+
+document.addEventListener("click", function (event) {
+    var link = event.target.closest('a[href^="#"]');
+    if (!link) {
+        return;
+    }
+
+    var hash = link.getAttribute("href").slice(1);
+    var route = hash.endsWith("/szczegoly") ? hash.slice(0, -"/szczegoly".length) : hash;
+    if (projectRoutes[route]) {
+        openProjectFromHash("#" + hash);
+    }
+});
+
+document.addEventListener("DOMContentLoaded", openProjectFromHash);
+window.addEventListener("hashchange", openProjectFromHash);

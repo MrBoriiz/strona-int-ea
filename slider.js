@@ -1,53 +1,121 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.querySelector('.slider');
-  const nextButton = document.querySelector('#nextButton');
-  const prevButton = document.querySelector('#prevButton');
-  const bullets = document.querySelectorAll('.bullet');
+  const sliderElement = document.querySelector('.CSSgal .slider');
+  const bullets = document.querySelectorAll('.CSSgal .bullet');
+  const slides = sliderElement.querySelectorAll(':scope > .slide');
+  const artworkTarget = document.querySelector('.slider-container, .CSSgal');
+  const swipeThreshold = 50;
   let currentIndex = 0;
-  const maxIndex = 2; // 200% / 100%
+  let pointerStart = null;
+  let suppressClick = false;
+  let userPaused = false;
   const delay = 5000; // 5 seconds delay for autoplay
-  let autoplayInterval;
+  const interactionPause = 10000;
+  let autoplayTimeout;
+  let interactionResumeTimeout;
+  const bulletsContainer = document.querySelector('.CSSgal .bullets');
+  const sliderContainer = document.querySelector('.CSSgal');
+  bulletsContainer.style.setProperty('--slider-autoplay-duration', `${delay}ms`);
 
   function moveSlider(index) {
-    currentIndex = index;
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-    slider.style.webkitTransform = `translateX(-${currentIndex * 100}%)`;
-    updateBullets();
+    currentIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === currentIndex;
+      slide.classList.toggle('is-active', isActive);
+      slide.setAttribute('aria-hidden', String(!isActive));
+    });
+    bullets.forEach((bullet, bulletIndex) => {
+      bullet.classList.remove('active');
+      bullet.setAttribute('aria-pressed', String(bulletIndex === currentIndex));
+    });
+    void bullets[currentIndex].offsetWidth;
+    bullets[currentIndex].classList.add('active');
+    updateArtwork();
+    startAutoplay();
   }
 
-  function updateBullets() {
-    bullets.forEach((bullet, index) => {
-      if (index === currentIndex) {
-        bullet.classList.add('active');
-      } else {
-        bullet.classList.remove('active');
-      }
-    });
+  function updateArtwork() {
+    const background = slides[currentIndex].querySelector('[class$="-bc"]');
+    const artwork = getComputedStyle(background).backgroundImage;
+    artworkTarget.style.setProperty('--active-slide-artwork', artwork);
   }
 
   function startAutoplay() {
-    autoplayInterval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % (maxIndex + 1);
-      moveSlider(currentIndex);
+    if (userPaused) {
+      return;
+    }
+
+    clearTimeout(autoplayTimeout);
+    autoplayTimeout = setTimeout(() => {
+      moveSlider(currentIndex + 1);
     }, delay);
   }
 
-  function stopAutoplay() {
-    clearInterval(autoplayInterval);
+  function pauseAutoplayForInteraction() {
+    userPaused = true;
+    clearTimeout(autoplayTimeout);
+    clearTimeout(interactionResumeTimeout);
+    bulletsContainer.classList.add('is-paused');
+    interactionResumeTimeout = setTimeout(() => {
+      userPaused = false;
+      bulletsContainer.classList.remove('is-paused');
+      sliderContainer.classList.remove('is-paused');
+      startAutoplay();
+    }, interactionPause);
+    bulletsContainer.classList.add('is-paused');
+    sliderContainer.classList.add('is-paused');
   }
 
-  nextButton.addEventListener('click', function() {
-    stopAutoplay();
-    currentIndex = (currentIndex + 1) % (maxIndex + 1);
-    moveSlider(currentIndex);
+  bullets.forEach((bullet, index) => {
+    bullet.addEventListener('click', function() {
+      pauseAutoplayForInteraction();
+      moveSlider(index);
+    });
   });
 
-  prevButton.addEventListener('click', function() {
-    stopAutoplay();
-    currentIndex = (currentIndex - 1 + (maxIndex + 1)) % (maxIndex + 1);
-    moveSlider(currentIndex);
+  sliderElement.addEventListener('pointerdown', function(event) {
+    if (!event.isPrimary || (event.pointerType === 'mouse' && event.button !== 0)) {
+      return;
+    }
+
+    pointerStart = { x: event.clientX, y: event.clientY, pointerId: event.pointerId };
   });
 
-  startAutoplay();
-  updateBullets();
+  sliderElement.addEventListener('pointerup', function(event) {
+    if (!pointerStart || pointerStart.pointerId !== event.pointerId) {
+      return;
+    }
+
+    const deltaX = event.clientX - pointerStart.x;
+    const deltaY = event.clientY - pointerStart.y;
+    pointerStart = null;
+
+    if (Math.abs(deltaX) < swipeThreshold || Math.abs(deltaX) <= Math.abs(deltaY)) {
+      return;
+    }
+
+    pauseAutoplayForInteraction();
+    moveSlider(currentIndex + (deltaX < 0 ? 1 : -1));
+    suppressClick = true;
+    window.setTimeout(() => {
+      suppressClick = false;
+    }, 0);
+  });
+
+  sliderElement.addEventListener('pointercancel', function() {
+    pointerStart = null;
+  });
+
+  sliderElement.addEventListener('click', function(event) {
+    if (suppressClick) {
+      event.preventDefault();
+      event.stopPropagation();
+      suppressClick = false;
+    }
+  }, true);
+
+  sliderElement.addEventListener('dragstart', function(event) {
+    event.preventDefault();
+  });
+
+  moveSlider(currentIndex);
 });

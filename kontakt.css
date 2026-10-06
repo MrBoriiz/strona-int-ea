@@ -12,18 +12,35 @@
   }
 
   header{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('../images/bar.png');
     height: 40vh;
     width: auto;
-    background-size: cover;
+    background-size: 100% 100%, cover, cover;
     background-position: center;
+    background-attachment: scroll;
 }
 
 .background-images{
-    height: 40vh;
+    margin-top: 80px;
+    height: 35vh;
     width: auto;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('images/bar.png');
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        #000 20%,
+        #000 80%,
+        transparent
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        #000 20%,
+        #000 80%,
+        transparent
+    );
 }
 
 .gradient-0deg{
