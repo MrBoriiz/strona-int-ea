@@ -343,9 +343,8 @@ p{
 .najnowszy-film{
     display: flex;
     justify-content: center;
-    padding-top: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 100%;
+    padding-top: 1.5%;
 }
 
 iframe{
@@ -354,6 +353,44 @@ iframe{
     width: 100% !important;
     max-width: 630px;
     max-height: 360px;
+}
+
+.srodkowanie > .latest-video-section{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 630px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.srodkowanie > .latest-video-section .najnowszy-film{
+    max-width: 630px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.srodkowanie > .latest-video-section p{
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 630px;
+    left: auto;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: left;
+    transform: none;
+}
+
+@media (max-width: 759.98px) {
+    .srodkowanie > .latest-video-section .najnowszy-film iframe{
+        width: 92% !important;
+    }
+
+    .srodkowanie > .latest-video-section p{
+        width: 92%;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 
@@ -1438,13 +1475,14 @@ iframe{
   }
 
 
-  @media only screen and (min-width: 1803px) {
+  @media only screen and (min-width: 1280px) {
 
     .srodkowanie{
         display: flex;
-        grid-gap: 20px;
-        justify-items: center;
+        gap: clamp(16px, 2vw, 32px);
         justify-content: center;
+        padding-right: clamp(16px, 3vw, 48px);
+        padding-left: clamp(16px, 3vw, 48px);
     }
 
     .title3 p{
@@ -1457,10 +1495,11 @@ iframe{
         border-radius: 3px;
         color: hsla(0, 0%, 100%, 0.9);
         font-size: 2rem;
-        min-width: 350px;
-        max-width: 1100px;
-        left: 50%;
-        transform: translate(-50%, 0%);
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        left: auto;
+        transform: none;
     }
     
     .title3 .description{
@@ -1477,10 +1516,28 @@ iframe{
     
     .title3{
         display: inline-block;
+        box-sizing: border-box;
         text-decoration: none;
         margin-top: 10px;
         margin-bottom: 40px;
+        min-width: 0;
+    }
+
+    .srodkowanie > .title3:not(.latest-video-section){
+        flex: 1 1 600px;
         max-width: 900px;
+    }
+
+    .srodkowanie > .latest-video-section{
+        flex: 1 1 560px;
+        width: auto;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .srodkowanie > .latest-video-section{
+        margin-right: 0;
+        margin-left: 0;
     }
     
     .title3 h2{
