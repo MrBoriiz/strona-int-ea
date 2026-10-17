@@ -8,14 +8,16 @@ function toggleBodyScrollOn() {
     document.body.style.overflow = '';
 }
 
+
+
+
+//=============================== \/ \/ \/  POPUPY \/ \/ \/ ===============================
+
 //wojny meneli
 function togglePopup8(){
     document.getElementById("popup-8").classList.toggle("active");
     toggleBodyScrollOff();
 }
-
-
-//=============================== \/ \/ \/ NIEUŻYWANE POPUPY \/ \/ \/ ===============================
 
 //miasto gliwice
 function togglePopup9(){
@@ -46,7 +48,7 @@ function togglePopup13(){
 
 
 
-//=============================== /\ /\ /\ NIEUŻYWANE POPUPY /\ /\ /\ ===============================
+//=============================== /\ /\ /\  POPUPY /\ /\ /\ ===============================
 
 
 
@@ -81,6 +83,12 @@ function togglePopup18(){
     toggleBodyScrollOff();
 }
 
+//Rycerze Doliny Rozdupy
+function togglePopup19(){
+    document.getElementById("popup-19").classList.toggle("active");
+    toggleBodyScrollOff();
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     var isEnglishPage = window.location.pathname.indexOf("/eng/") !== -1;
     var detailsTitle = isEnglishPage ? "" : "";
@@ -95,7 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "popup-15": "koprod/wielk-egz",
         "popup-16": "koprod/swzmarl-egz",
         "popup-17": "koprod/egln",
-        "popup-18": "koprod/sylw-egz"
+        "popup-18": "koprod/sylw-egz",
+        "popup-19": "koprod/rydolroz"
     };
 
     document.querySelectorAll(".popup .modal").forEach(function (modal) {

@@ -9,7 +9,8 @@ var projectRoutes = {
     "koprod/wielk-egz": "popup-15",
     "koprod/swzmarl-egz": "popup-16",
     "koprod/egln": "popup-17",
-    "koprod/sylw-egz": "popup-18"
+    "koprod/sylw-egz": "popup-18",
+    "koprod/rydolroz": "popup-19"
 };
 
 function openProjectFromHash(hashValue) {
