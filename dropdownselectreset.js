@@ -1,13 +1,23 @@
 
-function DropdownValueReset(){
-document.getElementById('mg').options[0].selected = 'selected';
-document.getElementById('egz').options[0].selected = 'selected';
+function resetDropdown(id) {
+    const select = document.getElementById(id);
+
+    if (!(select instanceof HTMLSelectElement) || select.options.length === 0) {
+        return;
+    }
+
+    select.selectedIndex = 0;
+    select.dispatchEvent(new Event("change", { bubbles: true }));
 }
 
-function DropdownValueResetMG(){
-document.getElementById('mg').options[0].selected = 'selected';
+function DropdownValueReset() {
+    ["mg", "egz", "rdr"].forEach(resetDropdown);
 }
 
-function DropdownValueResetEGZ(){
-document.getElementById('egz').options[0].selected = 'selected';
+function DropdownValueResetMG() {
+    resetDropdown("mg");
+}
+
+function DropdownValueResetEGZ() {
+    resetDropdown("egz");
 }

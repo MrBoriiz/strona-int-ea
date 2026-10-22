@@ -52,6 +52,81 @@
     text-decoration: none;
     padding: 5px;
   }
+
+  .socials a:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.85);
+    outline-offset: 4px;
+    border-radius: 50%;
+  }
+
+  .socials .button6 {
+    box-sizing: border-box;
+    display: inline-grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    max-width: 48px;
+    max-height: 48px;
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.11),
+      rgba(255, 255, 255, 0.035)
+    ), rgba(18, 18, 22, 0.62);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(18px) saturate(145%);
+    -webkit-backdrop-filter: blur(18px) saturate(145%);
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .socials .button6:hover {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    max-width: 48px;
+    max-height: 48px;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.19),
+      rgba(255, 255, 255, 0.075)
+    ), rgba(27, 27, 32, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    border-radius: 50%;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
+  }
+
+  .socials .button6 svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    color: currentColor;
+    fill: currentColor;
+    transition: transform 0.2s ease;
+  }
+
+  .socials a:hover .button6 svg {
+    transform: scale(1.08);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .socials .button6,
+    .socials .button6 svg {
+      transition: none;
+    }
+  }
   
   
   .footer-bottom {

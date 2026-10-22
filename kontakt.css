@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
 
 *{
-    margin: 0;
+    margin: 0 auto;
     padding: -1;
     font-family: 'Poppins', 'sans-serif';
     box-sizing: border-box;
@@ -102,28 +102,161 @@ h6{
 }
 
 .email{
-    position: relative;
+    width: min(615px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.title2 .email .email-copy-button{
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 4px 12px;
+    width: 100%;
+    max-width: 520px;
+    min-width: 0;
+    min-height: 82px;
     height: auto;
-    max-width: 615px;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 10px 20px;
+    color: #fff;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.11),
+        rgba(255, 255, 255, 0.035)
+    ), rgba(18, 18, 22, 0.62);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(18px) saturate(145%);
+    -webkit-backdrop-filter: blur(18px) saturate(145%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.email svg{
-    position: relative;
-    top: 6px;
+.title2 .email .email-copy-button[data-copy-state="success"]{
+    animation: email-copy-success-flash 650ms ease-out;
 }
 
-.email p{
-    font-family: 'Poppins', 'sans-serif';
-    font-weight: 700;
-    display: inline;
+@keyframes email-copy-success-flash {
+    0%, 100% {
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.11),
+            rgba(255, 255, 255, 0.035)
+        ), rgba(18, 18, 22, 0.62);
+        border-color: rgba(255, 255, 255, 0.42);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    }
+    35% {
+        background: linear-gradient(
+            180deg,
+            rgba(112, 255, 155, 0.45),
+            rgba(56, 205, 105, 0.22)
+        ), rgba(18, 110, 55, 0.82);
+        border-color: rgba(156, 255, 184, 0.9);
+        box-shadow: 0 0 32px rgba(72, 220, 120, 0.6);
+    }
+}
+
+.title2 .email .email-copy-button:hover{
+    width: 100%;
+    max-width: 520px;
+    min-width: 0;
+    min-height: 82px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    border-radius: 16px;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.16),
+        rgba(255, 255, 255, 0.065)
+    ), rgba(24, 24, 29, 0.72);
+    border-color: rgba(255, 255, 255, 0.42);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
+}
+
+.title2 .email .email-copy-button:active{
+    transform: none;
+}
+
+.title2 .email .email-copy-button:focus-visible{
+    outline: 2px solid rgba(255, 255, 255, 0.85);
+    outline-offset: 4px;
+}
+
+.title2 .email .email-copy-button svg{
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    flex: 0 0 auto;
+    display: block;
+    width: 36px;
+    height: 42px;
+    color: rgba(255, 255, 255, 0.82);
+    transition:
+        opacity 0.18s ease,
+        transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+        color 0.18s ease;
+}
+
+.title2 .email .email-copy-button svg:last-of-type{
+    opacity: 0;
+    transform: scale(0.65);
+    color: #b7edc4;
+}
+
+.title2 .email .email-copy-button[data-copy-state="success"] svg:first-of-type{
+    opacity: 0;
+    transform: scale(0.65);
+}
+
+.title2 .email .email-copy-button[data-copy-state="success"] svg:last-of-type{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.title2 .email .email-address{
+    grid-column: 2;
+    grid-row: 1;
+    color: #fff;
+    font-size: clamp(16px, 1.55vw, 20px);
+    font-weight: 600;
+    overflow-wrap: anywhere;
     text-align: center;
-    border-radius: 15px;
-    color: hsl(0, 0%, 100%);
-    font-size: 2.5rem;
+}
+
+.title2 .email .email-copy-status{
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 0;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: clamp(12px, 1.05vw, 14px);
+    font-weight: 400;
+    line-height: 1.4;
     text-align: center;
+    transition: color 0.2s ease;
+}
+
+.title2 .email .email-copy-button[data-copy-state="success"] .email-copy-status{
+    color: #b7edc4;
+}
+
+.title2 .email .email-copy-button[data-copy-state="error"] .email-copy-status{
+    color: #ffb4ab;
 }
 
 .logo{
@@ -217,92 +350,20 @@ h6{
     text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6), 0px 0px 25px rgba(0, 0, 0, 0.6);
 }
 
-@media only screen and (min-width: 360px) and (max-width: 374px) {
-
-    .email p{
-        font-family: 'Poppins', 'sans-serif';
-        font-weight: 700;
-        display: block;
-        text-align: center;
-        border-radius: 3px;
-        color: hsla(0, 0%, 100%, 0.61);
-        font-size: 1.8rem;
+@media (prefers-reduced-motion: reduce) {
+    .title2 .email .email-copy-button,
+    .title2 .email .email-copy-button svg,
+    .title2 .email .email-copy-status {
+        transition: none;
     }
 
-  }
-
-  @media only screen and (min-width: 375px) and (max-width: 383px) {
-
-    .email p{
-        font-family: 'Poppins', 'sans-serif';
-        font-weight: 700;
-        display: block;
-        text-align: center;
-        border-radius: 3px;
-        color: hsla(0, 0%, 100%, 0.61);
-        font-size: 1.8rem;
+    .title2 .email .email-copy-button[data-copy-state="success"] {
+        animation: none;
+        background: linear-gradient(
+            180deg,
+            rgba(112, 255, 155, 0.3),
+            rgba(56, 205, 105, 0.18)
+        ), rgba(18, 110, 55, 0.72);
+        border-color: rgba(156, 255, 184, 0.75);
     }
-
-  }
-
-  @media only screen and (min-width: 384px) and (max-width: 400px) {
-
-    .email p{
-        font-family: 'Poppins', 'sans-serif';
-        font-weight: 700;
-        display: block;
-        text-align: center;
-        border-radius: 3px;
-        color: hsla(0, 0%, 100%, 0.61);
-        font-size: 1.8rem;
-    }
-    
-  }
-  
-  @media only screen and (min-width: 401px) and (max-width: 415px) {
-
-    .email p{
-        font-family: 'Poppins', 'sans-serif';
-        font-weight: 700;
-        display: block;
-        text-align: center;
-        border-radius: 3px;
-        color: hsla(0, 0%, 100%, 0.61);
-        font-size: 1.85rem;
-    }
-
-  }
-  
-  @media only screen and (min-width: 416px) and (max-width: 759px) {
-
-    .email p{
-        font-family: 'Poppins', 'sans-serif';
-        font-weight: 700;
-        display: block;
-        text-align: center;
-        border-radius: 3px;
-        color: hsla(0, 0%, 100%, 0.61);
-        font-size: 1.9rem;
-    }
-
-  }
-  
-  @media only screen and (min-width: 760px) and (max-width: 914px) {
-
-    .email p{
-        font-family: 'Poppins', 'sans-serif';
-        font-weight: 700;
-        display: block;
-        text-align: center;
-        border-radius: 3px;
-        color: hsla(0, 0%, 100%, 0.61);
-        font-size: 1.95rem;
-    }
-
-  }
-
-  @media only screen and (min-width: 915px) and (max-width: 1079px) {
-
-
-
-  }
+}
