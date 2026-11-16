@@ -345,7 +345,7 @@ body.ambient-background {
 }
 
 .ambient-home .srodkowanie::after,
-.ambient-home .gallery::after,
+.ambient-home .gallery:not(.original-productions-gallery)::after,
 .ambient-contact .title2::after {
     position: absolute;
     z-index: 0;
@@ -400,7 +400,7 @@ body.ambient-background {
 
 @media (prefers-reduced-motion: reduce) {
     .ambient-home .srodkowanie::after,
-    .ambient-home .gallery::after,
+    .ambient-home .gallery:not(.original-productions-gallery)::after,
     .ambient-contact .title2::after {
         animation: none;
         opacity: 0.45;

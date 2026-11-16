@@ -47,6 +47,14 @@
   .socials li {
     margin: 0 10px;
   }
+
+  .socials .social-link-tiktok {
+    order: 4;
+  }
+
+  .socials .social-link-threads {
+    order: 5;
+  }
   
   .socials a {
     text-decoration: none;
@@ -63,48 +71,27 @@
     box-sizing: border-box;
     display: inline-grid;
     place-items: center;
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    min-height: 48px;
-    max-width: 48px;
-    max-height: 48px;
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
+    max-width: 52px;
+    max-height: 52px;
     margin: 0;
     padding: 0;
-    color: rgba(255, 255, 255, 0.9);
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.11),
-      rgba(255, 255, 255, 0.035)
-    ), rgba(18, 18, 22, 0.62);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    background: #070709;
+    border: 2px solid rgba(255, 255, 255, 0.137);
     border-radius: 50%;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
-    backdrop-filter: blur(18px) saturate(145%);
-    -webkit-backdrop-filter: blur(18px) saturate(145%);
+    box-shadow: none;
     transition:
-      background 0.2s ease,
-      border-color 0.2s ease,
-      box-shadow 0.2s ease;
+      background-color 160ms ease,
+      border-color 160ms ease;
   }
 
   .socials .button6:hover {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    min-height: 48px;
-    max-width: 48px;
-    max-height: 48px;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.19),
-      rgba(255, 255, 255, 0.075)
-    ), rgba(27, 27, 32, 0.78);
-    border: 1px solid rgba(255, 255, 255, 0.48);
-    border-radius: 50%;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
+    background: #2c2c2c;
+    border-color: rgba(255, 255, 255, 0.4);
   }
 
   .socials .button6 svg {
@@ -115,6 +102,19 @@
     color: currentColor;
     fill: currentColor;
     transition: transform 0.2s ease;
+  }
+
+  .socials .button6 svg.social-icon-outline {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .socials .button6 svg.social-icon-solid {
+    fill: currentColor;
+    stroke: none;
   }
 
   .socials a:hover .button6 svg {

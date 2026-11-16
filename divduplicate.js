@@ -1,9 +1,22 @@
-//Kopiowanie istniejącego już diva z całym paskiem menu na górze strony (navbar) z pliku "powiadomienia.html" do diva z id="powiadomienia"
+var duplicateScriptUrl = document.currentScript && document.currentScript.src;
 
-$(document).ready(function () {
-    $("#powiadomienia").load("powiadomienia.html");
-});
+$(function () {
+    var notificationContainer = document.getElementById("powiadomienia") ||
+        document.getElementById("powiadomienia-eng");
+    if (!notificationContainer) {
+        return;
+    }
 
-$(document).ready(function () {
-    $("#powiadomienia").load("../powiadomienia.html");
+    var notificationsUrl = duplicateScriptUrl
+        ? new URL("powiadomienia.html", duplicateScriptUrl).href
+        : "powiadomienia.html";
+    $(notificationContainer).load(notificationsUrl, function () {
+        if (window.location.pathname.indexOf("/eng/") === -1) {
+            return;
+        }
+
+        notificationContainer.querySelectorAll(".notification img").forEach(function (image) {
+            image.src = new URL("../" + image.getAttribute("src"), window.location.href).href;
+        });
+    });
 });

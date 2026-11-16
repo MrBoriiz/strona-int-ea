@@ -627,6 +627,7 @@ body > .menu-btn,
 #active:checked ~ .wrapper ul > li:nth-child(3) a { transition-delay: 0.12s; }
 #active:checked ~ .wrapper ul > li:nth-child(4) a { transition-delay: 0.16s; }
 #active:checked ~ .wrapper ul > li:nth-child(5) a { transition-delay: 0.2s; }
+#active:checked ~ .wrapper ul > li:nth-child(6) a { transition-delay: 0.24s; }
 
 .wrapper ul > a {
   display: inline-flex;

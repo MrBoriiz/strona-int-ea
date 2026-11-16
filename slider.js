@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let pointerStart = null;
   let suppressClick = false;
   let userPaused = false;
+  let overlayPaused = Boolean(document.querySelector('.popup.active, .wm-artwork-dialog[open]'));
   const delay = 5000; // 5 seconds delay for autoplay
   const interactionPause = 10000;
   let autoplayTimeout;
@@ -40,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function startAutoplay() {
-    if (userPaused) {
+    if (userPaused || overlayPaused) {
       return;
     }
 
@@ -54,16 +55,30 @@ document.addEventListener('DOMContentLoaded', function() {
     userPaused = true;
     clearTimeout(autoplayTimeout);
     clearTimeout(interactionResumeTimeout);
-    bulletsContainer.classList.add('is-paused');
+    updateAutoplayPausedState();
     interactionResumeTimeout = setTimeout(() => {
       userPaused = false;
-      bulletsContainer.classList.remove('is-paused');
-      sliderContainer.classList.remove('is-paused');
+      updateAutoplayPausedState();
       startAutoplay();
     }, interactionPause);
-    bulletsContainer.classList.add('is-paused');
-    sliderContainer.classList.add('is-paused');
+    updateAutoplayPausedState();
   }
+
+  function updateAutoplayPausedState() {
+    const isPaused = userPaused || overlayPaused;
+    bulletsContainer.classList.toggle('is-paused', isPaused);
+    sliderContainer.classList.toggle('is-paused', isPaused);
+  }
+
+  document.addEventListener('project-overlay-change', function(event) {
+    overlayPaused = Boolean(event.detail && event.detail.isOpen);
+    if (overlayPaused) {
+      clearTimeout(autoplayTimeout);
+    } else {
+      startAutoplay();
+    }
+    updateAutoplayPausedState();
+  });
 
   bullets.forEach((bullet, index) => {
     bullet.addEventListener('click', function() {

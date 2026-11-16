@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entangled Artists | Artwork gallery</title>
+    <link rel="icon" href="../logos/icon.png">
+    <link rel="stylesheet" href="../menu.css">
+    <link rel="stylesheet" href="../kontakt.css">
+    <link rel="stylesheet" href="../scroll.css">
+    <link rel="stylesheet" href="../popup.css?v=project-overlay-lock-2">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../moviecard.css">
+    <link rel="stylesheet" href="../moviemodal.css?v=wm-lightbox-description-gradient-2">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../tooltip.css">
+    <link rel="stylesheet" href="../gallery.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../divduplicate.js"></script>
+    <script src="../popup.js?v=wm-lightbox-social-links-1"></script>
+    <script src="../reveal.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body class="ambient-background ambient-contact gallery-page">
+    <a id="top"></a>
+    <div class="title">
+        <div class="home-title"></div>
+    </div>
+    <div class="background-images"></div>
+
+    <main>
+        <div class="title2">
+            <h2>ARTWORK GALLERY</h2>
+            <span></span>
+            <hr>
+        </div>
+
+        <section class="wm-project-media gallery-media" data-gallery-route="galeria" aria-label="Artwork gallery">
+            <div class="wm-media-panel wm-extras-panel">
+                <button class="wm-artwork-button" type="button" aria-label="Enlarge illustration of two characters" data-artwork-slug="Evwttg2" data-artwork-title="Illustration of two characters" data-artwork-description="An illustration featuring two characters.">
+                    <img src="../images/evwttg2.png" alt="Illustration of two characters">
+                </button>
+                <button class="wm-artwork-button" type="button" aria-label="Enlarge illustration of two characters in a room" data-artwork-slug="Evwttg2_tlo" data-artwork-title="Illustration of two characters in a room" data-artwork-description="An illustration of two characters in a room.">
+                    <img src="../images/evwttg2 tlo.png" alt="Illustration of two characters in a room">
+                </button>
+                <button class="wm-artwork-button" type="button" aria-label="Enlarge alternate illustration of two characters" data-artwork-slug="Evwttg2_alternatywna" data-artwork-title="Alternate illustration of two characters" data-artwork-description="An alternate version of the two-character illustration.">
+                    <img src="../images/evwttg2 .png" alt="Alternate version of the two-character illustration">
+                </button>
+                <button class="wm-artwork-button" type="button" aria-label="Enlarge Grubas artwork" data-artwork-slug="Grubas_poza_zloczyńczy" data-artwork-title="Grubas – Hobo Wars" data-artwork-description="An illustration of Grubas from Hobo Wars.">
+                    <img src="../images/WM-Grubas-poza-zloczyncy-podpis-bez-logo.png" alt="Illustration of Grubas from Hobo Wars">
+                </button>
+            </div>
+            <dialog class="wm-artwork-dialog" aria-label="Artwork preview">
+                <div class="wm-lightbox-layout">
+                    <button class="wm-lightbox-nav wm-lightbox-previous" type="button" aria-label="Previous artwork">&lsaquo;</button>
+                    <div class="wm-lightbox-post">
+                        <div class="wm-lightbox-viewer">
+                            <div class="wm-lightbox-artwork-wrap">
+                                <div class="wm-lightbox-toolbar">
+                                    <button class="wm-artwork-close" type="button" aria-label="Close preview">&times;</button>
+                                    <div class="wm-lightbox-menu-wrap">
+                                        <button class="wm-lightbox-menu-toggle" type="button" aria-label="More options" aria-haspopup="true" aria-expanded="false" aria-controls="gallery-lightbox-menu">⋮</button>
+                                        <div class="wm-lightbox-menu" id="gallery-lightbox-menu" role="menu" hidden>
+                                            <button class="wm-lightbox-menu-backdrop" type="button" aria-label="Close options menu"></button>
+                                            <div class="wm-lightbox-menu-sheet">
+                                                <div class="wm-lightbox-menu-handle" aria-hidden="true"></div>
+                                                <h2 class="wm-lightbox-menu-title">More options</h2>
+                                                <a class="wm-lightbox-menu-item wm-lightbox-download" role="menuitem" href="#" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg><span>Download image</span></a>
+                                                <h3 class="wm-lightbox-social-title">Also view this artwork on:</h3>
+                                                <a class="wm-lightbox-menu-item wm-lightbox-social-link" data-social="instagram" role="menuitem" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="wm-lightbox-icon-fill" cx="18" cy="6" r="1"/></svg><span>Instagram</span></a>
+                                                <a class="wm-lightbox-menu-item wm-lightbox-social-link" data-social="twitter" role="menuitem" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="wm-lightbox-icon-solid" d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.8 5.8 22H2.6l7.3-8.4L1.8 2h6.5l4.5 6.7L18.9 2Zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20Z"/></svg><span>Twitter / X</span></a>
+                                                <a class="wm-lightbox-menu-item wm-lightbox-social-link" data-social="tiktok" role="menuitem" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.2a4.2 4.2 0 1 1-3.4-4.1M14 3c.6 3.2 2.5 5.1 5.5 5.5"/></svg><span>TikTok</span></a>
+                                                <a class="wm-lightbox-menu-item wm-lightbox-social-link" data-social="threads" role="menuitem" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="wm-lightbox-icon-solid" d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg><span>Threads</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wm-lightbox-artwork">
+                                    <img class="wm-lightbox-image" src="../images/evwttg2.png" alt="">
+                                    <span class="wm-lightbox-counter" aria-live="polite"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="wm-lightbox-details">
+                            <h2 class="wm-lightbox-title"></h2>
+                            <p class="wm-lightbox-description"></p>
+                        </section>
+                    </div>
+                    <button class="wm-lightbox-nav wm-lightbox-next" type="button" aria-label="Next artwork">&rsaquo;</button>
+                </div>
+            </dialog>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Entangled Artists 2026</h3>
+            <ul class="socials">
+                <li class="social-link-tiktok"><a href="https://www.tiktok.com/@entangledartists" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><button class="button6" type="button"><svg class="social-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.2a4.2 4.2 0 1 1-3.4-4.1M14 3c.6 3.2 2.5 5.1 5.5 5.5"/></svg></button></a></li>
+                <li class="social-link-threads"><a href="" target="_blank" rel="noopener noreferrer" aria-label="Threads"><button class="button6" type="button"><svg class="social-icon-solid" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg></button></a></li>
+                <li><a href="https://www.youtube.com/@EntangledArtists/videos" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><button class="button6" type="button"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8.05 2h.09c.82 0 4.99.03 6.11.34a2.01 2.01 0 0 1 1.42 1.42c.1.38.17.88.22 1.4l.03.36c.06.91.07 1.77.08 1.96v.2c0 .19-.01 1.1-.08 2.06l-.02.21c-.05.57-.12 1.14-.24 1.56a2.01 2.01 0 0 1-1.42 1.42c-1.16.31-5.57.33-6.18.34h-.14c-.31 0-1.59-.01-2.93-.05l-.17-.01-.17-.01c-1.11-.05-2.17-.13-2.65-.26a2.01 2.01 0 0 1-1.42-1.42c-.11-.42-.18-.99-.23-1.56L.32 9.82l-.01-.1A31.4 31.4 0 0 1 .22 7.68v-.12c0-.22.01-.96.06-1.78l.01-.16.03-.36c.05-.52.12-1.02.22-1.4a2.01 2.01 0 0 1 1.42-1.42c.49-.13 1.54-.21 2.65-.26l.43-.02A100 100 0 0 1 7.86 2h.19zM6.4 5.21v4.82l4.16-2.41L6.4 5.21z"/></svg></button></a></li>
+                <li><a href="https://www.instagram.com/entangledartists/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><button class="button6" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.05 1.26.07 1.64.07 4.85 0 3.2-.02 3.58-.07 4.85-.15 3.22-1.67 4.77-4.92 4.92-1.27.05-1.65.07-4.85.07s-3.58-.02-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.05-1.27-.07-1.65-.07-4.85s.02-3.59.07-4.85c.15-3.23 1.66-4.77 4.92-4.92 1.27-.06 1.65-.07 4.85-.07zm0-2.16C8.74 0 8.33.01 7.05.07 2.69.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-11.84a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></button></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+    <div class="navbar">
+        <div class="main">
+            <a href="index.html">
+                <div class="logo"><img src="../images/logo.png" alt="Entangled Artists"></div>
+            </a>
+        </div>
+        <div class="tooltip2">
+            <div class="tooltiptext">
+                <h1>Back to top</h1>
+            </div>
+            <a href="#top">
+                <label class="back-to-top-btn">
+                    <span>
+                        <svg viewBox="0 -10 32 32"><path d="m26.71 10.29-10-10a1 1 0 0 0-1.41 0l-10 10 1.41 1.41L15 3.41V32h2V3.41l8.29 8.29z"/></svg>
+                    </span>
+                </label>
+            </a>
+        </div>
+        <div id="powiadomienia-eng"></div>
+    </div>
+    <div class="wrapper">
+        <ul>
+            <li><a href="./">HOME PAGE</a></li>
+            <li><a href="./#productions">PRODUCTIONS</a></li>
+            <li><a href="./#aboutus">ABOUT US</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+            <a href="../galeria.html">
+                <button class="button6"><img src="../images/pl-flag.png" alt="Polski"></button>
+            </a>
+            <a href="index.html">
+                <button class="button6"><img src="../images/gb-flag.png" alt="English"></button>
+            </a>
+            <li><h2>Entangled Artists 2026</h2></li>
+        </ul>
+    </div>
+</body>
+</html>

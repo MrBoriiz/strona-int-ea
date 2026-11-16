@@ -293,7 +293,7 @@
 .tooltip .tooltiptext {
   box-sizing: border-box;
   width: min(420px, calc(100vw - 24px));
-  max-height: calc(100dvh - 96px);
+  max-height: min(420px, calc(100dvh - 96px));
   overflow-y: auto;
   right: clamp(12px, 2vw, 24px);
   z-index: 12;

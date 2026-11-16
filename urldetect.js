@@ -15,8 +15,9 @@ var projectRoutes = {
 
 function openProjectFromHash(hashValue) {
     var hash = (typeof hashValue === "string" ? hashValue : window.location.hash).replace(/^#/, "");
-    var isDetailsRoute = hash.endsWith("/szczegoly");
-    var route = isDetailsRoute ? hash.slice(0, -"/szczegoly".length) : hash;
+    var route = hash.split("/").slice(0, 2).join("/");
+    var routeSuffix = hash.slice(route.length);
+    var isDetailsRoute = routeSuffix === "/szczegoly";
     var popupId = projectRoutes[route];
 
     if (!popupId) {
@@ -37,6 +38,12 @@ function openProjectFromHash(hashValue) {
     var wasActive = popup.classList.contains("active");
     popup.classList.add("active");
     toggleBodyScrollOff();
+
+    if (popupId === "popup-8" && !isDetailsRoute &&
+        (routeSuffix === "/filmy" || routeSuffix === "/dodatki" || routeSuffix.indexOf("/dodatki/") === 0) &&
+        typeof window.openProjectMediaRoute === "function") {
+        window.openProjectMediaRoute(routeSuffix);
+    }
 
     if (isDetailsRoute) {
         var scrollToDetails = function () {
@@ -69,7 +76,7 @@ document.addEventListener("click", function (event) {
     }
 
     var hash = link.getAttribute("href").slice(1);
-    var route = hash.endsWith("/szczegoly") ? hash.slice(0, -"/szczegoly".length) : hash;
+    var route = hash.split("/").slice(0, 2).join("/");
     if (projectRoutes[route]) {
         openProjectFromHash("#" + hash);
     }
@@ -77,3 +84,4 @@ document.addEventListener("click", function (event) {
 
 document.addEventListener("DOMContentLoaded", openProjectFromHash);
 window.addEventListener("hashchange", openProjectFromHash);
+window.addEventListener("popstate", openProjectFromHash);

@@ -4,8 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
         ".ambient-home > .title2, " +
         ".ambient-home > .srodkowanie, " +
         ".ambient-home > .gallery, " +
+        ".ambient-home > .home-artworks, " +
         ".ambient-home > footer, " +
         ".ambient-contact > .title2, " +
+        ".gallery-page main > .title2, " +
+        ".gallery-page main > .gallery-media, " +
         ".ambient-contact > footer"
     );
 

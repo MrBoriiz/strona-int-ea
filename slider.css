@@ -676,22 +676,76 @@ html {
   flex: 0 1 auto;
   width: auto;
   min-width: 0;
-  min-height: 40px;
+  min-height: 50px;
   margin: 0;
-  padding: 8px 12px;
+  padding: 0 12px;
+  border: 2px solid rgba(255, 255, 255, 0.137);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.78);
+  background-color: #070709;
+  font: inherit;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
   white-space: nowrap;
 }
 
+.CSSgal .slide-buttons .button9,
+.CSSgal .slide-buttons .button11 {
+  min-height: 50px;
+  padding: 0 12px;
+  border: 2px solid rgba(255, 255, 255, 0.137);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.78);
+  background-color: #070709;
+  font: inherit;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
 .CSSgal .slide-buttons .button9 {
-  padding-left: 12px;
+  min-width: 112px;
+  background-color: rgba(28, 28, 31, 0.45);
+  color: #fff;
+}
+
+.CSSgal .slide-buttons .button11 {
+  min-width: 112px;
+  border-color: rgba(255, 255, 255, 0.65);
+  color: #2a2a2a;
+  background-color: rgba(255, 255, 255, 0.72);
+}
+
+.CSSgal .slide-buttons .button9:hover,
+.CSSgal .slide-buttons .button9:focus-visible {
+  border-color: rgba(255, 255, 255, 0.65);
+  background-color: #29292d;
+  color: #fff;
+}
+
+.CSSgal .slide-buttons .button11:hover,
+.CSSgal .slide-buttons .button11:focus-visible {
+  border-color: #fff;
+  background-color: #fff;
+  color: #2a2a2a;
+}
+
+.CSSgal .slide-buttons .button9:focus-visible,
+.CSSgal .slide-buttons .button11:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 2px;
 }
 
 .CSSgal .slide-buttons .button9 svg {
   position: static;
   flex: 0 0 auto;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  margin: 0;
   padding: 0;
+  fill: currentColor;
 }
 
 .CSSgal .slide > .slide-1-bc,
@@ -789,12 +843,11 @@ html {
   .CSSgal .slide-buttons .button9,
   .CSSgal .slide-buttons .button9:hover,
   .CSSgal .slide-buttons .button11 {
-    font-size: clamp(10px, 3vw, 12px);
-  }
-
-  .CSSgal .slide-buttons .button9,
-  .CSSgal .slide-buttons .button9:hover {
+    min-height: 44px;
+    min-width: 0;
+    padding-right: 8px;
     padding-left: 8px;
+    font-size: clamp(10px, 3vw, 12px);
   }
 
   .CSSgal .slide-buttons .button9 svg {

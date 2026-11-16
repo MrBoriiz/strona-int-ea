@@ -1,0 +1,143 @@
+.gallery-page {
+    min-height: 100vh;
+}
+
+.gallery-page .background-images {
+    margin-bottom: 24px;
+}
+
+.gallery-page .title2 {
+    margin-bottom: 24px;
+}
+
+.gallery-page .gallery-media {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto 72px;
+}
+
+.gallery-page .wm-extras-panel {
+    gap: 8px;
+}
+
+.gallery-page .wm-artwork-button {
+    border-radius: 6px;
+}
+
+.home-artworks {
+    width: min(1120px, calc(100% - 32px));
+    margin: 42px auto 80px;
+    text-align: center;
+}
+
+.home-artworks .wm-project-media {
+    margin: 0;
+}
+
+.home-artworks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.home-artwork-card {
+    display: block;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #171719;
+}
+
+.home-artwork-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 180ms ease, transform 180ms ease;
+}
+
+.home-artwork-card:hover img,
+.home-artwork-card:focus-visible img {
+    filter: brightness(0.72);
+    transform: scale(1.04);
+}
+
+.home-artworks-link {
+    position: relative;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    min-width: 0;
+    padding: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.66);
+    background: #171719;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: color 180ms ease, border-color 180ms ease;
+}
+
+.home-artworks-link::before {
+    position: absolute;
+    inset: -8px;
+    z-index: 0;
+    background: url("images/evwttg2 .png") center / cover no-repeat;
+    content: "";
+    filter: blur(5px) brightness(0.82);
+    transform: scale(1.04);
+    transition: filter 180ms ease, transform 180ms ease;
+}
+
+.home-artworks-link::after {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.28);
+    content: "";
+    transition: background-color 180ms ease;
+}
+
+.home-artworks-link span {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.home-artworks-link:hover,
+.home-artworks-link:focus-visible {
+    border-color: rgba(255, 255, 255, 0.65);
+    color: #fff;
+}
+
+.home-artworks-link:hover::before,
+.home-artworks-link:focus-visible::before {
+    filter: blur(5px) brightness(0.5);
+    transform: scale(1.08);
+}
+
+.home-artworks-link:hover::after,
+.home-artworks-link:focus-visible::after {
+    background: rgba(0, 0, 0, 0.42);
+}
+
+@media (max-width: 640px) {
+    .home-artworks-grid {
+        gap: 4px;
+    }
+
+    .gallery-page .gallery-media {
+        margin-bottom: 48px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-artwork-card img,
+    .home-artworks-link,
+    .home-artworks-link::before,
+    .home-artworks-link::after {
+        transition: none;
+    }
+}
