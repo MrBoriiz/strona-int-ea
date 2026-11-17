@@ -239,6 +239,19 @@ html {
     z-index: 2;
   }
 
+  .gallery .item__border .item__extras-icon {
+    left: 5px;
+    top: 32px;
+    opacity: 0.2;
+    fill: rgba(255, 255, 255, 0.877);
+  }
+
+  .item:hover .item__border .item__extras-icon {
+    top: 32px;
+    opacity: 1;
+    fill: rgba(255, 255, 255, 0.877);
+  }
+
   @media (min-width: 1000px) {
     .gallery .item {
       flex-basis: calc((100% - 3 * clamp(6px, 1.5vw, 16px)) / 4);

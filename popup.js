@@ -101,6 +101,11 @@ function togglePopup19(){
     toggleBodyScrollOff();
 }
 
+function closePopupGallery(){
+    document.getElementById("popup-gallery").classList.remove("active");
+    toggleBodyScrollOn();
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     var isEnglishPage = window.location.pathname.indexOf("/eng/") !== -1;
     var detailsTitle = isEnglishPage ? "" : "";
@@ -188,12 +193,17 @@ document.addEventListener("DOMContentLoaded", function () {
         var artworkToolbar = mediaSection.querySelector(".wm-lightbox-toolbar");
         var artworkMenu = mediaSection.querySelector(".wm-lightbox-menu");
         var artworkMenuToggle = mediaSection.querySelector(".wm-lightbox-menu-toggle");
+        var artworkFullscreenToggle = mediaSection.querySelector(".wm-lightbox-fullscreen-toggle");
         var artworkDownloadLink = mediaSection.querySelector(".wm-lightbox-download");
         var artworkSocialLinks = Array.from(mediaSection.querySelectorAll(".wm-lightbox-social-link"));
         var artworkMenuItems = [];
         var projectPopup = mediaSection.closest(".popup");
         var activeArtworkButton = null;
         var artworkPosts = [];
+        var allArtworkPosts = [];
+        var artworkTypeFilter = mediaSection.querySelector(".artwork-type-filter");
+        var artworkEmptyState = mediaSection.querySelector(".gallery-empty-state");
+        var artworkFullscreenTarget = document.documentElement;
         var activeArtworkIndex = 0;
         var artworkIsClosing = false;
         var artworkSwipeStart = null;
@@ -207,11 +217,13 @@ document.addEventListener("DOMContentLoaded", function () {
         var suppressArtworkClick = false;
         var artworkTapTimer = null;
         var lastArtworkTap = null;
+        var lastArtworkTouchTime = 0;
         var artworkMenuDrag = null;
         var artworkMenuCloseTimer = null;
         var artworkControlPositions = null;
-        var projectPopupWasActive = false;
-        var galleryRoute = projectPopup
+        var isProjectPopup = Boolean(projectPopup && profileRoutes[projectPopup.id]);
+        var parentPopupWasActive = false;
+        var galleryRoute = isProjectPopup
             ? profileRoutes[projectPopup.id]
             : mediaSection.dataset.galleryRoute;
 
@@ -227,6 +239,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 slug: button.dataset.artworkSlug || thumbnail.src.split("/").pop().replace(/\.[^.]+$/, "").replace(/[^a-zA-Z0-9_-]+/g, "_"),
                 title: button.dataset.artworkTitle || thumbnail.alt,
                 description: button.dataset.artworkDescription || thumbnail.alt,
+                type: button.dataset.artworkLinkType || "",
+                button: button,
                 socialLinks: {
                     instagram: button.dataset.artworkLinkInstagram || "",
                     twitter: button.dataset.artworkLinkTwitter || "",
@@ -235,6 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         });
+        allArtworkPosts = artworkPosts.slice();
         artworkMenuItems = Array.from(artworkMenu.querySelectorAll('[role="menuitem"]'));
 
         if (artworkDialog) {
@@ -283,6 +298,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 artworkDialogImage.style.height = "";
                 artworkPost.style.width = "";
                 applyArtworkZoom();
+                return;
+            }
+
+            if (artworkDialog.classList.contains("is-fullscreen-preview")) {
+                artworkDialogImage.style.width = "";
+                artworkDialogImage.style.height = "";
+                artworkPost.style.width = "";
+                artworkDialog.classList.remove("is-wide-artwork", "is-upright-artwork");
+                applyArtworkZoom();
+                showArtworkInterface();
                 return;
             }
 
@@ -364,7 +389,7 @@ document.addEventListener("DOMContentLoaded", function () {
         function handleArtworkTouchTap(event) {
             var now = Date.now();
             if (lastArtworkTap &&
-                now - lastArtworkTap.time < 320 &&
+                now - lastArtworkTap.time < 500 &&
                 Math.hypot(event.clientX - lastArtworkTap.x, event.clientY - lastArtworkTap.y) < 48) {
                 window.clearTimeout(artworkTapTimer);
                 artworkTapTimer = null;
@@ -381,7 +406,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 lastArtworkTap = null;
                 suppressArtworkClick = false;
                 toggleArtworkInterface();
-            }, 320);
+            }, 500);
         }
 
         function positionArtworkCounter() {
@@ -443,6 +468,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     (position.top - rect.top) + "px)";
             });
 
+            if (isDesktopArtworkFullscreen()) {
+                artworkPost.classList.remove("has-toolbar-overlap");
+                artworkArea.style.removeProperty("--artwork-mask-start");
+                artworkArea.style.removeProperty("--artwork-mask-end");
+                return;
+            }
+
             var artworkTop = artworkArea.getBoundingClientRect().top;
             var toolbarBottom = artworkToolbar.getBoundingClientRect().bottom;
             var artworkHeight = artworkArea.getBoundingClientRect().height;
@@ -483,6 +515,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (artworkControlPositions) {
                     alignDesktopArtworkControls(artworkControlPositions);
                 }
+                showArtworkInterface();
                 return;
             }
 
@@ -494,6 +527,7 @@ document.addEventListener("DOMContentLoaded", function () {
             artworkArea.style.removeProperty("--artwork-mask-end");
             unfreezeDesktopArtworkControls();
             artworkControlPositions = null;
+            showArtworkInterface();
         }
 
         function handleArtworkMenuDragStart(event) {
@@ -546,7 +580,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         function handleArtworkSwipeStart(event) {
-            if (event.pointerType === "touch" && window.matchMedia("(max-width: 1024px)").matches) {
+            if (event.pointerType === "touch") {
                 artworkPointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
                 if (artworkPointers.size === 1) {
                     artworkSwipeStart = {
@@ -655,6 +689,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function handleArtworkSwipeEnd(event) {
             if (artworkPointers.has(event.pointerId)) {
+                if (event.type === "pointerup") {
+                    lastArtworkTouchTime = Date.now();
+                }
+
                 artworkPointers.delete(event.pointerId);
                 if (artworkPointers.size < 2) {
                     artworkPinchStart = null;
@@ -666,15 +704,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     artworkPanStart = null;
                     artworkGestureHandled = false;
 
-                    if (event.type === "pointerup" && artworkZoomScale === 1 &&
+                    if (event.type === "pointerup" &&
                         !touchGestureHandled && touchSwipe &&
                         touchSwipe.pointerId === event.pointerId) {
                         var touchDeltaX = event.clientX - touchSwipe.x;
                         var touchDeltaY = event.clientY - touchSwipe.y;
-                        if (Math.abs(touchDeltaX) >= 48 && Math.abs(touchDeltaX) >= Math.abs(touchDeltaY) * 1.25) {
+                        if (artworkZoomScale === 1 && Math.abs(touchDeltaX) >= 48 &&
+                            Math.abs(touchDeltaX) >= Math.abs(touchDeltaY) * 1.25) {
                             suppressArtworkClick = true;
                             showArtworkPost(activeArtworkIndex + (touchDeltaX < 0 ? 1 : -1), true);
-                        } else if (Math.hypot(touchDeltaX, touchDeltaY) < 16) {
+                        } else if (Math.hypot(touchDeltaX, touchDeltaY) < 24) {
                             handleArtworkTouchTap(event);
                         } else {
                             suppressArtworkClick = true;
@@ -733,7 +772,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         function handleArtworkDoubleClick(event) {
-            if (!window.matchMedia("(max-width: 1024px)").matches || !artworkDialog.open) {
+            if (!artworkDialog.open || Date.now() - lastArtworkTouchTime < 650) {
                 return;
             }
 
@@ -742,19 +781,49 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         function toggleArtworkInterface() {
-            if (!window.matchMedia("(max-width: 1024px)").matches ||
-                artworkDetails.classList.contains("is-description-expanded") ||
+            var isMobile = window.matchMedia("(max-width: 1024px)").matches;
+            var isFullscreen = artworkDialog.classList.contains("is-fullscreen-preview");
+            var isDesktopFullscreen = !isMobile && isFullscreen;
+            if ((!isMobile && !isDesktopFullscreen) ||
+                (!isFullscreen && artworkDetails.classList.contains("is-description-expanded")) ||
                 !artworkDialog.open ||
                 !artworkMenu.hidden) {
+                return;
+            }
+
+            if (isDesktopFullscreen) {
+                if (artworkDialog.classList.contains("is-interface-hidden")) {
+                    showArtworkInterface();
+                } else {
+                    artworkDialog.classList.add("is-interface-hidden");
+                }
                 return;
             }
 
             artworkDialog.classList.toggle("is-interface-hidden");
         }
 
+        function isDesktopArtworkFullscreen() {
+            return artworkDialog.classList.contains("is-fullscreen-preview") &&
+                !window.matchMedia("(max-width: 1024px)").matches;
+        }
+
+        function showArtworkInterface() {
+            if (!isDesktopArtworkFullscreen()) {
+                return;
+            }
+
+            artworkDialog.classList.remove("is-interface-hidden");
+        }
+
         function setArtworkMenuOpen(isOpen) {
             artworkMenuToggle.setAttribute("aria-expanded", String(isOpen));
             window.clearTimeout(artworkMenuCloseTimer);
+            if (isDesktopArtworkFullscreen()) {
+                if (isOpen) {
+                    artworkDialog.classList.remove("is-interface-hidden");
+                }
+            }
 
             if (isOpen) {
                 artworkMenu.hidden = false;
@@ -791,6 +860,75 @@ document.addEventListener("DOMContentLoaded", function () {
             artworkMenu.classList.remove("is-open");
             artworkMenu.querySelector(".wm-lightbox-menu-backdrop").style.removeProperty("opacity");
             artworkMenu.querySelector(".wm-lightbox-menu-sheet").style.removeProperty("transform");
+            if (!isOpen && isDesktopArtworkFullscreen()) {
+                showArtworkInterface();
+            }
+        }
+
+        function getArtworkFullscreenElement() {
+            return document.fullscreenElement || document.webkitFullscreenElement || null;
+        }
+
+        function setArtworkFullscreenState(isFullscreen) {
+            artworkDialog.classList.toggle("is-fullscreen-preview", isFullscreen);
+            artworkDialog.classList.remove("is-interface-hidden");
+            updateArtworkDescriptionMode();
+            artworkFullscreenToggle.setAttribute("aria-pressed", String(isFullscreen));
+            var label = isFullscreen
+                ? artworkFullscreenToggle.dataset.labelExit
+                : artworkFullscreenToggle.dataset.labelEnter;
+            artworkFullscreenToggle.setAttribute("aria-label", label);
+            artworkFullscreenToggle.title = label;
+            if (artworkDialogImage.naturalWidth) {
+                fitArtworkPreview();
+            }
+            if (isFullscreen) {
+                showArtworkInterface();
+            }
+        }
+
+        function enterArtworkFullscreen() {
+            setArtworkFullscreenState(true);
+            var requestFullscreen = artworkFullscreenTarget.requestFullscreen || artworkFullscreenTarget.webkitRequestFullscreen;
+            if (!requestFullscreen) {
+                console.warn("Fullscreen API is unavailable; using the expanded artwork preview.");
+                return;
+            }
+
+            try {
+                var request = requestFullscreen.call(artworkFullscreenTarget);
+                if (request && typeof request.catch === "function") {
+                    request.catch(function (error) {
+                        console.warn("Could not enter browser fullscreen; keeping the artwork preview expanded.", error);
+                    });
+                }
+            } catch (error) {
+                console.warn("Could not enter browser fullscreen; keeping the artwork preview expanded.", error);
+            }
+        }
+
+        function exitArtworkFullscreen() {
+            setArtworkFullscreenState(false);
+            if (getArtworkFullscreenElement() !== artworkFullscreenTarget) {
+                return;
+            }
+
+            var exitFullscreen = document.exitFullscreen || document.webkitExitFullscreen;
+            if (!exitFullscreen) {
+                console.warn("Fullscreen API is unavailable; the expanded artwork preview was closed.");
+                return;
+            }
+
+            try {
+                var exit = exitFullscreen.call(document);
+                if (exit && typeof exit.catch === "function") {
+                    exit.catch(function (error) {
+                        console.error("Could not exit browser fullscreen.", error);
+                    });
+                }
+            } catch (error) {
+                console.error("Could not exit browser fullscreen.", error);
+            }
         }
 
         tabs.forEach(function (tab, index) {
@@ -821,7 +959,7 @@ document.addEventListener("DOMContentLoaded", function () {
         function showArtworkPost(index, animate) {
             activeArtworkIndex = (index + artworkPosts.length) % artworkPosts.length;
             var post = artworkPosts[activeArtworkIndex];
-            activeArtworkButton = artworkButtons[activeArtworkIndex];
+            activeArtworkButton = post.button;
 
             unfreezeDesktopArtworkControls();
             artworkControlPositions = null;
@@ -868,7 +1006,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setArtworkMenuOpen(false);
 
             if (artworkDialog.open) {
-                setProjectMediaHash(projectPopup ? "/dodatki/" + post.slug : "/" + post.slug, true);
+                setProjectMediaHash(isProjectPopup ? "/dodatki/" + post.slug : "/" + post.slug, true);
             }
 
             if (animate) {
@@ -884,6 +1022,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             artworkIsClosing = true;
+            exitArtworkFullscreen();
             resetArtworkZoom();
             artworkDetails.classList.remove("is-description-expanded");
             artworkPost.classList.remove("is-description-expanded", "has-toolbar-overlap");
@@ -911,16 +1050,16 @@ document.addEventListener("DOMContentLoaded", function () {
         function openArtworkRoute(suffix) {
             var route = suffix.replace(/^\/+/, "");
             var routeParts = route.split("/");
-            var isExtrasRoute = projectPopup && routeParts[0] === "dodatki";
-            if (projectPopup) {
+            var isExtrasRoute = isProjectPopup && routeParts[0] === "dodatki";
+            if (isProjectPopup) {
                 var tab = isExtrasRoute ? tabs[1] : tabs[0];
                 selectMediaTab(tab, false);
             }
 
-            if ((isExtrasRoute && routeParts[1]) || (!projectPopup && routeParts[0])) {
+            if ((isExtrasRoute && routeParts[1]) || (!isProjectPopup && routeParts[0])) {
                 var slug;
                 try {
-                    slug = decodeURIComponent(projectPopup ? routeParts.slice(1).join("/") : routeParts.join("/"));
+                    slug = decodeURIComponent(isProjectPopup ? routeParts.slice(1).join("/") : routeParts.join("/"));
                 } catch (error) {
                     console.error("Invalid artwork route in URL.", error);
                     return;
@@ -928,6 +1067,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 var artworkIndex = artworkPosts.findIndex(function (post) {
                     return post.slug === slug;
                 });
+                if (artworkIndex === -1 && artworkTypeFilter && allArtworkPosts.some(function (post) {
+                    return post.slug === slug;
+                })) {
+                    artworkTypeFilter.value = "all";
+                    artworkTypeFilter.dispatchEvent(new Event("change", { bubbles: true }));
+                    artworkIndex = artworkPosts.findIndex(function (post) {
+                        return post.slug === slug;
+                    });
+                }
                 if (artworkIndex === -1) {
                     return;
                 }
@@ -952,7 +1100,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         function openArtworkPreview(artworkIndex) {
-            projectPopupWasActive = Boolean(projectPopup && projectPopup.classList.contains("active"));
+            parentPopupWasActive = Boolean(projectPopup && projectPopup.classList.contains("active"));
             if (projectPopup) {
                 projectPopup.classList.remove("active");
             }
@@ -961,9 +1109,32 @@ document.addEventListener("DOMContentLoaded", function () {
                 artworkDialog.showModal();
             }
             toggleBodyScrollOff();
-            setProjectMediaHash(projectPopup
+            if (window.matchMedia("(max-width: 1024px)").matches) {
+                enterArtworkFullscreen();
+            } else {
+                setArtworkFullscreenState(false);
+            }
+            setProjectMediaHash(isProjectPopup
                 ? "/dodatki/" + artworkPosts[artworkIndex].slug
                 : "/" + artworkPosts[artworkIndex].slug, false);
+        }
+
+        function applyArtworkTypeFilter() {
+            var selectedType = artworkTypeFilter.value;
+            artworkPosts = allArtworkPosts.filter(function (post) {
+                return selectedType === "all" || post.type === selectedType;
+            });
+            allArtworkPosts.forEach(function (post) {
+                post.button.hidden = selectedType !== "all" && post.type !== selectedType;
+            });
+            if (artworkEmptyState) {
+                artworkEmptyState.hidden = artworkPosts.length > 0;
+            }
+        }
+
+        if (artworkTypeFilter) {
+            artworkTypeFilter.addEventListener("change", applyArtworkTypeFilter);
+            applyArtworkTypeFilter();
         }
 
         if (artworkPosts.length && artworkDialog && artworkDialogImage && closeArtworkButton) {
@@ -994,10 +1165,21 @@ document.addEventListener("DOMContentLoaded", function () {
                     toggleArtworkInterface();
                 }
             });
+            artworkDialog.addEventListener("pointermove", function (event) {
+                if (event.pointerType === "mouse") {
+                    showArtworkInterface();
+                }
+            });
+            artworkDialog.addEventListener("focusin", showArtworkInterface);
 
-            artworkButtons.forEach(function (button, artworkIndex) {
+            artworkButtons.forEach(function (button) {
                 button.addEventListener("click", function () {
-                    openArtworkPreview(artworkIndex);
+                    var artworkIndex = artworkPosts.findIndex(function (post) {
+                        return post.button === button;
+                    });
+                    if (artworkIndex !== -1) {
+                        openArtworkPreview(artworkIndex);
+                    }
                 });
             });
 
@@ -1012,6 +1194,23 @@ document.addEventListener("DOMContentLoaded", function () {
             artworkMenuToggle.addEventListener("click", function () {
                 setArtworkMenuOpen(artworkMenuToggle.getAttribute("aria-expanded") !== "true");
             });
+
+            artworkFullscreenToggle.addEventListener("click", function () {
+                if (artworkDialog.classList.contains("is-fullscreen-preview")) {
+                    exitArtworkFullscreen();
+                } else {
+                    enterArtworkFullscreen();
+                }
+            });
+
+            function synchronizeArtworkFullscreenState() {
+                if (artworkDialog.open) {
+                    setArtworkFullscreenState(getArtworkFullscreenElement() === artworkFullscreenTarget);
+                }
+            }
+
+            document.addEventListener("fullscreenchange", synchronizeArtworkFullscreenState);
+            document.addEventListener("webkitfullscreenchange", synchronizeArtworkFullscreenState);
 
             artworkMenu.querySelector(".wm-lightbox-menu-backdrop").addEventListener("click", function () {
                 setArtworkMenuOpen(false);
@@ -1079,14 +1278,14 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             artworkDialog.addEventListener("close", function () {
-                if (projectPopupWasActive && projectPopup) {
+                if (parentPopupWasActive && projectPopup) {
                     projectPopup.classList.add("active");
                 }
-                var artworkHashPrefix = projectPopup
+                var artworkHashPrefix = isProjectPopup
                     ? "#" + galleryRoute + "/dodatki/"
                     : "#" + galleryRoute + "/";
                 if (window.location.hash.indexOf(artworkHashPrefix) === 0) {
-                    setProjectMediaHash(projectPopup ? "/dodatki" : "", true);
+                    setProjectMediaHash(isProjectPopup ? "/dodatki" : "", true);
                 }
                 toggleBodyScrollOn();
                 if (activeArtworkButton) {
@@ -1099,11 +1298,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     return;
                 }
 
+                showArtworkInterface();
                 if (event.key === "Escape") {
                     event.preventDefault();
                     if (!artworkMenu.hidden) {
                         setArtworkMenuOpen(false);
                         artworkMenuToggle.focus();
+                        return;
+                    }
+                    if (getArtworkFullscreenElement() === artworkFullscreenTarget) {
+                        exitArtworkFullscreen();
                         return;
                     }
                     closeArtworkPreview();
@@ -1116,23 +1320,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
 
-            if (projectPopup) {
+            if (isProjectPopup) {
                 window.openProjectMediaRoute = openArtworkRoute;
             } else {
-                var handleGalleryLocation = function () {
-                    var routePrefix = "#" + galleryRoute;
-                    if (window.location.hash.indexOf(routePrefix) !== 0) {
-                        if (artworkDialog.open) {
-                            closeArtworkPreview();
-                        }
-                        return;
-                    }
-                    var routeSuffix = window.location.hash.slice(routePrefix.length);
-                    openArtworkRoute(routeSuffix);
-                };
-                window.addEventListener("hashchange", handleGalleryLocation);
-                window.addEventListener("popstate", handleGalleryLocation);
-                handleGalleryLocation();
+                window.openGalleryMediaRoute = openArtworkRoute;
             }
         }
     });

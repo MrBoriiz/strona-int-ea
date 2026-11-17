@@ -292,10 +292,11 @@ html {
 .slider-container {
   isolation: isolate;
   display: grid;
-  width: 100%;
-  height: 100%;
+  width: min(100%, var(--slider-width, 100%));
+  height: var(--slider-height, auto);
   min-width: 0;
   min-height: 0;
+  aspect-ratio: var(--slider-aspect-ratio, 16 / 9);
   --active-slide-artwork: url("./images/WM-Grubas-poza-zloczyncy-podpis-bez-logo.png");
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr);
@@ -372,6 +373,7 @@ html {
   inset: 0;
   z-index: 1;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
   padding: 24px 24px 24px 38px;
@@ -404,6 +406,7 @@ html {
 .CSSgal .slide-title > .slide-buttons {
   opacity: 0;
   transform: translateY(14px) scale(0.96);
+  transform-origin: left center;
   transition:
     opacity 550ms ease,
     transform 700ms cubic-bezier(0.2, 0.7, 0.25, 1);
@@ -543,6 +546,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left;
   gap: 15px;
   position: relative;
   top: auto;
@@ -558,9 +562,9 @@ html {
   display: block;
   position: relative;
   right: auto;
-  width: 100%;
+  width: auto;
   min-width: 0;
-  max-width: 100%;
+  max-width: min(100%, 540px);
   height: min(300px, 34vh);
   object-fit: contain;
   object-position: left center;
@@ -599,6 +603,10 @@ html {
 
 .CSSgal .project-badges > span {
   margin-right: 0;
+}
+
+.CSSgal .project-badges > span:first-child {
+  padding-left: 0;
 }
 
 .CSSgal .project-badges > span.info-badge-3 {
@@ -652,6 +660,7 @@ html {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  justify-content: flex-start;
   gap: 8px;
   width: 100%;
 }
@@ -676,76 +685,22 @@ html {
   flex: 0 1 auto;
   width: auto;
   min-width: 0;
-  min-height: 50px;
+  min-height: 40px;
   margin: 0;
-  padding: 0 12px;
-  border: 2px solid rgba(255, 255, 255, 0.137);
-  border-radius: 10px;
-  color: rgba(255, 255, 255, 0.78);
-  background-color: #070709;
-  font: inherit;
-  font-size: 1.6rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+  padding: 8px 12px;
   white-space: nowrap;
 }
 
-.CSSgal .slide-buttons .button9,
-.CSSgal .slide-buttons .button11 {
-  min-height: 50px;
-  padding: 0 12px;
-  border: 2px solid rgba(255, 255, 255, 0.137);
-  border-radius: 10px;
-  color: rgba(255, 255, 255, 0.78);
-  background-color: #070709;
-  font: inherit;
-  font-size: 1.6rem;
-  font-weight: 600;
-  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
-}
-
 .CSSgal .slide-buttons .button9 {
-  min-width: 112px;
-  background-color: rgba(28, 28, 31, 0.45);
-  color: #fff;
-}
-
-.CSSgal .slide-buttons .button11 {
-  min-width: 112px;
-  border-color: rgba(255, 255, 255, 0.65);
-  color: #2a2a2a;
-  background-color: rgba(255, 255, 255, 0.72);
-}
-
-.CSSgal .slide-buttons .button9:hover,
-.CSSgal .slide-buttons .button9:focus-visible {
-  border-color: rgba(255, 255, 255, 0.65);
-  background-color: #29292d;
-  color: #fff;
-}
-
-.CSSgal .slide-buttons .button11:hover,
-.CSSgal .slide-buttons .button11:focus-visible {
-  border-color: #fff;
-  background-color: #fff;
-  color: #2a2a2a;
-}
-
-.CSSgal .slide-buttons .button9:focus-visible,
-.CSSgal .slide-buttons .button11:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.7);
-  outline-offset: 2px;
+  padding-left: 12px;
 }
 
 .CSSgal .slide-buttons .button9 svg {
   position: static;
   flex: 0 0 auto;
-  width: 18px;
-  height: 18px;
-  margin: 0;
+  width: 20px;
+  height: 20px;
   padding: 0;
-  fill: currentColor;
 }
 
 .CSSgal .slide > .slide-1-bc,
@@ -798,22 +753,48 @@ html {
     padding-top: 88px;
   }
 
+  .CSSgal .slide > .title {
+    padding: clamp(8px, 2vh, 16px) clamp(12px, 2vw, 24px) clamp(8px, 2vh, 16px) clamp(16px, 4.4vw, 38px);
+  }
+
+  .CSSgal .slide-title {
+    top: auto;
+    gap: clamp(6px, 1.5vh, 10px);
+  }
+
   .CSSgal .slide-title img {
     max-width: min(100%, 540px);
     height: auto;
-    max-height: 22vh;
+    max-height: clamp(48px, 20vh, 140px);
+  }
+
+  .CSSgal .project-badges {
+    gap: clamp(4px, 1vh, 8px);
   }
 
   .CSSgal .project-badges > span {
-    font-size: 12px;
-    padding-right: 0.3em;
-    padding-left: 0.3em;
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    box-sizing: border-box;
+    height: auto;
+    min-height: clamp(20px, 5vh, 30px);
+    max-width: 100%;
+    padding: 2px clamp(4px, 1vw, 8px);
+    font-size: clamp(10px, 2.8vh, 16px);
+    line-height: 1.2;
+  }
+
+  .CSSgal .project-badges > span.info-badge-3 {
+    height: auto;
+    min-height: clamp(20px, 5vh, 30px);
+    padding: 0;
   }
 
   .CSSgal .slide-title p {
-    padding: 8px 0 0;
-    font-size: 14px;
-    line-height: 1.25;
+    padding: 0;
+    font-size: clamp(12px, 3vh, 16px);
+    line-height: 1.2;
   }
 
   .CSSgal .slide-buttons {
@@ -843,11 +824,12 @@ html {
   .CSSgal .slide-buttons .button9,
   .CSSgal .slide-buttons .button9:hover,
   .CSSgal .slide-buttons .button11 {
-    min-height: 44px;
-    min-width: 0;
-    padding-right: 8px;
-    padding-left: 8px;
     font-size: clamp(10px, 3vw, 12px);
+  }
+
+  .CSSgal .slide-buttons .button9,
+  .CSSgal .slide-buttons .button9:hover {
+    padding-left: 8px;
   }
 
   .CSSgal .slide-buttons .button9 svg {
@@ -910,5 +892,30 @@ html {
     padding-right: clamp(1px, 0.4vw, 1.5px);
     padding-left: clamp(1px, 0.4vw, 1.5px);
     font-size: clamp(12px, calc(2.04vw + 6.77px), 14.5px);
+  }
+}
+
+@media (max-height: 700px) and (max-width: 759.98px) {
+  .CSSgal .slide-title {
+    top: auto;
+  }
+
+  .CSSgal .project-badges > span {
+    flex-shrink: 0;
+    min-height: clamp(20px, 5vh, 30px);
+    padding: 2px clamp(4px, 1vw, 8px);
+    font-size: clamp(10px, 2.8vh, 16px);
+    line-height: 1.2;
+  }
+
+  .CSSgal .project-badges > span.info-badge-3 {
+    min-height: clamp(20px, 5vh, 30px);
+    padding: 0;
+  }
+}
+
+@media (max-height: 700px) and (max-width: 550px) {
+.CSSgal .slide-title > img {
+    max-height: clamp(48px, 20vh, 140px);
   }
 }

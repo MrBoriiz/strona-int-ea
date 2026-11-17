@@ -4,9 +4,11 @@
     const trigger = document.createElement("button");
     const arrow = document.createElement("span");
     const listbox = document.createElement("div");
-    const pickerId = `season-picker-${select.id || "season"}-${document.querySelectorAll(".season-picker").length}`;
+    const isSeasonPicker = select.matches("select.season");
+    const pickerType = isSeasonPicker ? "season-picker" : "artwork-type-picker";
+    const pickerId = `${pickerType}-${select.id || "select"}-${document.querySelectorAll(".season-picker").length}`;
 
-    picker.className = "season-picker";
+    picker.className = isSeasonPicker ? "season-picker" : "season-picker artwork-type-picker";
     trigger.className = "season-picker-trigger";
     trigger.type = "button";
     trigger.setAttribute("aria-haspopup", "listbox");
@@ -153,7 +155,7 @@
   }
 
   function initialize() {
-    document.querySelectorAll("select.season").forEach(initializeSeasonPicker);
+    document.querySelectorAll("select.season, select.artwork-type-filter").forEach(initializeSeasonPicker);
   }
 
   if (document.readyState === "loading") {
