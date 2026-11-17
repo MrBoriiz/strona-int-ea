@@ -3,12 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const bullets = document.querySelectorAll('.CSSgal .bullet');
   const slides = sliderElement.querySelectorAll(':scope > .slide');
   const artworkTarget = document.querySelector('.slider-container, .CSSgal');
+  const sliderFrame = document.querySelector('.slider-container');
+  const header = sliderFrame.closest('header');
   const swipeThreshold = 50;
   let currentIndex = 0;
   let pointerStart = null;
   let suppressClick = false;
   let userPaused = false;
-  let overlayPaused = Boolean(document.querySelector('.popup.active, .wm-artwork-dialog[open]'));
   const delay = 5000; // 5 seconds delay for autoplay
   const interactionPause = 10000;
   let autoplayTimeout;
@@ -16,6 +17,24 @@ document.addEventListener('DOMContentLoaded', function() {
   const bulletsContainer = document.querySelector('.CSSgal .bullets');
   const sliderContainer = document.querySelector('.CSSgal');
   bulletsContainer.style.setProperty('--slider-autoplay-duration', `${delay}ms`);
+
+  function updateSliderDimensions() {
+    const landscapeRatio = 16 / 9;
+    const headerStyles = getComputedStyle(header);
+    const availableWidth = header.clientWidth - parseFloat(headerStyles.paddingLeft) - parseFloat(headerStyles.paddingRight);
+    const availableHeight = header.clientHeight - parseFloat(headerStyles.paddingTop) - parseFloat(headerStyles.paddingBottom);
+    const fillsViewport = window.innerWidth <= 1000;
+    const width = fillsViewport ? availableWidth : Math.min(availableWidth, availableHeight * landscapeRatio);
+    const height = fillsViewport ? availableHeight : width / landscapeRatio;
+    const ratio = width / height;
+
+    sliderFrame.style.setProperty('--slider-aspect-ratio', ratio);
+    sliderFrame.style.setProperty('--slider-width', `${width}px`);
+    sliderFrame.style.setProperty('--slider-height', `${height}px`);
+  }
+
+  window.addEventListener('resize', updateSliderDimensions);
+  updateSliderDimensions();
 
   function moveSlider(index) {
     currentIndex = (index + slides.length) % slides.length;
@@ -41,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function startAutoplay() {
-    if (userPaused || overlayPaused) {
+    if (userPaused) {
       return;
     }
 
@@ -55,30 +74,16 @@ document.addEventListener('DOMContentLoaded', function() {
     userPaused = true;
     clearTimeout(autoplayTimeout);
     clearTimeout(interactionResumeTimeout);
-    updateAutoplayPausedState();
+    bulletsContainer.classList.add('is-paused');
     interactionResumeTimeout = setTimeout(() => {
       userPaused = false;
-      updateAutoplayPausedState();
+      bulletsContainer.classList.remove('is-paused');
+      sliderContainer.classList.remove('is-paused');
       startAutoplay();
     }, interactionPause);
-    updateAutoplayPausedState();
+    bulletsContainer.classList.add('is-paused');
+    sliderContainer.classList.add('is-paused');
   }
-
-  function updateAutoplayPausedState() {
-    const isPaused = userPaused || overlayPaused;
-    bulletsContainer.classList.toggle('is-paused', isPaused);
-    sliderContainer.classList.toggle('is-paused', isPaused);
-  }
-
-  document.addEventListener('project-overlay-change', function(event) {
-    overlayPaused = Boolean(event.detail && event.detail.isOpen);
-    if (overlayPaused) {
-      clearTimeout(autoplayTimeout);
-    } else {
-      startAutoplay();
-    }
-    updateAutoplayPausedState();
-  });
 
   bullets.forEach((bullet, index) => {
     bullet.addEventListener('click', function() {

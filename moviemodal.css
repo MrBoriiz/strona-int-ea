@@ -1280,6 +1280,25 @@ a {
   animation: wm-lightbox-fade 220ms ease both;
 }
 
+.wm-artwork-dialog.is-fullscreen-preview {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-layout {
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+}
+
 @keyframes wm-lightbox-fade {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -1364,6 +1383,7 @@ a {
   outline: none;
   cursor: grab;
   user-select: none;
+  touch-action: none;
 }
 
 .wm-lightbox-artwork:active {
@@ -1526,7 +1546,9 @@ a {
 
 .wm-artwork-close,
 .wm-lightbox-menu-toggle,
-.popup .modal-header .close-btn {
+.wm-lightbox-fullscreen-toggle,
+.popup .modal-header .close-btn,
+.popup .gallery-popup-close {
   display: grid;
   width: 42px;
   height: 42px;
@@ -1549,7 +1571,8 @@ a {
   font-size: 2.2rem;
 }
 
-.popup .modal-header .close-btn {
+.popup .modal-header .close-btn,
+.popup .gallery-popup-close {
   position: absolute;
   top: 10px;
   right: auto;
@@ -1560,20 +1583,48 @@ a {
 
 .wm-lightbox-menu-wrap {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .wm-lightbox-menu-toggle {
   font-size: 2rem;
 }
 
+.wm-lightbox-fullscreen-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.wm-lightbox-fullscreen-exit {
+  display: none;
+}
+
+.wm-lightbox-fullscreen-toggle[aria-pressed="true"] .wm-lightbox-fullscreen-enter {
+  display: none;
+}
+
+.wm-lightbox-fullscreen-toggle[aria-pressed="true"] .wm-lightbox-fullscreen-exit {
+  display: block;
+}
+
 .wm-artwork-close:hover,
-.popup .modal-header .close-btn:hover {
+.popup .modal-header .close-btn:hover,
+.popup .gallery-popup-close:hover {
   border-color: rgba(255, 255, 255, 0.4);
   background: #2c2c2c;
 }
 
 .wm-lightbox-menu-toggle:hover,
-.wm-lightbox-menu-toggle:focus-visible {
+.wm-lightbox-menu-toggle:focus-visible,
+.wm-lightbox-fullscreen-toggle:hover,
+.wm-lightbox-fullscreen-toggle:focus-visible {
   border-color: rgba(255, 255, 255, 0.4);
   background: #2c2c2c;
 }
@@ -1689,6 +1740,17 @@ a {
 }
 
 @media (max-width: 1024px) {
+  .wm-artwork-button,
+  .wm-artwork-dialog button,
+  .wm-artwork-dialog a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .wm-artwork-button:focus:not(:focus-visible),
+  .wm-artwork-dialog :focus:not(:focus-visible) {
+    outline: none;
+  }
+
   .wm-artwork-dialog {
     inset: 0;
     width: 100vw;
@@ -1960,7 +2022,9 @@ a {
 
   .wm-artwork-close,
   .wm-lightbox-menu-toggle,
-  .popup .modal-header .close-btn {
+  .wm-lightbox-fullscreen-toggle,
+  .popup .modal-header .close-btn,
+  .popup .gallery-popup-close {
     width: 38px;
     height: 38px;
   }
@@ -1984,6 +2048,142 @@ a {
   .wm-lightbox-toolbar,
   .wm-lightbox-details {
     transition: opacity 180ms ease, visibility 180ms ease;
+  }
+}
+
+@media (min-width: 1025px) {
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-layout {
+    position: relative;
+    display: block;
+    padding: 0;
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-post {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-viewer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-artwork-wrap {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    padding: clamp(8px, 1vw, 18px);
+    box-sizing: border-box;
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-artwork {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    border-radius: 0;
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-toolbar {
+    position: fixed;
+    top: clamp(14px, 2vh, 28px);
+    right: clamp(14px, 2vw, 32px);
+    left: clamp(14px, 2vw, 32px);
+    z-index: 8;
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-nav {
+    position: fixed;
+    top: 50%;
+    z-index: 7;
+    width: clamp(42px, 4vw, 54px);
+    height: clamp(42px, 4vw, 54px);
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(7, 7, 9, 0.62);
+    backdrop-filter: blur(10px);
+    transform: translateY(-50%);
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-previous {
+    left: clamp(14px, 2vw, 32px);
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-next {
+    right: clamp(14px, 2vw, 32px);
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-nav:hover {
+    transform: translateY(-50%) scale(1.06);
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-details {
+    position: fixed;
+    right: clamp(20px, 3vw, 48px);
+    bottom: clamp(16px, 3vh, 32px);
+    left: clamp(20px, 3vw, 48px);
+    z-index: 6;
+    width: auto;
+    max-width: none;
+    max-height: 24vh;
+    padding: clamp(12px, 1.5vw, 22px);
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    background: linear-gradient(90deg, rgba(7, 7, 9, 0.76), rgba(7, 7, 9, 0.42));
+    backdrop-filter: blur(12px);
+    box-sizing: border-box;
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-details.is-description-expanded {
+    max-height: min(50dvh, 420px);
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-title {
+    margin: 0 0 6px;
+    font-size: clamp(1.15rem, 2.4vw, 2rem);
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-description {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+    font-size: clamp(14px, 1.2vw, 18px);
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-counter {
+    top: clamp(14px, 2vh, 28px);
+    right: 50%;
+    bottom: auto;
+    transform: translateX(50%);
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-toolbar,
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-nav,
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-details,
+  .wm-artwork-dialog.is-fullscreen-preview .wm-lightbox-counter {
+    transition: opacity 180ms ease, visibility 180ms ease;
+  }
+
+  .wm-artwork-dialog.is-fullscreen-preview.is-interface-hidden .wm-lightbox-toolbar,
+  .wm-artwork-dialog.is-fullscreen-preview.is-interface-hidden .wm-lightbox-nav,
+  .wm-artwork-dialog.is-fullscreen-preview.is-interface-hidden .wm-lightbox-details,
+  .wm-artwork-dialog.is-fullscreen-preview.is-interface-hidden .wm-lightbox-counter {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
   }
 }
 
@@ -2713,5 +2913,45 @@ body.episode-card-view .popup .content .episode-grid-list[style*="display: block
   .wm-extras-panel .wm-artwork-button::after,
   .wm-extras-panel .wm-artwork-button img {
     transition: none;
+  }
+}
+
+@media (hover: none), (max-width: 1024px) {
+  .wm-artwork-dialog .wm-lightbox-nav:hover,
+  .wm-artwork-dialog .wm-artwork-close:hover,
+  .wm-artwork-dialog .wm-lightbox-menu-toggle:hover,
+  .wm-artwork-dialog .wm-lightbox-fullscreen-toggle:hover {
+    border-color: rgba(255, 255, 255, 0.137);
+    background: #070709;
+  }
+
+  .wm-artwork-dialog .wm-lightbox-nav:hover {
+    transform: none;
+  }
+
+  .wm-artwork-dialog .wm-lightbox-menu-item:hover {
+    background: #070709;
+  }
+
+  .wm-artwork-button:hover img {
+    transform: none;
+  }
+
+  .wm-extras-panel .wm-artwork-button:hover {
+    background: transparent;
+  }
+
+  .wm-extras-panel .wm-artwork-button:hover::before {
+    opacity: 0;
+  }
+
+  .wm-extras-panel .wm-artwork-button:hover::after {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+
+  .wm-extras-panel .wm-artwork-button:hover img {
+    filter: none;
+    transform: none;
   }
 }

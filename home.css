@@ -271,6 +271,16 @@ p{
     transform: translate(-50%, 0%);
 }
 
+.srodkowanie > .title3:not(.latest-video-section) p{
+    display: block;
+    text-align: left;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    left: auto;
+    transform: none;
+}
+
 .title3 .description{
     font-family: 'Poppins', 'sans-serif';
     font-weight: 400;

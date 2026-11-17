@@ -10,12 +10,14 @@ var projectRoutes = {
     "koprod/swzmarl-egz": "popup-16",
     "koprod/egln": "popup-17",
     "koprod/sylw-egz": "popup-18",
-    "koprod/rydolroz": "popup-19"
+    "koprod/rydolroz": "popup-19",
+    "galeria": "popup-gallery"
 };
 
 function openProjectFromHash(hashValue) {
     var hash = (typeof hashValue === "string" ? hashValue : window.location.hash).replace(/^#/, "");
-    var route = hash.split("/").slice(0, 2).join("/");
+    var routeParts = hash.split("/");
+    var route = routeParts[0] === "galeria" ? routeParts[0] : routeParts.slice(0, 2).join("/");
     var routeSuffix = hash.slice(route.length);
     var isDetailsRoute = routeSuffix === "/szczegoly";
     var popupId = projectRoutes[route];
@@ -43,6 +45,10 @@ function openProjectFromHash(hashValue) {
         (routeSuffix === "/filmy" || routeSuffix === "/dodatki" || routeSuffix.indexOf("/dodatki/") === 0) &&
         typeof window.openProjectMediaRoute === "function") {
         window.openProjectMediaRoute(routeSuffix);
+    }
+
+    if (popupId === "popup-gallery" && typeof window.openGalleryMediaRoute === "function") {
+        window.openGalleryMediaRoute(routeSuffix);
     }
 
     if (isDetailsRoute) {
